@@ -28,87 +28,85 @@
       </nav>
     </header>
     <main class="form-content">
-      <h1 class="secondary-title">Подбор программы</h1>
+      <h1 class="main-title form-content__main-title">Подбор программы</h1>
       <p class="form-content__text-help">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="questionnaire-form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="stripe">
+        <section class="inquirer stripe questionnaire-form__inquirer">
           <div class="wrapper">
-            <p class="questionnaire-form__row">
-              <label class="questionnaire-form__stats" for="questionnaire-form__cat-name">Имя:*</label>
-              <input class="questionnaire-form__field" id="questionnaire-form__cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+            <p class="form-row">
+              <label class="inquirer__stats" for="inquirer__cat-name">Имя:*</label>
+              <input class="inquirer__field" id="inquirer__cat-name" type="text" name="cat-name" placeholder="Барсик" required>
             </p>
-            <p class="questionnaire-form__row">
-              <label class="questionnaire-form__stats" for="questionnaire-form__cat-weight">Вес (кг):*</label>
-              <input class="questionnaire-form__field" id="questionnaire-form__cat-weight" type="text" name="cat-weight" placeholder="7" required>
+            <p class="form-row">
+              <label class="inquirer__stats" for="inquirer__cat-weight">Вес (кг):*</label>
+              <input class="inquirer__field" id="inquirer__cat-weight" type="text" name="cat-weight" placeholder="7" required>
             </p>
-            <p class="questionnaire-form__row">
-              <label class="questionnaire-form__stats" for="questionnaire-form__cat-years">Возраст (лет):</label>
-              <input class="questionnaire-form__field" id="questionnaire-form__cat-years" type="text" name="cat-years" placeholder="7" required>
+            <p class="form-row">
+              <label class="inquirer__stats" for="inquirer__cat-years">Возраст (лет):</label>
+              <input class="inquirer__field" id="inquirer__cat-years" type="text" name="cat-years" placeholder="7" required>
             </p>
           </div>
-        </div>
-        <div class="stripe">
+        </section>
+        <section class="program-selection stripe questionnaire-form__program-selection">
           <div class="wrapper">
-            <fieldset class="questionnaire-form__program-selection">
-              <legend class="visual-hidden">Выберите желаемую программу питания для кота</legend>
-              <ul class="same-list questionnaire-form__field-radio">
-                <li class="questionnaire-form__radio-wrapper-item">
-                  <input class="visual-hidden questionnaire-form__radio-item" type="radio" name="program" id="program-selection__slim" value="slim" checked>
-                  <label class="questionnaire-form__radio-label" for="program-selection__slim">Похудение</label>
+            <h2 class="visual-hidden">Выберите желаемую программу питания для кота</h2>
+              <ul class="same-list program-selection__field-radio">
+                <li class="program-selection__radio-wrapper-item">
+                  <input class="visual-hidden program-selection__radio-item" type="radio" name="program" id="program-selection__slim" value="slim" checked>
+                  <label class="program-selection__radio-label" for="program-selection__slim">Похудение</label>
                 </li>
-                <li class="questionnaire-form__radio-wrapper-item">
-                  <input class="visual-hidden questionnaire-form__radio-item" type="radio" name="program" id="program-selection__pro" value="pro">
-                  <label class="questionnaire-form__radio-label" for="program-selection__pro">Набор массы</label>
+                <li class="program-selection__radio-wrapper-item">
+                  <input class="visual-hidden program-selection__radio-item" type="radio" name="program" id="program-selection__pro" value="pro">
+                  <label class="program-selection__radio-label" for="program-selection__pro">Набор массы</label>
                 </li>
-                <li class="questionnaire-form__radio-wrapper-item">
-                  <input class="visual-hidden questionnaire-form__radio-item" type="radio" name="program" id="program-selection__advice" value="advice">
-                  <label class="questionnaire-form__radio-label" for="program-selection__advice">Не знаю (Нужен ваш совет)</label>
+                <li class="program-selection__radio-wrapper-item">
+                  <input class="visual-hidden program-selection__radio-item" type="radio" name="program" id="program-selection__advice" value="advice">
+                  <label class="program-selection__radio-label" for="program-selection__advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
-            </fieldset>
           </div>
-        </div>
+        </section>
         <div class="wrapper">
-          <section class="questionnaire-form__cat-owner">
-            <h3 class="title-with-stripe">Контактные данные (владельца кота)</h3>
-            <p class="questionnaire-form__row">
-              <label class="questionnaire-form__stats" for="questionnaire-form__e-mail">E-mail:*</label>
-              <input class="questionnaire-form__field" id="questionnaire-form__e-mail" type="email" name="e-mail" placeholder="kuklachev@gmail.com" required>
+          <section class="cat-owner questionnaire-form__cat-owner">
+            <h2 class="title-stripe cat-owner__title-stripe">Контактные данные (владельца кота)</h2>
+            <p class="form-row cat-owner__form-row">
+              <label class="cat-owner__stats" for="cat-owner__e-mail">E-mail:*</label>
+              <input class="cat-owner__field" id="cat-owner__e-mail" type="email" name="e-mail" placeholder="kuklachev@gmail.com" required>
             </p>
-            <p class="questionnaire-form__row">
-              <label class="questionnaire-form__stats" for="questionnaire-form__tel">Телефон:*</label>
-              <input class="questionnaire-form__field" id="questionnaire-form__tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-            </p>
-          </section>
-          <section class="questionnaire-form__comment">
-            <h3 class="title-with-stripe">Комментарий</h3>
-            <p class="questionnaire-form__row">
-              <label class="visual-hidden" for="questionnaire-form__feedback">Расскажите о коте</label>
-              <textarea class="questionnaire-form__field" id="questionnaire-form__feedback" name="feedback" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <p class="form-row cat-owner__form-row">
+              <label class="cat-owner__stats" for="cat-owner__tel">Телефон:*</label>
+              <input class="cat-owner__field" id="cat-owner__tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
             </p>
           </section>
-          <fieldset class="questionnaire-form__additional-products">
-            <legend class="questionnaire-form__label-checkbox title-with-stripe">Дополнительно</legend>
-            <ul class="same-list questionnaire-form__field-checkbox">
-              <li class="questionnaire-form__checkbox-wrapper-item">
-                <input class="visual-hidden questionnaire-form__checkbox-item" type="checkbox" name="sweetener" id="questionnaire-form__sweetener" checked>
-                <label class="questionnaire-form__checkbox-label questionnaire-form__checkbox-label--1" for="questionnaire-form__sweetener">Сахарозаменитель</label>
+          <section class="comment questionnaire-form__comment">
+            <h2 class="title-stripe comment__title-stripe">Комментарий</h2>
+            <p class="form-row comment__form-row">
+              <label class="visual-hidden" for="comment__feedback">Расскажите о коте</label>
+              <textarea class="comment__field" id="comment__feedback" name="feedback" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </p>
+          </section>
+          <fieldset class="more-products questionnaire-form__more-products">
+            <legend class="more-products__label-checkbox title-stripe">Дополнительно</legend>
+            <ul class="same-list more-products__field-checkbox">
+              <li class="more-products__checkbox-wrapper-item">
+                <input class="visual-hidden more-products__checkbox-item" type="checkbox" name="sweetener" id="more-products__sweetener" checked>
+                <label class="more-products__checkbox-label more-products__checkbox-label--1" for="more-products__sweetener">Сахарозаменитель</label>
               </li>
-              <li class="questionnaire-form__checkbox-wrapper-item">
-                <input class="visual-hidden questionnaire-form__checkbox-item" type="checkbox" name="water" id="questionnaire-form__water">
-                <label class="questionnaire-form__checkbox-label questionnaire-form__checkbox-label--2" for="questionnaire-form__water">Питьевая вода</label>
+              <li class="more-products__checkbox-wrapper-item">
+                <input class="visual-hidden more-products__checkbox-item" type="checkbox" name="water" id="more-products__water">
+                <label class="more-products__checkbox-label more-products__checkbox-label--2" for="more-products__water">Питьевая вода</label>
               </li>
-              <li class="questionnaire-form__checkbox-wrapper-item">
-                <input class="visual-hidden questionnaire-form__checkbox-item" type="checkbox" name="milk" id="questionnaire-form__milk">
-                <label class="questionnaire-form__checkbox-label questionnaire-form__checkbox-label--3" for="questionnaire-form__milk">Молоко</label>
+              <li class="more-products__checkbox-wrapper-item">
+                <input class="visual-hidden more-products__checkbox-item" type="checkbox" name="milk" id="more-products__milk">
+                <label class="more-products__checkbox-label more-products__checkbox-label--3" for="more-products__milk">Молоко</label>
               </li>
-              <li class="questionnaire-form__checkbox-wrapper-item">
-                <input class="visual-hidden questionnaire-form__checkbox-item" type="checkbox" name="vitamins" id="questionnaire-form__vitamins">
-                <label class="questionnaire-form__checkbox-label questionnaire-form__checkbox-label--4" for="questionnaire-form__vitamins">Витамины</label>
+              <li class="more-products__checkbox-wrapper-item">
+                <input class="visual-hidden more-products__checkbox-item" type="checkbox" name="vitamins" id="more-products__vitamins">
+                <label class="more-products__checkbox-label more-products__checkbox-label--4" for="more-products__vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
-          <button class="green_button" type="submit">Применить</button>
+          <button class="button button--green questionnaire-form__button" type="submit">Применить</button>
           <p class="questionnaire-form__text">* — Обязательные поля</p>
         </div>
       </form>
