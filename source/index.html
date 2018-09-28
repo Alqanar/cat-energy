@@ -7,7 +7,8 @@
   <body>
     <header class="main-header">
       <img width="191" height="39" alt="Логотип магазина cat-energy">
-      <nav class="main-menu">
+      <nav class="main-header__main-menu main-menu">
+        <button class="sandwich-button main-menu__sandwich-button visual-hidden" type="button">Открыть меню</button>
         <ul class="same-list main-menu__navigation">
           <li class="main-menu__item">
             <a class="main-menu__item-wrapper" href="#">
@@ -31,78 +32,78 @@
       <div class="main-content__substrate"></div>
       <h1 class="main-content__title">Функциональное питание для котов</h1>
       <div class="wrapper">
-        <section class="main-content__selection-of-the-program">
+        <article class="selection-program main-content__selection-program">
           <h2 class="visual-hidden">Подобрать для кота соответствующую программу питания</h2>
-          <p class="tagline">Занялся собой? Займись котом!</p>
+          <p class="selection-program__tagline">Занялся собой? Займись котом!</p>
           <img width="280" height="270" alt="Баночка корма">
-          <a class="green_button" href="form.html">Подобрать программу</a>
-        </section>
-        <article class="main-content__programm">
-          <header class="main-content__programm-header">
-            <span class="main-content__programm-logo-slim"></span>
-            <h3 class="main-content__programm-title">Похудение</h3>
+          <a class="button button--green selection-program__button" href="form.html">Подобрать программу</a>
+        </article>
+        <article class="programm programm-slim main-content__programm">
+          <header class="programm__header">
+            <span class="programm__logo programm__logo--slim"></span>
+            <h3 class="programm__title">Похудение</h3>
           </header>
-          <main class="main-content__programm-content">
+          <main class="programm__content">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </main>
-          <footer class="main-content__programm-footer">
-            <a class="main-content__programm-link" href="#">Каталог slim</a>
-            <span class="main-content__programm-arrow"></span>
+          <footer class="programm__footer">
+            <a class="programm__link" href="#">Каталог slim</a>
+            <span class="programm__arrow"></span>
           </footer>
         </article>
-        <article class="main-content__programm">
-          <header class="main-content__programm-header">
-            <span class="main-content__programm-logo-weight"></span>
-            <h3 class="main-content__programm-title">Набор массы</h3>
+        <article class="programm programm-pro main-content__programm">
+          <header class="programm__header">
+            <span class="programm__logo programm__logo--weight"></span>
+            <h3 class="programm__title">Набор массы</h3>
           </header>
-          <main class="main-content__programm-content">
+          <main class="programm__content">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
           </main>
-          <footer class="main-content__programm-footer">
-            <a class="main-content__programm-link" href="#">Каталог pro</a>
-            <span class="main-content__programm-arrow"></span>
+          <footer class="programm__footer">
+            <a class="programm__link" href="#">Каталог pro</a>
+            <span class="programm__arrow"></span>
           </footer>
         </article>
-        <section class="features">
+        <section class="features main-content__features">
           <h2 class="visual-hidden">Наши преимущества</h2>
           <p class="features__how-it-work">Как это работает</p>
           <ul class="same-list features__about-product">
             <li class="features__item">
-              <span class="features__leaf"></span>
+              <span class="features__icon features__icon--leaf"></span>
               <p class="features__text">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>
             <li class="features__item">
-              <span class="features__water"></span>
+              <span class="features__icon features__icon--water"></span>
               <p class="features__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
             </li>
             <li class="features__item">
-              <span class="features__cutlery"></span>
+              <span class="ffeatures__icon features__icon--cutlery"></span>
               <p class="features__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
-            <li class="features__item">
+            <li class="features__icon features__icon--item">
               <span class="features__weight"></span>
               <p class="features__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
             </li>
           </ul>
         </section>
       </div>
-      <section class="sample">
+      <section class="sample main-content__sample">
         <h2 class="sample__title">Живой пример</h2>
         <p class="sample__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-        <div class="sample__form">
-          <p class="sample__form-field">5 кг</p>
-          <p class="sample__form-field">60 дней</p>
-          <p class="sample__form-waste">Затраты на питание: 15 000 руб.</p>
+        <div class="sample__result">
+          <p class="sample__field">5 кг</p>
+          <p class="sample__field">60 дней</p>
+          <p class="sample__waste">Затраты на питание: 15 000 руб.</p>
         </div>
-        <section class="sample__slides">
-          <input class="visual-hidden sample__slide-1" type="radio" id="sample-1" name="toggle" checked>
-          <input class="visual-hidden sample__slide-2" type="radio" id="sample-2" name="toggle">
-          <div class="sample__slide-1"></div>
-          <div class="sample__slide-2"></div>
+        <section class="slider sample__slider">
+          <input class="visual-hidden slider__slide-1" type="radio" id="sample-1" name="toggle" checked>
+          <input class="visual-hidden slider__slide-2" type="radio" id="sample-2" name="toggle">
+          <div class="slider__fat-cat"></div>
+          <div class="slider__thin-cat"></div>
           <div class="slider__controls">
             <label class="slider__band" for="sample-1">Было</label>
-            <div class="sample__indication-toggle">
-              <span class="sample__indication-toggle-line"></span>
+            <div class="slider__indication-toggle">
+              <span class="slider__line"></span>
             </div>
             <label class="slider__band" for="sample-2">Стало</label>
           </div>
