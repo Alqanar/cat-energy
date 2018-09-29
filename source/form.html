@@ -6,103 +6,99 @@
   </head>
   <body>
     <header class="main-header">
-      <img width="191" height="39" alt="Логотип магазина cat-energy">
+      <a class="main-header__logo" href="index.html">
+        <img width="191" height="39" alt="Логотип магазина cat-energy">
+      </a>
       <nav class="main-menu">
         <ul class="same-list main-menu__navigation">
           <li class="main-menu__item">
-            <a class="main-menu__item-wrapper" href="index.html">
-              <p class="main-menu__link">Главная</p>
-            </a>
+            <a class="link main-menu__link" href="index.html">Главная</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__item-wrapper" href="#">
-              <p class="main-menu__link">Каталог продукции</p>
-            </a>
+            <a class="link main-menu__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-menu__item">
-            <a class="main-menu__item-wrapper" href="form.html">
-              <p class="main-menu__link">Подбор программы</p>
-            </a>
+            <a class="link main-menu__link" href="#">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="form-content">
-      <h1 class="main-title form-content__main-title">Подбор программы</h1>
+      <h1 class="title form-content__title">Подбор программы</h1>
       <p class="form-content__text-help">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="questionnaire-form" action="https://echo.htmlacademy.ru" method="post">
-        <section class="inquirer stripe questionnaire-form__inquirer">
+        <section class="stripe questionnaire-form__inquirer">
           <div class="wrapper">
-            <p class="form-row">
-              <label class="inquirer__stats" for="inquirer__cat-name">Имя:*</label>
-              <input class="inquirer__field" id="inquirer__cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+            <p class="questionnaire-form__row">
+              <label class="questionnaire-form__label" for="questionnaire-form__cat-name">Имя:*</label>
+              <input class="questionnaire-form__input" id="questionnaire-form__cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+            </p>
+            <p class="questionnaire-form__row">
+              <label class="questionnaire-form__label" for="questionnaire-form__cat-weight">Вес (кг):*</label>
+              <input class="questionnaire-form__input" id="questionnaire-form__cat-weight" type="text" name="cat-weight" placeholder="7" required>
             </p>
             <p class="form-row">
-              <label class="inquirer__stats" for="inquirer__cat-weight">Вес (кг):*</label>
-              <input class="inquirer__field" id="inquirer__cat-weight" type="text" name="cat-weight" placeholder="7" required>
-            </p>
-            <p class="form-row">
-              <label class="inquirer__stats" for="inquirer__cat-years">Возраст (лет):</label>
-              <input class="inquirer__field" id="inquirer__cat-years" type="text" name="cat-years" placeholder="7" required>
+              <label class="questionnaire-form__label" for="questionnaire-form__cat-years">Возраст (лет):</label>
+              <input class="questionnaire-form__input" id="questionnaire-form__cat-years" type="text" name="cat-years" placeholder="7" required>
             </p>
           </div>
         </section>
-        <section class="program-selection stripe questionnaire-form__program-selection">
+        <section class="questionnaire-form__program-selection">
           <div class="wrapper">
             <h2 class="visual-hidden">Выберите желаемую программу питания для кота</h2>
-              <ul class="same-list program-selection__field-radio">
-                <li class="program-selection__radio-wrapper-item">
-                  <input class="visual-hidden program-selection__radio-item" type="radio" name="program" id="program-selection__slim" value="slim" checked>
-                  <label class="program-selection__radio-label" for="program-selection__slim">Похудение</label>
+              <ul class="same-list questionnaire-form__radio">
+                <li class="questionnaire-form__item">
+                  <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="slim" value="slim" checked>
+                  <label class="questionnaire-form__label questionnaire-form__label--radio" for="slim">Похудение</label>
                 </li>
-                <li class="program-selection__radio-wrapper-item">
-                  <input class="visual-hidden program-selection__radio-item" type="radio" name="program" id="program-selection__pro" value="pro">
-                  <label class="program-selection__radio-label" for="program-selection__pro">Набор массы</label>
+                <li class="questionnaire-form__item">
+                  <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="pro" value="pro">
+                  <label class="questionnaire-form__label questionnaire-form__label--radio" for="pro">Набор массы</label>
                 </li>
-                <li class="program-selection__radio-wrapper-item">
-                  <input class="visual-hidden program-selection__radio-item" type="radio" name="program" id="program-selection__advice" value="advice">
-                  <label class="program-selection__radio-label" for="program-selection__advice">Не знаю (Нужен ваш совет)</label>
+                <li class="questionnaire-form__item">
+                  <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="advice" value="advice">
+                  <label class="questionnaire-form__label questionnaire-form__label--radio" for="advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
           </div>
         </section>
         <div class="wrapper">
-          <section class="cat-owner questionnaire-form__cat-owner">
-            <h2 class="title-stripe cat-owner__title-stripe">Контактные данные (владельца кота)</h2>
-            <p class="form-row cat-owner__form-row">
-              <label class="cat-owner__stats" for="cat-owner__e-mail">E-mail:*</label>
-              <input class="cat-owner__field" id="cat-owner__e-mail" type="email" name="e-mail" placeholder="kuklachev@gmail.com" required>
+          <section class="questionnaire-form__cat-owner">
+            <h2 class="title-stripe questionnaire-form__title-stripe">Контактные данные (владельца кота)</h2>
+            <p class="questionnaire-form__row">
+              <label class="questionnaire-form__label" for="e-mail">E-mail:*</label>
+              <input class="questionnaire-form__input questionnaire-form__input--email" id="e-mail" type="email" name="e-mail" placeholder="kuklachev@gmail.com" required>
             </p>
-            <p class="form-row cat-owner__form-row">
-              <label class="cat-owner__stats" for="cat-owner__tel">Телефон:*</label>
-              <input class="cat-owner__field" id="cat-owner__tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-            </p>
-          </section>
-          <section class="comment questionnaire-form__comment">
-            <h2 class="title-stripe comment__title-stripe">Комментарий</h2>
-            <p class="form-row comment__form-row">
-              <label class="visual-hidden" for="comment__feedback">Расскажите о коте</label>
-              <textarea class="comment__field" id="comment__feedback" name="feedback" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <p class="questionnaire-form__row">
+              <label class="questionnaire-form__label" for="tel">Телефон:*</label>
+              <input class="questionnaire-form__input questionnaire-form__input--tel" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
             </p>
           </section>
-          <fieldset class="more-products questionnaire-form__more-products">
-            <legend class="more-products__label-checkbox title-stripe">Дополнительно</legend>
-            <ul class="same-list more-products__field-checkbox">
-              <li class="more-products__checkbox-wrapper-item">
-                <input class="visual-hidden more-products__checkbox-item" type="checkbox" name="sweetener" id="more-products__sweetener" checked>
-                <label class="more-products__checkbox-label more-products__checkbox-label--1" for="more-products__sweetener">Сахарозаменитель</label>
+          <section class="questionnaire-form__comment">
+            <h2 class="title-stripe questionnaire-form__title-stripe">Комментарий</h2>
+            <p class="questionnaire-form__row">
+              <label class="visual-hidden" for="feedback">Расскажите о коте</label>
+              <textarea class="questionnaire-form__input" id="feedback" name="feedback" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </p>
+          </section>
+          <fieldset class="questionnaire-form__more-products">
+            <legend class="title-stripe questionnaire-form__title-stripe">Дополнительно</legend>
+            <ul class="same-list questionnaire-form__checkbox">
+              <li class="questionnaire-form__item">
+                <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+                <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="sweetener">Сахарозаменитель</label>
               </li>
-              <li class="more-products__checkbox-wrapper-item">
-                <input class="visual-hidden more-products__checkbox-item" type="checkbox" name="water" id="more-products__water">
-                <label class="more-products__checkbox-label more-products__checkbox-label--2" for="more-products__water">Питьевая вода</label>
+              <li class="questionnaire-form__item">
+                <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="water" id="water">
+                <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="water">Питьевая вода</label>
               </li>
-              <li class="more-products__checkbox-wrapper-item">
-                <input class="visual-hidden more-products__checkbox-item" type="checkbox" name="milk" id="more-products__milk">
-                <label class="more-products__checkbox-label more-products__checkbox-label--3" for="more-products__milk">Молоко</label>
+              <li class="questionnaire-form__item">
+                <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="milk" id="milk">
+                <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="milk">Молоко</label>
               </li>
-              <li class="more-products__checkbox-wrapper-item">
-                <input class="visual-hidden more-products__checkbox-item" type="checkbox" name="vitamins" id="more-products__vitamins">
-                <label class="more-products__checkbox-label more-products__checkbox-label--4" for="more-products__vitamins">Витамины</label>
+              <li class="questionnaire-form__item">
+                <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="vitamins" id="vitamins">
+                <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="vitamins">Витамины</label>
               </li>
             </ul>
           </fieldset>
@@ -112,26 +108,28 @@
       </form>
     </main>
     <footer class="main-footer">
-      <section class="wrapper main-footer__contacts">
+      <section class="wrapper contacts main-footer__contacts">
         <p class="contacts__dillers">приглашаем к сотрудничеству дилеров!</p>
         <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </section>
       <section class="map" id="map"></section>
-      <section class="wrapper main-footer__links">
-        <img width="191" height="39" alt="Уменьшенный логотип магазина cat-energy">
-        <ul class="same-list main-footer__social">
+      <section class="wrapper main-footer__references">
+        <a class="main-footer__link" href="index.html">
+          <img width="191" height="39" alt="Уменьшенный логотип магазина cat-energy">
+        </a>
+        <ul class="same-list social main-footer__social">
           <li>
-            <a class="main-footer__social-button main-footer__social-button--vk" href="#">ВКонтакте</a>
+            <a class="social__button social__button--vk" href="#">ВКонтакте</a>
           </li>
           <li>
-            <a class="main-footer__social-button main-footer__social-button--inst" href="#">Инстаграм</a>
+            <a class="social__button social__button--inst" href="#">Инстаграм</a>
           </li>
           <li>
-            <a class="main-footer__social-button main-footer__social-button--fb" href="#">Фейсбук</a>
+            <a class="social__button social__button--fb" href="#">Фейсбук</a>
           </li>
         </ul>
         <section class="main-footer__copyright">
-          <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="link main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="main-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">
             <img width="108" height="39" alt="Логотип HTMLAcademy">
           </a>
