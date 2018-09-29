@@ -27,7 +27,7 @@
       <h1 class="title form-content__title">Подбор программы</h1>
       <p class="form-content__text-help">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="questionnaire-form" action="https://echo.htmlacademy.ru" method="post">
-        <section class="stripe questionnaire-form__inquirer">
+        <section class="stripe questionnaire-form__division questionnaire-form__division--inquirer">
           <div class="wrapper">
             <p class="questionnaire-form__row">
               <label class="questionnaire-form__label" for="questionnaire-form__cat-name">Имя:*</label>
@@ -43,7 +43,7 @@
             </p>
           </div>
         </section>
-        <section class="questionnaire-form__program-selection">
+        <section class="questionnaire-form__division questionnaire-form__division--program">
           <div class="wrapper">
             <h2 class="visual-hidden">Выберите желаемую программу питания для кота</h2>
               <ul class="same-list questionnaire-form__radio">
@@ -63,7 +63,7 @@
           </div>
         </section>
         <div class="wrapper">
-          <section class="questionnaire-form__cat-owner">
+          <section class="questionnaire-form__division questionnaire-form__division--cat-owner">
             <h2 class="title-stripe questionnaire-form__title-stripe">Контактные данные (владельца кота)</h2>
             <p class="questionnaire-form__row">
               <label class="questionnaire-form__label" for="e-mail">E-mail:*</label>
@@ -74,15 +74,15 @@
               <input class="questionnaire-form__input questionnaire-form__input--tel" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
             </p>
           </section>
-          <section class="questionnaire-form__comment">
+          <section class="questionnaire-form__division questionnaire-form__division--comment">
             <h2 class="title-stripe questionnaire-form__title-stripe">Комментарий</h2>
             <p class="questionnaire-form__row">
               <label class="visual-hidden" for="feedback">Расскажите о коте</label>
               <textarea class="questionnaire-form__input" id="feedback" name="feedback" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
             </p>
           </section>
-          <fieldset class="questionnaire-form__more-products">
-            <legend class="title-stripe questionnaire-form__title-stripe">Дополнительно</legend>
+          <section class="questionnaire-form__division questionnaire-form__division--more-products">
+            <h2 class="title-stripe questionnaire-form__title-stripe">Дополнительно</h2>
             <ul class="same-list questionnaire-form__checkbox">
               <li class="questionnaire-form__item">
                 <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
@@ -101,7 +101,7 @@
                 <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="vitamins">Витамины</label>
               </li>
             </ul>
-          </fieldset>
+          </section>
           <button class="button button--green questionnaire-form__button" type="submit">Применить</button>
           <p class="questionnaire-form__text">* — Обязательные поля</p>
         </div>
