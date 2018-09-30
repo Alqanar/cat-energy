@@ -2,11 +2,115 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
+    <title>Кэт энерджи</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
-
+    <header class="main-header">
+      <a class="main-header__logo" href="#">
+        <img width="191" height="39" alt="Логотип магазина cat-energy">
+      </a>
+      <nav class="main-header__main-menu main-menu">
+        <button class="sandwich-button main-menu__sandwich-button visual-hidden" type="button">Открыть меню</button>
+        <ul class="same-list main-menu__navigation">
+          <li class="main-menu__item">
+            <a class="link main-menu__link" href="#">Главная</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="link main-menu__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="link main-menu__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="selection-program main-content__selection-program">
+        <h1 class="title title--index main-content__title">Функциональное питание для котов</h1>
+        <p class="selection-program__tagline">Занялся собой? Займись котом!</p>
+        <img width="280" height="270" alt="Баночка корма">
+        <a class="button button--green selection-program__button" href="form.html">Подобрать программу</a>
+      </section>
+      <div class="wrapper">
+        <article class="programm programm--slim main-content__programm">
+          <h3 class="programm__title">Похудение</h3>
+          <p class="programm__content">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <a class="link programm__link" href="#">Каталог slim</a>
+        </article>
+        <article class="programm programm--pro main-content__programm">
+          <h3 class="programm__title">Набор массы</h3>
+          <p class="programm__content">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+          <a class="link programm__link" href="#">Каталог pro</a>
+        </article>
+        <section class="features main-content__features">
+          <h2 class="title features__title">Как это работает</h2>
+          <ul class="same-list features__about-product">
+            <li class="features__item features__item--leaf">
+              <p class="features__text">Функциональное питание содержит только полезные питательные вещества.</p>
+            </li>
+            <li class="features__item features__item--water">
+              <p class="features__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+            </li>
+            <li class="features__item features__item--cultery">
+              <p class="features__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
+            </li>
+            <li class="features__item features__item--weight">
+              <p class="features__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <section class="sample main-content__sample">
+        <h2 class="title sample__title">Живой пример</h2>
+        <p class="sample__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+        <div class="sample__result">
+          <p class="sample__field">5 кг</p>
+          <p class="sample__property-small">снижение веса</p>
+          <p class="sample__field">60 дней</p>
+          <p class="sample__property-small">затрачено времени</p>
+          <p class="sample__waste">Затраты на питание: 15 000 руб.</p>
+        </div>
+        <section class="slider sample__slider">
+          <input class="visual-hidden slider__slide-1" type="radio" id="sample-1" name="toggle" checked>
+          <input class="visual-hidden slider__slide-2" type="radio" id="sample-2" name="toggle">
+          <div class="slider__fat-cat"></div>
+          <div class="slider__thin-cat"></div>
+          <div class="slider__controls">
+            <label class="slider__band" for="sample-1">Было</label>
+            <div class="slider__indication-toggle"></div>
+            <label class="slider__band" for="sample-2">Стало</label>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <section class="wrapper contacts contacts--index main-footer__contacts">
+        <p class="contacts__dillers">приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </section>
+      <section class="map" id="map"></section>
+      <section class="wrapper main-footer__references">
+        <a class="main-footer__link" href="index.html">
+          <img width="191" height="39" alt="Уменьшенный логотип магазина cat-energy">
+        </a>
+        <ul class="same-list social main-footer__social">
+          <li>
+            <a class="social__button social__button--vk" href="#">ВКонтакте</a>
+          </li>
+          <li>
+            <a class="social__button social__button--inst" href="#">Инстаграм</a>
+          </li>
+          <li>
+            <a class="social__button social__button--fb" href="#">Фейсбук</a>
+          </li>
+        </ul>
+        <section class="main-footer__copyright">
+          <a class="link main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="main-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">
+            <img width="108" height="39" alt="Логотип HTMLAcademy">
+          </a>
+        </section>
+      </section>
+    </footer>
   </body>
 </html>
