@@ -1,0 +1,27 @@
+.main-menu__navigation {
+  @include Oswald;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.main-menu__item {
+  border-top: 1px solid $gray-border;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.main-menu__link {
+  &--active {
+    border-bottom: 2px solid $main-color;
+  }
+  &:hover,
+  &:focus {
+    color: rgba($dark-text, 0.6%);
+  }
+  &:active {
+    color: rgba($dark-text, 0.3%);
+  }
+}

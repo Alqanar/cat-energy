@@ -1,0 +1,11 @@
+.title {
+  @include Oswald;
+  font-size: 36px;
+  line-height: 60px;
+  &--index {
+    line-height: 36px;
+    color: $white-text;
+  }
+}
+
+

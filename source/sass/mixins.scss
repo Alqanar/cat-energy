@@ -1,0 +1,16 @@
+@mixin button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin content-margin {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@mixin Oswald {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  color: $dark-text;
+}

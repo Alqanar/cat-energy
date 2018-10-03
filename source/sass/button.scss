@@ -1,0 +1,23 @@
+.button {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  &--green {
+    font-size: 14px;
+    color: $white-text;
+    background-color: $main-color;
+    &:hover,
+    &:focus {
+      background-color: $button-action;
+    }
+    &:active {
+      color: rgba($white-text, 0.3%);
+    }
+  }
+  &--gray {
+    line-height: 20px;
+    background-color: $gray-color;
+  }
+}
