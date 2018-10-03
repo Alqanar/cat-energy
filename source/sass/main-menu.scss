@@ -1,20 +1,23 @@
 .main-menu__navigation {
-  @include Oswald;
+  @include Oswald-uppercase;
   font-size: 20px;
   line-height: 25px;
   text-align: center;
-  text-transform: uppercase;
   font-weight: 500;
 }
 
 .main-menu__item {
   border-top: 1px solid $gray-border;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .main-menu__link {
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   &--active {
+    display: inline;
     border-bottom: 2px solid $main-color;
   }
   &:hover,

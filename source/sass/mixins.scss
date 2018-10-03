@@ -14,3 +14,17 @@
   font-weight: 400;
   color: $dark-text;
 }
+
+@mixin Oswald-uppercase {
+  @include Oswald;
+  text-transform: uppercase;
+}
+
+@mixin Arial {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $arial-text;
+}
+

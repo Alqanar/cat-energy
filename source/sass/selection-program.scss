@@ -7,10 +7,13 @@
 }
 
 .selection-program__tagline {
-  @include Oswald;
+  @include Oswald-uppercase;
   font-size: 14px;
   line-height: 14px;
   color: $white-text;
   margin-bottom: 29px;
-  text-transform: uppercase;
+}
+
+.selection-program__button {
+  margin-top: 2px;
 }

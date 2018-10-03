@@ -1,9 +1,9 @@
 .button {
+  @include Oswald-uppercase;
   display: block;
   text-decoration: none;
-  text-transform: uppercase;
-  padding-top: 13px;
-  padding-bottom: 12px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   &--green {
     font-size: 14px;
     color: $white-text;
