@@ -16,8 +16,7 @@
 }
 
 .contacts__adress {
-  @include Arial;
+  @include Arial (, 20px);
   margin: 0;
-  line-height: 20px;
   margin-left: 25px;
 }

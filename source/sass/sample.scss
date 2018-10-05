@@ -9,7 +9,7 @@
 }
 
 .sample__text {
-  @include Arial;
+  @include Arial();
   padding-top: 10px;
 }
 
@@ -40,11 +40,9 @@
 }
 
 .sample__property-small {
-  @include Arial;
+  @include Arial(12px, 12px);
   width: 87px;
   height: 21px;
-  font-size: 12px;
-  line-height: 12px;
   background-color: $gray-color;
 }
 

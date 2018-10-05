@@ -11,8 +11,8 @@
 
 @mixin Oswald {
   font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
   color: $dark-text;
+  font-weight: 400;
 }
 
 @mixin Oswald-uppercase {
@@ -20,10 +20,10 @@
   text-transform: uppercase;
 }
 
-@mixin Arial {
+@mixin Arial($f-size: 14px, $l-height: 18px) {
   font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: $f-size;
+  line-height: $l-height;
   color: $arial-text;
+  font-weight: 400;
 }

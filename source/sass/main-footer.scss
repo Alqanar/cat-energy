@@ -57,7 +57,7 @@
   align-self: center;
 
   &:active {
-    color: rgba($arial-text, 0.3%);
+    color: rgba($arial-text, 0.3);
   }
 }
 
@@ -71,7 +71,7 @@
   }
 
   &:active .main-footer__htmlacademy-fill {
-    fill: rgba($main-color, 0.3%);
+    fill: rgba($main-color, 0.3);
   }
 }
 

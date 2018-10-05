@@ -38,14 +38,13 @@
 }
 
 .program__title {
-  @include Oswald;
+  @include Oswald-uppercase;
   position: relative;
   margin: 0;
   font-size: 24px;
   line-height: 37px;
   margin-top: 10px;
   margin-left: 71px;
-  text-transform: uppercase;
 
   &::before {
     position: absolute;
@@ -60,7 +59,7 @@
 }
 
 .program__content {
-  @include Arial;
+  @include Arial();
   border-bottom: 1px solid $black-opacity;
   padding-bottom: 22px;
   margin-top: 29px;
@@ -92,7 +91,7 @@
   }
 
   &:active {
-    color: rgba($dark-text, 0.3%);
+    color: rgba($dark-text, 0.3);
 
     &::after {
       opacity: 0.3;
