@@ -4,7 +4,6 @@
   background-repeat: no-repeat;
   background-position: 0 76px;
   background-size: 320px 400px;
-  padding-top: 29px;
 
   &::before {
     position: absolute;
@@ -28,11 +27,10 @@
 }
 
 .main-footer__references {
+  padding: 41px 19px 17px 20px;
   text-align: center;
   background-color: $gray-color;
   margin-top: 360px;
-  padding-top: 41px;
-  padding-bottom: 17px;
 }
 
 .main-footer__social {

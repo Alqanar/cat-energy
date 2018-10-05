@@ -1,0 +1,38 @@
+.additional-item {
+  border-top: 1px solid $sample-border;
+  padding-top: 14px;
+  padding-bottom: 17px;
+
+  &:last-child {
+    border-bottom: 1px solid $sample-border;
+  }
+}
+
+.additional-item__goods {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.additional-item__product-name {
+  @include Oswald-uppercase;
+  width: 100%;
+  line-height: 16px;
+  color: $additional-item-title;
+}
+
+.additional-item__size,
+.additional-item__price {
+  @include Arial(14px, 14px);
+  width: 50%;
+  margin: 0;
+  margin-top: 12px;
+}
+
+.additional-item__price {
+  text-align: right;
+}
+
+.additional-item__button {
+  width: 100%;
+  margin-top: 15px;
+}

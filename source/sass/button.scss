@@ -1,17 +1,18 @@
 .button {
   @include Oswald-uppercase;
   display: block;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
   text-decoration: none;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   &--green {
-    font-size: 14px;
     color: $white-text;
     background-color: $main-color;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: $button-action;
     }
 
@@ -21,7 +22,22 @@
   }
 
   &--gray {
-    line-height: 20px;
+    color: $arial-text;
     background-color: $gray-color;
+
+    &:hover {
+      background-color: $gray-button-action;
+    }
+
+    &:active {
+      color: rgba($arial-text, 0.3);
+    }
+  }
+
+  &--index {
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 }

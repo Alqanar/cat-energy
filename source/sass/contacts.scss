@@ -3,6 +3,9 @@
   display: flex;
   background-color: $gray-color;
   align-content: space-between;
+  padding-left: 19px;
+  padding-right: 19px;
+  padding-top: 29px;
 
   &--index {
     background-color: $white-text;
