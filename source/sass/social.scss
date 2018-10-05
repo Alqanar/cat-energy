@@ -1,30 +1,61 @@
 .social {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
-.social__button {
+.social__item-vk {
   width: 25px;
-  height: 20px;
 }
 
-.social__button--vk {
-  overflow: hidden;
-  width: 22px;
-  height: 12px;
-  font-size: 0;
+.social__button-vk-svg {
+  fill: $image-color;
 }
 
-.social__button--inst {
-  overflow: hidden;
+.social__button-vk {
+  &:hover .social__button-vk-svg {
+    fill: $main-color;
+  }
+
+  &:active .social__button-vk-svg {
+    fill: rgba($main-color, 0.3%);
+  }
+}
+
+.social__item-inst {
   width: 17px;
-  height: 17px;
-  font-size: 0;
+  margin-left: 36px;
+  margin-right: 40px;
 }
 
-.social__button--fb {
-  overflow: hidden;
+.social__button-inst-svg {
+  fill: $image-color;
+}
+
+.social__button-inst {
+  &:hover .social__button-inst-svg {
+    fill: $main-color;
+  }
+
+  &:active .social__button-inst-svg {
+    fill: rgba($main-color, 0.3%);
+  }
+}
+
+.social__item-fb {
   width: 10px;
-  height: 19px;
-  font-size: 0;
+}
+
+.social__button-fb-svg {
+  fill: $image-color;
+}
+
+.social__button-fb {
+  &:hover .social__button-fb-svg {
+    fill: $main-color;
+  }
+
+  &:active .social__button-fb-svg {
+    fill: rgba($main-color, 0.3%);
+  }
 }
