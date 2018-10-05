@@ -51,9 +51,7 @@
 }
 
 .main-footer__copyright-link {
-  @include Arial;
-  font-size: 16px;
-  line-height: 16px;
+  @include Arial(16px, 16px);
   align-self: center;
 
   &:active {
