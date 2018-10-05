@@ -1,0 +1,23 @@
+.contacts {
+  z-index: 2;
+  display: flex;
+  background-color: $gray-color;
+  align-content: space-between;
+
+  &--index {
+    background-color: $white-text;
+  }
+}
+
+.contacts__dillers {
+  @include Oswald-uppercase;
+  margin: 0;
+  line-height: 20px;
+}
+
+.contacts__adress {
+  @include Arial;
+  margin: 0;
+  line-height: 20px;
+  margin-left: 25px;
+}

@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__button {
+  width: 25px;
+  height: 20px;
+}
+
+.social__button--vk {
+  overflow: hidden;
+  width: 22px;
+  height: 12px;
+  font-size: 0;
+}
+
+.social__button--inst {
+  overflow: hidden;
+  width: 17px;
+  height: 17px;
+  font-size: 0;
+}
+
+.social__button--fb {
+  overflow: hidden;
+  width: 10px;
+  height: 19px;
+  font-size: 0;
+}
