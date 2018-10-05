@@ -20,10 +20,12 @@
     display: inline;
     border-bottom: 2px solid $main-color;
   }
+
   &:hover,
   &:focus {
     color: rgba($dark-text, 0.6%);
   }
+
   &:active {
     color: rgba($dark-text, 0.3%);
   }

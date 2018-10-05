@@ -4,6 +4,7 @@
 
   &--slim {
     position: relative;
+
     &::before {
       position: absolute;
       top: 23px;
@@ -17,8 +18,10 @@
       content: "";
     }
   }
+
   &--pro {
     position: relative;
+
     &::before {
       position: absolute;
       top: 35px;

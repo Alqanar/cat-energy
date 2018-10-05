@@ -4,6 +4,7 @@
   font-size: 0;
   background-color: #ffffff;
   justify-content: center;
+
   @include button;
 }
 
@@ -19,6 +20,7 @@
     .sandwich-button__line--top {
       stroke-dashoffset: -98px;
     }
+
     .sandwich-button__line--bottom {
       stroke-dashoffset: -138px;
     }
@@ -27,7 +29,7 @@
 
 .sandwich-button__line {
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  fill:none;
+  fill: none;
   stroke: #000000;
   stroke-width: 3;
   stroke-linecap: round;

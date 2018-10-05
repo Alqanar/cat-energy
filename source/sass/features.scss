@@ -13,6 +13,7 @@
     background-color: $main-color;
     content: "";
   }
+
   &--leaf {
     &::after {
       position: absolute;
@@ -26,6 +27,7 @@
       content: "";
     }
   }
+
   &--water {
     &::after {
       position: absolute;
@@ -39,6 +41,7 @@
       content: "";
     }
   }
+
   &--cultery {
     &::after {
       position: absolute;
@@ -52,6 +55,7 @@
       content: "";
     }
   }
+
   &--weight {
     &::after {
       position: absolute;
