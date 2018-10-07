@@ -60,7 +60,7 @@
 
   &:focus {
     border: 1px solid $arial-text;
-    box-shadow: 
+    box-shadow:
       inset 1px 1px $arial-text,
       inset -1px -1px $arial-text;
     outline: none;
@@ -72,7 +72,7 @@
 
   &--error {
     border: 1px solid $input-error;
-    box-shadow: 
+    box-shadow:
       inset 1px 1px $input-error,
       inset -1px -1px $input-error;
   }
