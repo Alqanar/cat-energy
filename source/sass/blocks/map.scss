@@ -1,0 +1,22 @@
+.map {
+  overflow: hidden;
+  width: 320px;
+  height: 400px;
+  background-color: $map-color;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 -38px;
+  background-size: 320px 400px;
+
+  &::before {
+    position: absolute;
+    top: 253px;
+    left: 132px;
+    width: 60px;
+    height: 55px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: 55px 53px;
+    content: "";
+  }
+}
