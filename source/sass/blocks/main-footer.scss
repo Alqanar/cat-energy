@@ -1,4 +1,5 @@
 .main-footer {
+  @include content;
   position: relative;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
