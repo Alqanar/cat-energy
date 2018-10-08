@@ -1,5 +1,8 @@
 .selection-program {
+  position: relative;
   text-align: center;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
 }
 
 .selection-program__title {
@@ -13,3 +16,5 @@
   color: $white-text;
   margin-bottom: 29px;
 }
+
+

@@ -1,22 +1,6 @@
 .main-footer {
   @include content;
   position: relative;
-  background-image: url("../img/bg-map-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: 0 76px;
-  background-size: 320px 400px;
-
-  &::before {
-    position: absolute;
-    top: 253px;
-    left: 132px;
-    width: 60px;
-    height: 55px;
-    background-image: url("../img/map-pin.png");
-    background-repeat: no-repeat;
-    background-size: 55px 53px;
-    content: "";
-  }
 }
 
 .main-footer__contacts {
@@ -31,7 +15,7 @@
   padding: 41px 19px 17px 20px;
   text-align: center;
   background-color: $gray-color;
-  margin-top: 360px;
+  margin-top: -40px;
 }
 
 .main-footer__social {
