@@ -1,0 +1,178 @@
+.questionnaire-form {
+  @include Oswald-uppercase;
+  padding-top: 25px;
+}
+
+.questionnaire-form__row {
+  position: relative;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+
+.questionnaire-form__label {
+  align-self: center;
+
+  &--radio {
+    margin-left: 45px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 6px;
+      left: -1px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $sample-border;
+      border-radius: 50%;
+      content: "";
+    }
+  }
+
+  &--checkbox {
+    margin-left: 66px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: 6px;
+      left: 20px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid $sample-border;
+      content: "";
+    }
+  }
+}
+
+
+.questionnaire-form__input {
+  padding: 13px 12px 13px 15px;
+  color: $arial-text;
+  border: 1px solid rgba($sample-border, 0.5);
+  margin-left: 12px;
+  text-transform: inherit;
+  flex-grow: 1;
+
+  &:hover {
+    border: 1px solid $sample-border;
+  }
+
+  &:focus {
+    border: 1px solid $arial-text;
+    box-shadow:
+      inset 1px 1px $arial-text,
+      inset -1px -1px $arial-text;
+    outline: none;
+  }
+
+  &:focus + .questionnaire-form__element {
+    fill: $main-color;
+  }
+
+  &--error {
+    border: 1px solid $input-error;
+    box-shadow:
+      inset 1px 1px $input-error,
+      inset -1px -1px $input-error;
+  }
+
+  &--error + .questionnaire-form__element {
+    fill: $input-error;
+  }
+
+  &--radio:checked + .questionnaire-form__label--radio::after {
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    width: 12px;
+    height: 12px;
+    background-color: $main-color;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &--checkbox:checked + .questionnaire-form__label--checkbox::after {
+    position: absolute;
+    top: 14px;
+    left: 25px;
+    width: 22px;
+    height: 17px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    content: "";
+  }
+
+  &--textarea {
+    @include content-margin;
+  }
+}
+
+.questionnaire-form__program {
+  border: 1px solid $gray-light;
+  margin-top: 23px;
+  padding-bottom: 14px;
+  padding-top: 13px;
+}
+
+.questionnaire-form__item {
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 13px;
+
+  &:hover > .questionnaire-form__label--radio::before {
+    border: 1px solid $input-action;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover > .questionnaire-form__label--checkbox::before {
+    border: 1px solid $input-action;
+  }
+}
+
+.questionnaire-form__cat-owner {
+  padding-top: 27px;
+}
+
+.questionnaire-form__title-stripe {
+  margin: 0;
+  margin-left: 20px;
+  text-transform: none;
+  margin-bottom: 31px;
+
+  &--more {
+    margin-bottom: 25px;
+  }
+}
+
+.questionnaire-form__element {
+  position: absolute;
+  top: 15px;
+  right: 14px;
+  fill: $additional-item-title;
+}
+
+.questionnaire-form__comment {
+  padding-top: 15px;
+}
+
+.questionnaire-form__more-products {
+  padding-top: 11px;
+}
+
+.questionnaire-form__button {
+  width: 282px;
+  margin-left: 20px;
+  margin-top: 26px;
+}
+
+.questionnaire-form__text {
+  @include Arial(14px, 16px);
+  text-align: center;
+  text-transform: none;
+  margin-top: 21px;
+  margin-bottom: 32px;
+}

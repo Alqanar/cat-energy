@@ -1,0 +1,44 @@
+.button {
+  @include Oswald-uppercase;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &--green {
+    color: $white-text;
+    background-color: $main-color;
+
+    &:hover {
+      background-color: $button-action;
+    }
+
+    &:active {
+      color: rgba($white-text, 0.3);
+    }
+  }
+
+  &--gray {
+    color: $arial-text;
+    background-color: $gray-color;
+
+    &:hover {
+      background-color: $gray-button-action;
+    }
+
+    &:active {
+      color: rgba($arial-text, 0.3);
+    }
+  }
+
+  &--index {
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+}

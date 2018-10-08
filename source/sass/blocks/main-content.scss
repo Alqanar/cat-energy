@@ -1,0 +1,17 @@
+.main-content {
+  @include content;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.main-content__selection-program {
+  border-top: 1px solid $gray-border;
+}
+
+.main-content__program {
+  margin-top: 21px;
+}
+
+.main-content__sample {
+  margin-top: 46px;
+}

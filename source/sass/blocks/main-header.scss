@@ -1,0 +1,25 @@
+.main-header {
+  @include content;
+  padding-top: 13px;
+}
+
+.main-header__logo-link {
+  display: inline-block;
+  margin-bottom: 9px;
+  margin-left: 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-header__sandwich-button {
+  margin-left: 61px;
+  vertical-align: top;
+  margin-top: 7px;
+  margin-right: 20px;
+}

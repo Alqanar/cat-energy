@@ -1,0 +1,33 @@
+@mixin content {
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+@mixin button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin content-margin {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@mixin Oswald {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+@mixin Oswald-uppercase {
+  @include Oswald;
+  text-transform: uppercase;
+}
+
+@mixin Arial($f-size: 14px, $l-height: 18px) {
+  font-family: "Arial", sans-serif;
+  font-size: $f-size;
+  line-height: $l-height;
+  color: $arial-text;
+  font-weight: 400;
+}

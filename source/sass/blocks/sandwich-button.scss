@@ -1,0 +1,44 @@
+.sandwich-button {
+  overflow: hidden;
+  width: 24px;
+  font-size: 0;
+  background-color: #ffffff;
+  justify-content: center;
+
+  @include button;
+}
+
+.sandwich-button__ham {
+  transition: transform 400ms;
+  user-select: none;
+  max-width: 100%;
+  max-height: 100%;
+
+  &--active {
+    transform: rotate(45deg);
+
+    .sandwich-button__line--top {
+      stroke-dashoffset: -98px;
+    }
+
+    .sandwich-button__line--bottom {
+      stroke-dashoffset: -138px;
+    }
+  }
+}
+
+.sandwich-button__line {
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  fill: none;
+  stroke: #000000;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.sandwich-button__line--top {
+  stroke-dasharray: 40 139;
+}
+
+.sandwich-button__line--bottom {
+  stroke-dasharray: 40 180;
+}

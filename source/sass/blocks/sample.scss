@@ -1,0 +1,75 @@
+.sample {
+  background-color: $gray-color;
+  padding-top: 17px;
+  padding-bottom: 37px;
+}
+
+.sample__title {
+  margin: 0;
+}
+
+.sample__text {
+  @include Arial();
+  padding-top: 10px;
+}
+
+.sample__result {
+  position: relative;
+  display: flex;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.sample__field {
+  @include Oswald-uppercase;
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+  border: 1px solid $sample-border;
+  border-radius: 3px;
+  min-width: 124px;
+}
+
+.sample__field--weight {
+  padding: 13px 40px 17px;
+  margin-right: 32px;
+}
+
+.sample__field--time {
+  padding: 13px 20px 14px;
+}
+
+.sample__property-small {
+  @include Arial(12px, 12px);
+  width: 87px;
+  height: 21px;
+  background-color: $gray-color;
+}
+
+.sample__property-small--weight {
+  position: absolute;
+  bottom: -24px;
+  left: 18px;
+  padding-left: 16px;
+  padding-right: 17px;
+}
+
+.sample__property-small--time {
+  position: absolute;
+  right: 19px;
+  bottom: -24px;
+  padding-left: 16px;
+  padding-right: 17px;
+}
+
+.sample__waste {
+  @include Oswald-uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 34px;
+}
+
+.sample__slider {
+  margin-top: 33px;
+}

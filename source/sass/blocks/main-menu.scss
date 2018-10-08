@@ -1,0 +1,32 @@
+.main-menu__navigation {
+  @include Oswald-uppercase;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.main-menu__item {
+  border-top: 1px solid $gray-border;
+}
+
+.main-menu__link {
+  display: block;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &--active {
+    display: inline;
+    // border-bottom: 2px solid $main-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba($dark-text, 0.6);
+  }
+
+  &:active {
+    color: rgba($dark-text, 0.3);
+  }
+}

@@ -1,0 +1,15 @@
+.selection-program {
+  text-align: center;
+}
+
+.selection-program__title {
+  margin-top: 27px;
+}
+
+.selection-program__tagline {
+  @include Oswald-uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  color: $white-text;
+  margin-bottom: 29px;
+}

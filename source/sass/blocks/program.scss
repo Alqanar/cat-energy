@@ -1,0 +1,100 @@
+.program {
+  padding: 20px;
+  background-color: $gray-color;
+
+  &--slim {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 23px;
+      left: 30px;
+      z-index: 2;
+      width: 40px;
+      height: 55px;
+      background-image: url("../img/icon-cat-slim.svg");
+      background-repeat: no-repeat;
+      background-size: 35px 50px;
+      content: "";
+    }
+  }
+
+  &--pro {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 35px;
+      left: 13px;
+      z-index: 2;
+      width: 70px;
+      height: 30px;
+      background-image: url("../img/icon-cat-pro.svg");
+      background-repeat: no-repeat;
+      background-size: 67px 28px;
+      content: "";
+    }
+  }
+}
+
+.program__title {
+  @include Oswald-uppercase;
+  position: relative;
+  margin: 0;
+  font-size: 24px;
+  line-height: 37px;
+  margin-top: 10px;
+  margin-left: 71px;
+
+  &::before {
+    position: absolute;
+    top: -6px;
+    left: -70px;
+    width: 50px;
+    height: 50px;
+    background-color: $main-color;
+    border-radius: 25px;
+    content: "";
+  }
+}
+
+.program__content {
+  @include Arial();
+  border-bottom: 1px solid $black-opacity;
+  padding-bottom: 22px;
+  margin-top: 29px;
+}
+
+.program__link {
+  @include Oswald-uppercase;
+  position: relative;
+  display: flex;
+  margin-top: 19px;
+
+  &::after {
+    position: absolute;
+    top: 3px;
+    left: 96px;
+    width: 30px;
+    height: 15px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-size: 25px 12px;
+    content: "";
+  }
+
+  &:hover::after {
+    left: 96px;
+    width: 40px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-size: 34px 12px;
+  }
+
+  &:active {
+    color: rgba($dark-text, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}

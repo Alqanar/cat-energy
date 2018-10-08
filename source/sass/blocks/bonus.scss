@@ -1,0 +1,31 @@
+.bonus {
+  position: relative;
+  display: flex;
+  width: 280px;
+  height: 289px;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-top: 39px;
+  margin-bottom: 35px;
+}
+
+.bonus__text {
+  @include Arial(16px, 20px);
+  text-align: center;
+  color: $white-text;
+  padding-top: 171px;
+  padding-left: 60px;
+  padding-right: 61px;
+
+  &::before {
+    position: absolute;
+    top: 64px;
+    left: 113px;
+    width: 56px;
+    height: 61px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    content: "";
+  }
+}

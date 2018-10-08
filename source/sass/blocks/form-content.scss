@@ -1,0 +1,19 @@
+.form-content {
+  @include content;
+  border-top: 1px solid $gray-border;
+  padding-top: 15px;
+}
+
+.form-content__title {
+  margin: 0;
+
+  @include content-margin;
+}
+
+.form-content__text-help {
+  @include Oswald-uppercase;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-top: 25px;
+}

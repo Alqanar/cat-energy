@@ -1,0 +1,77 @@
+.main-footer {
+  @include content;
+  position: relative;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 76px;
+  background-size: 320px 400px;
+
+  &::before {
+    position: absolute;
+    top: 253px;
+    left: 132px;
+    width: 60px;
+    height: 55px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: 55px 53px;
+    content: "";
+  }
+}
+
+.main-footer__contacts {
+  padding-bottom: 25px;
+}
+
+.main-footer__link:active {
+  opacity: 0.6;
+}
+
+.main-footer__references {
+  padding: 41px 19px 17px 20px;
+  text-align: center;
+  background-color: $gray-color;
+  margin-top: 360px;
+}
+
+.main-footer__social {
+  border-top: 1px solid $black-opacity;
+  border-bottom: 1px solid $black-opacity;
+  margin-top: 27px;
+  padding-top: 22px;
+  padding-right: 10px;
+  padding-bottom: 17px;
+}
+
+.main-footer__copyright {
+  display: flex;
+  padding-top: 18px;
+  justify-content: space-between;
+}
+
+.main-footer__copyright-link {
+  @include Arial(16px, 16px);
+  align-self: center;
+
+  &:active {
+    color: rgba($arial-text, 0.3);
+  }
+}
+
+.main-footer__copyright-logo {
+  width: 42px;
+  height: 42px;
+  margin-right: -8px;
+
+  &:hover .main-footer__htmlacademy-fill {
+    fill: $main-color;
+  }
+
+  &:active .main-footer__htmlacademy-fill {
+    fill: rgba($main-color, 0.3);
+  }
+}
+
+.main-footer__htmlacademy-fill {
+  fill: $image-color;
+}
