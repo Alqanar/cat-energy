@@ -23,3 +23,19 @@
   margin-top: 7px;
   margin-right: 20px;
 }
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    @include content-tablet;
+    @include margin-tablet;
+    display: flex;
+    padding-top: 24px;
+    justify-content: space-between;
+  }
+
+  .main-header__logo-link {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}

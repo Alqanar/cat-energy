@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Кэт энерджи</title>
   </head>
@@ -31,12 +32,11 @@
     </header>
     <main class="main-content">
       <section class="selection-program main-content__selection-program">
-        <div class="selection-program__substrate"></div>
         <div class="wrapper">
           <h1 class="title title--index selection-program__title">Функциональное питание для котов</h1>
           <p class="selection-program__tagline">Занялся собой? Займись котом!</p>
           <img src="img/index-can-mobile@1x.png" width="280" height="270" alt="Баночка корма">
-          <a class="button button--green button--index" href="form.html">Подобрать программу</a>
+          <a class="button button--green button--index selection-program__button" href="form.html">Подобрать программу</a>
         </div>
       </section>
       <div class="wrapper">
@@ -52,33 +52,35 @@
         </article>
         <section class="features">
           <h2 class="title features__title">Как это работает</h2>
-          <ul class="same-list">
-            <li class="features__item features__item--leaf">
-              <p class="features__text">Функциональное питание содержит только полезные питательные вещества.</p>
+          <ol class="same-list same-list--notmobile">
+            <li class="features__item">
+              <p class="features__text features__text--leaf">Функциональное питание содержит только полезные питательные вещества.</p>
             </li>
-            <li class="features__item features__item--water">
-              <p class="features__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+            <li class="features__item">
+              <p class="features__text features__text--water">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
             </li>
-            <li class="features__item features__item--cultery">
-              <p class="features__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
+            <li class="features__item">
+              <p class="features__text features__text--cultery">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
-            <li class="features__item features__item--weight">
-              <p class="features__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <li class="features__item">
+              <p class="features__text features__text--weight">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
             </li>
-          </ul>
+          </ol>
         </section>
       </div>
       <section class="sample main-content__sample">
         <div class="wrapper">
           <h2 class="title sample__title">Живой пример</h2>
           <p class="sample__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-          <div class="sample__result">
-            <p class="sample__field sample__field--weight">5 кг</p>
-            <p class="sample__property-small sample__property-small--weight">снижение веса</p>
-            <p class="sample__field sample__field--time">60 дней</p>
-            <p class="sample__property-small sample__property-small--time">затрачено времени</p>
+          <div class="sample__wrapper-result">
+            <div class="sample__result">
+              <p class="sample__field sample__field--weight">5 кг</p>
+              <p class="sample__property-small sample__property-small--weight">снижение веса</p>
+              <p class="sample__field sample__field--time">60 дней</p>
+              <p class="sample__property-small sample__property-small--time">затрачено времени</p>
+            </div>
+            <p class="sample__waste">Затраты на питание: 15 000 руб.</p>
           </div>
-          <p class="sample__waste">Затраты на питание: 15 000 руб.</p>
         </div>
         <section class="slider sample__slider">
           <input class="visual-hidden slider__slide-1" type="radio" id="sample-1" name="toggle" checked>
@@ -96,7 +98,11 @@
     <footer class="main-footer">
       <section class="contacts contacts--index main-footer__contacts">
         <p class="contacts__dillers">приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="contacts__adress">
+          <p class="contacts__adress-street">ул. Большая Конюшенная, д. 19/8</p>
+          <p class="contacts__adress-town">Санкт-Петербург</p>
+        </div>
+        
       </section>
       <section class="map" id="map"></section>
       <section class="main-footer__references">

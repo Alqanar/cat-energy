@@ -1,17 +1,17 @@
 .slider__fat-cat {
   display: none;
-  width: 320px;
   height: 240px;
   background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .slider__thin-cat {
   display: none;
-  width: 320px;
   height: 240px;
   background-image: url("../img/after-mobile@1x.png");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .slider__controls {
@@ -59,4 +59,21 @@
 
 .slider__slide-2:checked ~ .slider__controls .slider__indication-toggle::before {
   right: 4px;
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    padding-top: 52px;
+    padding-left: 12px;
+  }
+
+  .slider__fat-cat {
+    height: 520px;
+    background-image: url("../img/before-tablet@1x.png");
+  }
+
+  .slider__thin-cat {
+    height: 520px;
+    background-image: url("../img/after-tablet@1x.png");
+  }
 }

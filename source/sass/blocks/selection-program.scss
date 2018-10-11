@@ -3,6 +3,7 @@
   text-align: center;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .selection-program__title {
@@ -17,4 +18,24 @@
   margin-bottom: 29px;
 }
 
+@media (min-width: $tablet-width) {
+  .selection-program {
+    position: relative;
+    background-image: none;
+  }
 
+  .selection-program__tagline {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: $dark-text;
+    margin-top: 41px;
+    margin-left: 88px;
+  }
+
+  .selection-program__button {
+    position: absolute;
+    top: 280px;
+    left: 119px;
+  }
+}

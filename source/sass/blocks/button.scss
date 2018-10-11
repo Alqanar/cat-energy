@@ -42,3 +42,13 @@
     padding-bottom: 11px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .button {
+    &--index {
+      padding: 15px 29px 17px 26px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}

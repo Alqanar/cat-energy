@@ -18,7 +18,6 @@
 
   &--active {
     display: inline;
-    // border-bottom: 2px solid $main-color;
   }
 
   &:hover,
@@ -28,5 +27,26 @@
 
   &:active {
     color: rgba($dark-text, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-menu__navigation {
+    display: flex;
+    font-size: 18px;
+    flex-wrap: wrap;
+    font-weight: 400;
+}
+
+  .main-menu__item {
+    border-top: none;
+    margin-left: 38px;
+  }
+
+  .main-menu__link{
+    color: $additional-item-title;
+    &--active {
+      border-bottom: 2px solid $main-color;
+    }
   }
 }

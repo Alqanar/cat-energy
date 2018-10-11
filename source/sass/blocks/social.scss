@@ -59,3 +59,24 @@
     fill: rgba($main-color, 0.3);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .social {
+    padding: 0;
+    padding-left: 19px;
+  }
+
+  .social__item-vk {
+    width: 30px;
+  }
+
+  .social__item-inst {
+    width: 23px;
+    margin-left: 28px;
+    margin-right: 30px;
+  }
+
+  .social__item-fb {
+    width: 14px;
+  }
+}

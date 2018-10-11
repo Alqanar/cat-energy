@@ -20,3 +20,21 @@
     content: "";
   }
 }
+
+@media (min-width: $tablet-width) {
+  .map {
+    width: 768px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+    background-position: 0 -3px;
+    background-size: 768px 400px;
+
+    &::before {
+      top: 347px;
+      left: 323px;
+      width: 125px;
+      height: 110px;
+      background-image: url("../img/map-pin.png");
+      background-size: 122px 106px;
+    }
+  }
+}

@@ -1,3 +1,9 @@
 .wrapper {
   @include content-margin;
 }
+
+@media (min-width: $tablet-width) {
+  .wrapper {
+    @include margin-tablet;
+  }
+}

@@ -4,10 +4,17 @@
 
 .features__item {
   position: relative;
+}
+
+.features__text {
+  @include Arial();
+  margin-left: 80px;
+  margin-bottom: 26px;
 
   &::before {
     position: absolute;
     top: -2px;
+    left: 0;
     width: 60px;
     height: 60px;
     background-color: $main-color;
@@ -71,8 +78,82 @@
   }
 }
 
-.features__text {
-  @include Arial();
-  margin-left: 80px;
-  margin-bottom: 26px;
+@media (min-width: $tablet-width) {
+  .features {
+    padding-top: 28px;
+  }
+
+  .features__title {
+    margin-bottom: 0;
+  }
+
+  .same-list--notmobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .features__item {
+    width: 265px;
+    margin-top: 74px;
+    padding-bottom: 61px;
+    margin-right: 59px;
+
+    &::before {
+      position: absolute;
+      top: -41px;
+      left: 116px;
+      z-index: 1;
+      display: inline-block;
+      font-size: 281px;
+      line-height: 281px;
+      color: $gray-color;
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      @include Oswald;
+    }
+  }
+
+  .features__text {
+    position: relative;
+    z-index: 2;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 110px;
+    @include Arial(16px, 24px);
+
+    &::before {
+      top: -112px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &--leaf {
+      &::after {
+        top: -97px;
+        left: 15px;
+      }
+    }
+
+    &--water {
+      &::after {
+        top: -97px;
+        left: 15px;
+      }
+    }
+
+    &--cultery {
+      &::after {
+        top: -97px;
+        left: 15px;
+      }
+    }
+
+    &--weight {
+      &::after {
+        top: -97px;
+        left: 15px;
+      }
+    }
+  }
 }

@@ -2,7 +2,7 @@
   z-index: 2;
   display: flex;
   background-color: $gray-color;
-  align-content: space-between;
+  justify-content: space-between;
   padding-left: 19px;
   padding-right: 19px;
   padding-top: 29px;
@@ -16,10 +16,42 @@
   @include Oswald-uppercase;
   margin: 0;
   line-height: 20px;
+  flex-basis: 50%;
 }
 
 .contacts__adress {
   @include Arial (14px, 20px);
   margin: 0;
-  margin-left: 25px;
+  flex-basis: 50%;
+}
+
+.contacts__adress-street,
+.contacts__adress-town {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    padding: 64px 72px 56px;
+  }
+
+  .contacts__dillers {
+    font-size: 20px;
+    line-height: 25px;
+    flex-basis: 25%;
+  }
+
+  .contacts__adress {
+    font-size: 16px;
+    flex-basis: 25%;
+  }
+
+  .contacts__adress-street,
+  .contacts__adress-town {
+    text-align: right;
+  }
+
+  .contacts__adress-town {
+    margin-top: 20px;
+  }
 }

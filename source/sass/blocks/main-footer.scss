@@ -59,3 +59,35 @@
 .main-footer__htmlacademy-fill {
   fill: $image-color;
 }
+
+@media (min-width: $tablet-width) {
+  .main-footer {
+    @include content-tablet;
+  }
+
+  .main-footer__references {
+    display: flex;
+    padding: 52px 30px 54px;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  .main-footer__link {
+    margin-top: 9px;
+  }
+
+  .main-footer__social {
+    border-top: none;
+    border-bottom: none;
+    margin-top: 0;
+  }
+
+  .main-footer__copyright {
+    padding-top: 0;
+  }
+
+  .main-footer__copyright-logo {
+    margin-left: 15px;
+  }
+
+}
