@@ -36,15 +36,16 @@
     font-size: 18px;
     flex-wrap: wrap;
     font-weight: 400;
-}
+  }
 
   .main-menu__item {
     border-top: none;
     margin-left: 38px;
   }
 
-  .main-menu__link{
+  .main-menu__link {
     color: $additional-item-title;
+
     &--active {
       border-bottom: 2px solid $main-color;
     }

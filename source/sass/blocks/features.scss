@@ -100,6 +100,7 @@
     margin-right: 59px;
 
     &::before {
+      @include Oswald;
       position: absolute;
       top: -41px;
       left: 116px;
@@ -110,17 +111,16 @@
       color: $gray-color;
       counter-increment: myCounter;
       content: counter(myCounter);
-      @include Oswald;
     }
   }
 
   .features__text {
+    @include Arial(16px, 24px);
     position: relative;
     z-index: 2;
     margin-left: 0;
     margin-bottom: 0;
     margin-top: 110px;
-    @include Arial(16px, 24px);
 
     &::before {
       top: -112px;
