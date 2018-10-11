@@ -27,8 +27,9 @@
 @media (min-width: $tablet-width) {
   .main-header {
     @include content-tablet;
-    @include margin-tablet;
     display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 24px;
     justify-content: space-between;
   }
@@ -37,5 +38,10 @@
     display: inline-block;
     margin-bottom: 0;
     margin-left: 0;
+  }
+
+  .main-header__logo-image {
+    width: 174px;
+    height: 59px;
   }
 }

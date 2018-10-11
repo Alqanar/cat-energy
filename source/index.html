@@ -9,7 +9,11 @@
   <body>
     <header class="main-header">
       <a class="main-header__logo-link" href="#">
-        <img src="img/logo-mobile.svg" width="191" height="39" alt="Логотип магазина cat-energy">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип магазина cat-energy">
+        </picture>
       </a>
       <button class="sandwich-button main-header__sandwich-button" type="button">Открыть меню
         <include src="img/hamburger.svg"></include>
@@ -35,7 +39,11 @@
         <div class="wrapper">
           <h1 class="title title--index selection-program__title">Функциональное питание для котов</h1>
           <p class="selection-program__tagline">Занялся собой? Займись котом!</p>
-          <img src="img/index-can-mobile@1x.png" width="280" height="270" alt="Баночка корма">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+            <img class="selection-program__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Баночка корма">
+          </picture>
           <a class="button button--green button--index selection-program__button" href="form.html">Подобрать программу</a>
         </div>
       </section>
