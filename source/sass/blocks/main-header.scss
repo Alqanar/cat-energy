@@ -27,10 +27,13 @@
 @media (min-width: $tablet-width) {
   .main-header {
     @include content-tablet;
-    display: flex;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 24px;
+  }
+
+  .main-header__wrapper {
+    display: flex;
     justify-content: space-between;
   }
 
@@ -43,5 +46,26 @@
   .main-header__logo-image {
     width: 174px;
     height: 59px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .main-header {
+    @include content-desktop;
+    position: relative;
+    padding: 0;
+  }
+
+  .main-header__wrapper {
+    position: absolute;
+    top: 53px;
+    left: 8%;
+    z-index: 3;
+    width: 85%;
+  }
+
+  .main-header__logo-image {
+    width: 203px;
+    height: 60px;
   }
 }

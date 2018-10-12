@@ -23,17 +23,21 @@
     border-top: none;
     padding-top: 24px;
   }
+
+  .main-content__sample {
+    margin-top: 41px;
+  }
 }
 
-@media (min-width: $tablet-width) and (max-width: 1219px) {
+@media (min-width: $tablet-width) and (max-width: $desktop-min-width - 1px) {
   .main-content__program {
     margin-top: -3px;
     margin-bottom: 32px;
   }
 }
 
-@media (min-width: $tablet-width) {
-  .main-content__sample {
-    margin-top: 41px;
+@media (min-width: $desktop-min-width) {
+ .main-content {
+    @include content-desktop;
   }
 }

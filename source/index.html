@@ -8,37 +8,41 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="main-header__logo-link" href="#">
-        <picture>
-          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип магазина cat-energy">
-        </picture>
-      </a>
-      <button class="sandwich-button main-header__sandwich-button" type="button">Открыть меню
-        <include src="img/hamburger.svg"></include>
-      </button>
-      <nav class="main-header__main-menu main-menu">
-        <ul class="same-list main-menu__navigation">
-          <li class="main-menu__item">
-            <a class="link main-menu__link" href="#">
-              <p class="main-menu__link--active">Главная</p>
-            </a>
-          </li>
-          <li class="main-menu__item">
-            <a class="link main-menu__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-menu__item">
-            <a class="link main-menu__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="main-header__wrapper">
+        <a class="main-header__logo-link" href="#">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип магазина cat-energy">
+          </picture>
+        </a>
+        <button class="sandwich-button main-header__sandwich-button" type="button">Открыть меню
+          <include src="img/hamburger.svg"></include>
+        </button>
+        <nav class="main-header__main-menu main-menu">
+          <ul class="same-list main-menu__navigation">
+            <li class="main-menu__item">
+              <a class="link main-menu__link" href="#">
+                <p class="main-menu__link--active">Главная</p>
+              </a>
+            </li>
+            <li class="main-menu__item">
+              <a class="link main-menu__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="link main-menu__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main-content">
       <section class="selection-program main-content__selection-program">
-        <div class="wrapper">
-          <h1 class="title title--index selection-program__title">Функциональное питание для котов</h1>
-          <p class="selection-program__tagline">Занялся собой? Займись котом!</p>
+        <div class="wrapper selection-program__wrapper">
+          <div class="selection-program__wrapper-title">
+            <h1 class="title title--index selection-program__title">Функциональное питание для котов</h1>
+            <p class="selection-program__tagline">Занялся собой? Займись котом!</p>
+          </div>
           <picture>
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
@@ -48,16 +52,18 @@
         </div>
       </section>
       <div class="wrapper">
-        <article class="program program--slim main-content__program">
-          <h3 class="program__title">Похудение</h3>
-          <p class="program__content">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="link program__link" href="#">Каталог slim</a>
-        </article>
-        <article class="program program--pro main-content__program">
-          <h3 class="program__title">Набор массы</h3>
-          <p class="program__content">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="link program__link" href="#">Каталог pro</a>
-        </article>
+        <div class="wrapper__program">
+          <article class="program program--slim main-content__program">
+            <h3 class="program__title">Похудение</h3>
+            <p class="program__content">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="link program__link" href="#">Каталог slim</a>
+          </article>
+          <article class="program program--pro main-content__program">
+            <h3 class="program__title">Набор массы</h3>
+            <p class="program__content">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="link program__link" href="#">Каталог pro</a>
+          </article>
+        </div>
         <section class="features">
           <h2 class="title features__title">Как это работает</h2>
           <ol class="same-list same-list--notmobile">

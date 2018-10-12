@@ -5,7 +5,12 @@
 
 @mixin content-tablet {
   margin: 0 auto;
-  max-width: 768px;
+  max-width: $tablet-width;
+}
+
+@mixin content-desktop {
+  margin: 0 auto;
+  max-width: $desktop-max-width;
 }
 
 @mixin button {
@@ -22,6 +27,11 @@
 @mixin margin-tablet {
   margin-left: 30px;
   margin-right: 30px;
+}
+
+@mixin margin-desktop {
+  margin-left: 7%;
+  margin-right: 7%;
 }
 
 @mixin Oswald {

@@ -51,3 +51,26 @@
     }
   }
 }
+
+@media (min-width: $desktop-min-width) {
+  .main-menu__navigation {
+    font-size: 20px;
+  }
+
+  .main-menu__link {
+    color: $white-text;
+
+    &--active {
+      border-bottom: 2px solid $white-text;
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba($white-text, 0.6);
+    }
+
+    &:active {
+      color: rgba($white-text, 0.3);
+    }
+  }
+}

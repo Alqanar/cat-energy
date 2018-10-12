@@ -7,3 +7,16 @@
     @include margin-tablet;
   }
 }
+
+@media (min-width: $desktop-min-width) {
+  .wrapper {
+    @include margin-desktop;
+  }
+
+  .wrapper__program {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1%;
+    margin-top: 59px;
+  }
+}

@@ -99,7 +99,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: 1219px) {
+@media (min-width: $tablet-width) and (max-width: $desktop-min-width - 1px) {
   .program {
     padding: 76px 60px 62px 53px;
 
@@ -150,6 +150,64 @@
     }
 
     &:hover::after {
+      left: 128px;
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  .program {
+    width: 46%;
+    padding: 43px 48px;
+
+    &--slim {
+      margin-right: 7%;
+
+      &::before {
+        top: 41px;
+        left: 63px;
+        width: 71px;
+        height: 97px;
+        background-size: 71px 97px;
+      }
+    }
+
+    &--pro::before {
+      top: 68px;
+      left: 31px;
+      width: 134px;
+      height: 57px;
+      background-size: 134px 57px;
+    }
+  }
+
+  .program__title {
+    font-size: 36px;
+    margin-top: 32px;
+    margin-left: 35%;
+
+    &::before {
+      top: -28px;
+      left: -162px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .program__content {
+    @include Arial(16px, 24px);
+    border-bottom: none;
+    margin-top: 75px;
+    margin-bottom: 0;
+  }
+
+  .program__link {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 9px;
+
+    &::after {
+      top: 4px;
       left: 128px;
     }
   }
