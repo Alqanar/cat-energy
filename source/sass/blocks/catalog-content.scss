@@ -6,8 +6,7 @@
 
 .catalog-content__title {
   margin: 0;
-
-  @include content-margin;
+  padding-left: 20px;
 }
 
 .catalog-content__products-list {
@@ -16,4 +15,22 @@
 
 .catalog-content__additional-products {
   padding-top: 29px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-content {
+    @include content-tablet;
+    border-top: none;
+  }
+
+  .catalog-content__title {
+    padding-left: 30px;
+    padding-top: 36px;
+  }
+
+  .catalog-content__products-list {
+    @include margin-tablet;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
