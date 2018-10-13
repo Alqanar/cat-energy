@@ -40,7 +40,7 @@
 
   .main-menu__item {
     border-top: none;
-    margin-left: 36px;
+    margin-left: 35px;
   }
 
   .main-menu__link {
@@ -52,7 +52,7 @@
   }
 }
 
-@media (min-width: $desktop-min-width) {
+@media (min-width: $desktop-width) {
   .main-menu__navigation {
     font-size: 20px;
   }

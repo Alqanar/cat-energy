@@ -99,7 +99,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-min-width - 1px) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .program {
     padding: 76px 60px 62px 53px;
 
@@ -155,17 +155,17 @@
   }
 }
 
-@media (min-width: $desktop-min-width) {
+@media (min-width: $desktop-width) {
   .program {
-    width: 46%;
-    padding: 43px 48px;
+    width: 570px;
+    padding: 43px 48px 62px 52px;
 
     &--slim {
-      margin-right: 7%;
+      margin-right: 80px;
 
       &::before {
         top: 41px;
-        left: 63px;
+        left: 65px;
         width: 71px;
         height: 97px;
         background-size: 71px 97px;
@@ -174,7 +174,7 @@
 
     &--pro::before {
       top: 68px;
-      left: 31px;
+      left: 34px;
       width: 134px;
       height: 57px;
       background-size: 134px 57px;
@@ -183,11 +183,11 @@
 
   .program__title {
     font-size: 36px;
-    margin-top: 32px;
-    margin-left: 35%;
+    margin-top: 33px;
+    margin-left: 162px;
 
     &::before {
-      top: -28px;
+      top: -29px;
       left: -162px;
       width: 100px;
       height: 100px;
@@ -197,7 +197,7 @@
   .program__content {
     @include Arial(16px, 24px);
     border-bottom: none;
-    margin-top: 75px;
+    margin-top: 74px;
     margin-bottom: 0;
   }
 
@@ -208,7 +208,7 @@
 
     &::after {
       top: 4px;
-      left: 128px;
+      left: 129px;
     }
   }
 }

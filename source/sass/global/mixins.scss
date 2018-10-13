@@ -9,8 +9,9 @@
 }
 
 @mixin content-desktop {
+  width: $desktop-width;
   margin: 0 auto;
-  max-width: $desktop-max-width;
+  max-width: 100%
 }
 
 @mixin button {
@@ -30,8 +31,8 @@
 }
 
 @mixin margin-desktop {
-  margin-left: 7%;
-  margin-right: 7%;
+  padding-left: 31px;
+  padding-right: 31px;
 }
 
 @mixin Oswald {

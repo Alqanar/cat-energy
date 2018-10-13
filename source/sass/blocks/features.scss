@@ -88,12 +88,6 @@
     margin-bottom: 0;
   }
 
-  .same-list--notmobile {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
   .features__item {
     width: 265px;
     margin-top: 74px;
@@ -156,5 +150,19 @@
         left: 15px;
       }
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    margin-top: 60px;
+  }
+
+  .features__item {
+    width: 260px;
+  }
+
+  .features__item:nth-child(4n) {
+    margin-right: 0;
   }
 }

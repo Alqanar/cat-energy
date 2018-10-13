@@ -55,3 +55,23 @@
     margin-top: 20px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: absolute;
+    top: 95px;
+    left: 40px;
+    width: 570px;
+    padding: 64px 71px 57px 76px;
+  }
+
+  .contacts__dillers,
+  .contacts__adress {
+    flex-basis: 41%;
+  }
+
+  .contacts__adress-street,
+  .contacts__adress-town {
+    text-align: left;
+  }
+}

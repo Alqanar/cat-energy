@@ -66,10 +66,13 @@
   }
 
   .main-footer__references {
-    display: flex;
     padding: 52px 30px 54px;
-    justify-content: space-between;
     margin-top: 0;
+  }
+
+  .main-footer__references-wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 
   .main-footer__link {
@@ -88,5 +91,23 @@
 
   .main-footer__copyright-logo {
     margin-left: 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-footer {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .main-footer__contacts-wrapper {
+    @include content-desktop;
+    position: relative;
+  }
+
+  .main-footer__references-wrapper {
+    @include content-desktop;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }

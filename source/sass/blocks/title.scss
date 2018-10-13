@@ -22,3 +22,9 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .title--index {
+    margin-left: 80px;
+  }
+}

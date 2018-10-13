@@ -49,7 +49,7 @@
   }
 }
 
-@media (min-width: $desktop-min-width) {
+@media (min-width: $desktop-width) {
   .main-header {
     @include content-desktop;
     position: relative;
@@ -59,9 +59,9 @@
   .main-header__wrapper {
     position: absolute;
     top: 53px;
-    left: 8%;
+    left: 40px;
     z-index: 3;
-    width: 85%;
+    width: 1220px;
   }
 
   .main-header__logo-image {

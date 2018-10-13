@@ -77,3 +77,15 @@
     background-image: url("../img/after-tablet@1x.png");
   }
 }
+
+@media (min-width: $desktop-width) {
+  .slider__fat-cat {
+    height: 499px;
+    background-image: url("../img/before-desktop@1x.png");
+  }
+
+  .slider__thin-cat {
+    height: 517px;
+    background-image: url("../img/after-desktop@1x.png");
+  }
+}

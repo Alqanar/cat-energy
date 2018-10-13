@@ -36,19 +36,26 @@
   }
 
   &--index {
+    position: absolute;
+    top: 440px;
+    padding: 11px 73px;
     font-size: 14px;
     line-height: 18px;
-    padding-top: 11px;
-    padding-bottom: 11px;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .button {
-    &--index {
-      padding: 15px 29px 17px 26px;
-      font-size: 20px;
-      line-height: 20px;
-    }
+  .button--index {
+    top: 280px;
+    padding: 15px 29px 17px 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button--index {
+    top: 261px;
+    left: 80px;
   }
 }
