@@ -44,6 +44,7 @@
 
 .product__button {
   margin-right: 7px;
+  margin-top: -4px;
 }
 
 .product__text-show-item,
@@ -75,18 +76,30 @@
 .product__text-tastes-many {
   @include Arial(12px, 16px);
   margin-top: 7px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 @media (min-width: $tablet-width) {
   .product {
     position: relative;
     width: 324px;
-    padding: 162px 32px 40px 41px;
+    padding: 163px 32px 40px 41px;
     background-color: $gray-color;
     border: none;
-    margin-top: 138px;
+    margin-top: 137px;
     margin-bottom: 3px;
+
+    &:last-child {
+      border-bottom: 1px solid rgba($sample-border, 0.5);
+    }
+
+    &--show-item {
+      background-color: $white-text;
+      border: 1px solid rgba($sample-border, 0.5);
+      padding-top: 28px;
+      padding-left: 39px;
+      padding-bottom: 39px;
+    }
   }
 
   .product:nth-child(2n) {
@@ -107,7 +120,7 @@
     }
   }
 
-  .product__picture{
+  .product__picture {
     &--small {
       width: 324px;
       height: auto;
@@ -147,5 +160,85 @@
     margin-top: 33px;
     margin-left: -3px;
     margin-right: 5px;
+  }
+
+  .product__text-show-item {
+    @include centering-device;
+    width: 55%;
+    font-size: 20px;
+    padding-top: 54px;
+    padding-right: 4px;
+
+    &::before {
+      left: 37px;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/icon-plus.svg");
+    }
+  }
+
+  .product__text-tastes-many {
+    @include centering-device;
+    width: 70%;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 26px;
+    margin-bottom: 0;
+    padding-bottom: 53px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    width: 245px;
+    margin-bottom: 6px;
+  }
+
+  .product:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .product:not(:nth-child(4n)) {
+    margin-right: 80px;
+  }
+
+  .product__image--small {
+    top: -47px;
+    left: 0px;
+  }
+
+  .product__image--big {
+    top: -82px;
+    left: 0;
+  }
+
+  .product__picture--small {
+    width: 245px;
+    height: auto;
+    }
+
+  .product__picture--big {
+    width: 245px;
+    height: auto;
+  }
+
+  .product__title {
+    @include centering-device;
+    width: 80%;
+    padding-right: 5px;
+  }
+
+  .product__text-show-item {
+    width: 100%;
+    padding-top: 55px;
+
+    &::before {
+      left: 53px;
+    }
+  }
+
+  .product__text-tastes-many {
+    width: 100%;
+    padding-right: 5px;
   }
 }

@@ -249,51 +249,57 @@
           </div>
           <a class="link button button--green product__button" href="#">Заказать</a>
         </li>
-        <li class="product">
+        <li class="product product--show-item">
           <p class="product__text-show-item">Показать еще 100500 товаров</p>
           <p class="product__text-tastes-many">На самом деле вкусов гораздо больше!</p>
           <a class="link button button--gray product__button" href="#">Показать все</a>
         </li>
       </ul>
       <section class="additional-products catalog-content__additional-products">
-        <h2 class="title-stripe additional-products__title-stripe">Дополнительные товары</h2>
-        <ul class="wrapper same-list additional-products__additional-list">
-          <li class="additional-item">
-            <ul class="same-list additional-item__goods">
-              <li class="additional-item__product-name">Сахарозаменитель</li>
-              <li class="additional-item__size">1 упаковка (100 г)</li>
-              <li class="additional-item__price">100 Р.</li>
-              <a class="link button button--green additional-item__button" href="#">Заказать</a>
-            </ul>
-          </li>
-          <li class="additional-item">
-            <ul class="same-list additional-item__goods">
-              <li class="additional-item__product-name">Питьевая вода</li>
-              <li class="additional-item__size">5 литров</li>
-              <li class="additional-item__price">50 Р.</li>
-              <a class="link button button--green additional-item__button" href="#">Заказать</a>
-            </ul>
-          </li>
-          <li class="additional-item">
-            <ul class="same-list additional-item__goods">
-              <li class="additional-item__product-name">Молоко</li>
-              <li class="additional-item__size">1 литр</li>
-              <li class="additional-item__price">100 Р.</li>
-              <a class="link button button--green additional-item__button" href="#">Заказать</a>
-            </ul>
-          </li>
-          <li class="additional-item">
-            <ul class="same-list additional-item__goods">
-              <li class="additional-item__product-name">Витамины</li>
-              <li class="additional-item__size">1 упаковка (30 г)</li>
-              <li class="additional-item__price">300 Р.</li>
-              <a class="link button button--green additional-item__button" href="#">Заказать</a>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <section class="wrapper bonus">
-        <p class="bonus__text">Закажите все и получите чехол для кота в подарок!</p>
+        <div class="title-stripe__line">
+          <div class="title-strip__holder">
+            <h2 class="title-stripe additional-products__title-stripe">Дополнительные товары</h2>
+          </div>
+        </div>
+        <div class="additional-products__centering-device">
+          <ul class="wrapper same-list additional-products__additional-list">
+            <li class="additional-item">
+              <ul class="same-list additional-item__goods">
+                <li class="additional-item__product-name">Сахарозаменитель</li>
+                <li class="additional-item__size">1 упаковка (100 г)</li>
+                <li class="additional-item__price">100 Р.</li>
+                <a class="link button button--green additional-item__button" href="#">Заказать</a>
+              </ul>
+            </li>
+            <li class="additional-item">
+              <ul class="same-list additional-item__goods">
+                <li class="additional-item__product-name">Питьевая вода</li>
+                <li class="additional-item__size">5 литров</li>
+                <li class="additional-item__price">50 Р.</li>
+                <a class="link button button--green additional-item__button" href="#">Заказать</a>
+              </ul>
+            </li>
+            <li class="additional-item">
+              <ul class="same-list additional-item__goods">
+                <li class="additional-item__product-name">Молоко</li>
+                <li class="additional-item__size">1 литр</li>
+                <li class="additional-item__price">100 Р.</li>
+                <a class="link button button--green additional-item__button" href="#">Заказать</a>
+              </ul>
+            </li>
+            <li class="additional-item">
+              <ul class="same-list additional-item__goods">
+                <li class="additional-item__product-name">Витамины</li>
+                <li class="additional-item__size">1 упаковка (30 г)</li>
+                <li class="additional-item__price">300 Р.</li>
+                <a class="link button button--green additional-item__button" href="#">Заказать</a>
+              </ul>
+            </li>
+          </ul>
+          <section class="wrapper bonus">
+            <p class="bonus__text">Закажите все и получите чехол для кота в подарок!</p>
+          </section>
+        </div>
       </section>
     </main>
         <footer class="main-footer">
@@ -307,7 +313,9 @@
         </section>
       </div>
       <section class="map" id="map">
-        <div class="map__image"></div>
+        <div class="map__image">
+          <div class="map__badge"></div>
+        </div>
       </section>
       <section class="main-footer__references">
         <div class="main-footer__references-wrapper">

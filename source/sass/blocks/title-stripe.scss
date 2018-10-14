@@ -1,25 +1,88 @@
-.title-stripe {
-  @include Oswald;
+.title-stripe__line {
   overflow: hidden;
-  font-size: 24px;
-  line-height: 24px;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
 
   &::after {
-    position: relative;
-    right: -21px;
     display: inline-block;
     width: 100%;
     height: 3px;
     background-color: $main-color;
     content: "";
     vertical-align: middle;
-    margin-right: -100%;
   }
+}
+
+.title-strip__holder {
+  position: relative;
+  height: 27px;
+}
+
+.title-stripe {
+  position: absolute;
+  top: 20px;
+  z-index: 2;
+  overflow: hidden;
+  font-size: 24px;
+  line-height: 24px;
+  background-color: $white-text;
+  padding-bottom: 3px;
+  @include Oswald;
+
+  // &::after {
+  //   position: relative;
+  //   right: -21px;
+  //   display: inline-block;
+  //   width: 100%;
+  //   height: 3px;
+  //   background-color: $main-color;
+  //   content: "";
+  //   vertical-align: middle;
+  //   margin-right: -100%;
+  // }
 }
 
 .title-stripe__wrapper {
   display: inline-block;
   vertical-align: top;
   max-width: 181px;
+}
+
+@media (min-width: $tablet-width) {
+  .title-stripe__line {
+    padding-bottom: 16px;
+  }
+
+  .title-stripe {
+    top: 15px;
+    left: 29px;
+    font-size: 36px;
+    line-height: 36px;
+    padding-bottom: 5px;
+
+    // &::before {
+    //   position: relative;
+    //   left: -38px;
+    //   display: inline-block;
+    //   width: 100%;
+    //   height: 3px;
+    //   background-color: $main-color;
+    //   content: "";
+    //   vertical-align: middle;
+    //   margin-left: -100%;
+    // }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title-strip__holder {
+    @include content-desktop;
+  }
+
+  .title-stripe__line {
+    width: 100%;
+  }
+
+  .title-stripe {
+    left: 0;
+  }
 }
