@@ -111,7 +111,7 @@
 
     &--small {
       top: -47px;
-      left: 0px;
+      left: 0;
     }
 
     &--big {
@@ -204,7 +204,7 @@
 
   .product__image--small {
     top: -47px;
-    left: 0px;
+    left: 0;
   }
 
   .product__image--big {
@@ -215,7 +215,7 @@
   .product__picture--small {
     width: 245px;
     height: auto;
-    }
+  }
 
   .product__picture--big {
     width: 245px;

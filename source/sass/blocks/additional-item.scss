@@ -77,7 +77,7 @@
 
 @media (min-width: $desktop-width) {
   .additional-item {
-    padding: 15px 0px 16px;
+    padding: 15px 0 16px;
     border: none;
     border-top: 1px solid $sample-border;
 
@@ -112,6 +112,6 @@
 
   .additional-item__size,
   .additional-item__price {
-     text-align: left;
+    text-align: left;
   }
 }

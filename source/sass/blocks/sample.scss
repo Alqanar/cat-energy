@@ -167,6 +167,7 @@
 
   .sample__flex-box {
     display: flex;
+
     @include content-desktop;
   }
 

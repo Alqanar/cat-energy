@@ -51,13 +51,13 @@
     width: 100%;
     margin: 0 auto;
     background-image: url("../img/bg-map-desktop@1x.png");
-    background-position: top 0px center;
+    background-position: top 0 center;
     background-size: 1440px auto;
   }
 
   .map__badge {
     @include content-desktop;
-  
+
     &::before {
       top: 150px;
       right: 240px;
