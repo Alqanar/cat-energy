@@ -102,7 +102,7 @@
               <h2 class="title-stripe questionnaire-form__title-stripe">Комментарий</h2>
             </div>
           </div>
-          <p class="questionnaire-form__row">
+          <p class="questionnaire-form__row questionnaire-form__textarea-wrapper">
             <label class="visual-hidden" for="feedback">Расскажите о коте</label>
             <textarea class="questionnaire-form__input questionnaire-form__input--textarea" id="feedback" name="feedback" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
           </p>
@@ -114,26 +114,28 @@
             </div>
           </div>
           <ul class="same-list questionnaire-form__checkbox">
-            <li class="questionnaire-form__item">
+            <li class="questionnaire-form__item questionnaire-form__item--checkbox">
               <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
               <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="sweetener">Сахарозаменитель</label>
             </li>
-            <li class="questionnaire-form__item">
+            <li class="questionnaire-form__item questionnaire-form__item--checkbox">
               <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="water" id="water">
               <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="water">Питьевая вода</label>
             </li>
-            <li class="questionnaire-form__item">
+            <li class="questionnaire-form__item questionnaire-form__item--checkbox">
               <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="milk" id="milk">
               <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="milk">Молоко</label>
             </li>
-            <li class="questionnaire-form__item">
+            <li class="questionnaire-form__item questionnaire-form__item--checkbox">
               <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="vitamins" id="vitamins">
               <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="vitamins">Витамины</label>
             </li>
           </ul>
         </section>
-        <button class="button button--green questionnaire-form__button" type="submit">Отправить заявку</button>
-        <p class="questionnaire-form__text">* — Обязательные поля</p>
+        <div class="questionnaire-form__wrapper-end">
+          <button class="button button--green questionnaire-form__button" type="submit">Отправить заявку</button>
+          <p class="questionnaire-form__text">* — Обязательные поля</p>
+        </div>
       </form>
     </main>
     <footer class="main-footer">
