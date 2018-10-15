@@ -15,8 +15,11 @@
   opacity: 0.6;
 }
 
-.main-footer__references {
+.main-footer__references-wrapper {
   padding: 41px 19px 17px 20px;
+}
+
+.main-footer__references {
   text-align: center;
   background-color: $gray-color;
   margin-top: -40px;
@@ -70,12 +73,12 @@
   }
 
   .main-footer__references {
-    padding: 52px 30px 54px;
     margin-top: 0;
   }
 
   .main-footer__references-wrapper {
     display: flex;
+    padding: 52px 40px 54px;
     justify-content: space-between;
   }
 
@@ -111,6 +114,5 @@
 
   .main-footer__references-wrapper {
     @include content-desktop;
-    padding-right: 3px;
   }
 }

@@ -98,6 +98,14 @@
     content: "";
   }
 
+  &--email {
+    padding-right: 40px;
+  }
+
+  &--tel {
+    padding-right: 40px;
+  }
+
   &--checkbox:checked + .questionnaire-form__label--checkbox::after {
     position: absolute;
     top: 14px;
@@ -248,6 +256,14 @@
       height: 18px;
     }
 
+    &--email {
+      padding-right: 50px;
+    }
+
+    &--tel {
+      padding-right: 50px;
+    }
+
     &--textarea {
       padding-bottom: 17px;
       padding-top: 15px;
@@ -344,5 +360,99 @@
     font-size: 16px;
     align-self: center;
     margin-left: 63px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire-form {
+    padding-top: 45px;
+  }
+
+  .questionnaire-form__combiner {
+    @include content-desktop;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .questionnaire-form__inquirer,
+  .questionnaire-form__program-wrapper {
+    width: 50%;
+  }
+
+  .questionnaire-form__inquirer {
+    padding-left: 40px;
+    padding-right: 32px;
+  }
+
+  .questionnaire-form__program-wrapper {
+    padding-left: 48px;
+    padding-right: 23px;
+  }
+
+  .questionnaire-form__program {
+    margin: 0;
+  }
+
+  .questionnaire-form__cat-owner {
+    padding-top: 34px;
+  }
+
+  .questionnaire-form__cat-owner-wrapper {
+    @include content-desktop;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .questionnaire-form__row--cat-owner {
+    flex-basis: 50%;
+    padding-left: 44px;
+    padding-right: 27px;
+  }
+
+  .questionnaire-form__element {
+    top: 19px;
+    right: 46px;
+  }
+
+  .questionnaire-form__comment {
+    padding-top: 32px;
+  }
+
+  .questionnaire-form__textarea-wrapper {
+    @include content-desktop;
+    padding-left: 21px;
+    padding-right: 3px;
+  }
+
+  .questionnaire-form__more-products {
+    padding-top: 51px;
+  }
+
+  .questionnaire-form__checkbox {
+    @include content-desktop;
+    padding-left: 20px;
+  }
+
+  .questionnaire-form__item--checkbox {
+    min-width: 21%;
+  }
+
+  .questionnaire-form__wrapper-end {
+    @include content-desktop;
+    padding-top: 34px;
+    padding-left: 41px;
+    padding-bottom: 83px;
+  }
+
+  .questionnaire-form__button {
+    width: 568px;
+    margin-left: 0;
+  }
+
+  .questionnaire-form__text {
+    margin-left: 82px;
   }
 }

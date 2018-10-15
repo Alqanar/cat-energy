@@ -37,3 +37,28 @@
     margin-top: 55px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .form-content {
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .form-content__title {
+    @include content-desktop;
+    padding-top: 173px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .form-content__text-help {
+    width: 35%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .form-content__centring-device {
+    @include content-desktop;
+  }
+}

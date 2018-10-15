@@ -38,40 +38,44 @@
     </header>
     <main class="form-content">
       <h1 class="title form-content__title">Подбор программы</h1>
-      <p class="form-content__text-help">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <div class="form-content__centring-device">
+        <p class="form-content__text-help">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      </div>
       <form class="questionnaire-form form-content__questionnaire-form" action="https://echo.htmlacademy.ru" method="post">
-        <section class="questionnaire-form__inquirer">
-          <p class="questionnaire-form__row">
-            <label class="questionnaire-form__label" for="questionnaire-form__cat-name">Имя:*</label>
-            <input class="questionnaire-form__input" id="questionnaire-form__cat-name" type="text" name="cat-name" placeholder="Барсик" required>
-          </p>
-          <p class="questionnaire-form__row">
-            <label class="questionnaire-form__label" for="questionnaire-form__cat-weight">Вес (кг):*</label>
-            <input class="questionnaire-form__input" id="questionnaire-form__cat-weight" type="text" name="cat-weight" placeholder="7" required>
-          </p>
-          <p class="questionnaire-form__row">
-            <label class="questionnaire-form__label" for="questionnaire-form__cat-years">Возраст (лет):</label>
-            <input class="questionnaire-form__input" id="questionnaire-form__cat-years" type="text" name="cat-years" placeholder="7" required>
-          </p>
-        </section>
-        <div class="questionnaire-form__program-wrapper">
-          <section class="questionnaire-form__program">
-            <h2 class="visual-hidden">Выберите желаемую программу питания для кота</h2>
-              <ul class="same-list questionnaire-form__radio">
-                <li class="questionnaire-form__item">
-                  <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="slim" value="slim" checked>
-                  <label class="questionnaire-form__label questionnaire-form__label--radio" for="slim">Похудение</label>
-                </li>
-                <li class="questionnaire-form__item">
-                  <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="pro" value="pro">
-                  <label class="questionnaire-form__label questionnaire-form__label--radio" for="pro">Набор массы</label>
-                </li>
-                <li class="questionnaire-form__item">
-                  <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="advice" value="advice">
-                  <label class="questionnaire-form__label questionnaire-form__label--radio" for="advice">Не знаю (Нужен ваш совет)</label>
-                </li>
-              </ul>
+        <div class="questionnaire-form__combiner">
+          <section class="questionnaire-form__inquirer">
+            <p class="questionnaire-form__row">
+              <label class="questionnaire-form__label" for="questionnaire-form__cat-name">Имя:*</label>
+              <input class="questionnaire-form__input" id="questionnaire-form__cat-name" type="text" name="cat-name" placeholder="Барсик" required>
+            </p>
+            <p class="questionnaire-form__row">
+              <label class="questionnaire-form__label" for="questionnaire-form__cat-weight">Вес (кг):*</label>
+              <input class="questionnaire-form__input" id="questionnaire-form__cat-weight" type="text" name="cat-weight" placeholder="7" required>
+            </p>
+            <p class="questionnaire-form__row">
+              <label class="questionnaire-form__label" for="questionnaire-form__cat-years">Возраст (лет):</label>
+              <input class="questionnaire-form__input" id="questionnaire-form__cat-years" type="text" name="cat-years" placeholder="7" required>
+            </p>
           </section>
+          <div class="questionnaire-form__program-wrapper">
+            <section class="questionnaire-form__program">
+              <h2 class="visual-hidden">Выберите желаемую программу питания для кота</h2>
+                <ul class="same-list questionnaire-form__radio">
+                  <li class="questionnaire-form__item">
+                    <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="slim" value="slim" checked>
+                    <label class="questionnaire-form__label questionnaire-form__label--radio" for="slim">Похудение</label>
+                  </li>
+                  <li class="questionnaire-form__item">
+                    <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="pro" value="pro">
+                    <label class="questionnaire-form__label questionnaire-form__label--radio" for="pro">Набор массы</label>
+                  </li>
+                  <li class="questionnaire-form__item">
+                    <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="advice" value="advice">
+                    <label class="questionnaire-form__label questionnaire-form__label--radio" for="advice">Не знаю (Нужен ваш совет)</label>
+                  </li>
+                </ul>
+            </section>
+          </div>
         </div>
         <section class="questionnaire-form__cat-owner">
           <div class="title-stripe__line questionnaire-form__title-stripe--cat-owner">
@@ -84,12 +88,12 @@
             </div>
           </div>
           <div class="questionnaire-form__cat-owner-wrapper">
-            <p class="questionnaire-form__row">
+            <p class="questionnaire-form__row questionnaire-form__row--cat-owner">
               <label class="questionnaire-form__label" for="e-mail">E-mail:*</label>
               <input class="questionnaire-form__input questionnaire-form__input--email" id="e-mail" type="email" name="e-mail" placeholder="kuklachev@gmail.com" required>
               <include src="img/icon-mail.svg"></include>
             </p>
-            <p class="questionnaire-form__row">
+            <p class="questionnaire-form__row questionnaire-form__row--cat-owner">
               <label class="questionnaire-form__label" for="tel">Телефон:*</label>
               <input class="questionnaire-form__input questionnaire-form__input--tel" id="tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
               <include src="img/icon-phone.svg"></include>
