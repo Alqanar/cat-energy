@@ -35,6 +35,11 @@
   padding-right: 31px;
 }
 
+@mixin margin-form {
+  padding-left: 71px;
+  padding-right: 65px;
+}
+
 @mixin centering-device {
   margin-left: auto;
   margin-right: auto;

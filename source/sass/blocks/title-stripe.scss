@@ -48,6 +48,10 @@
     line-height: 36px;
     padding-bottom: 5px;
   }
+
+  .title-stripe__wrapper {
+    max-width: 100%
+  }
 }
 
 @media (min-width: $desktop-width) {

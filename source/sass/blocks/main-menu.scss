@@ -8,13 +8,13 @@
 
 .main-menu__item {
   border-top: 1px solid $gray-border;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .main-menu__link {
   display: block;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
 
   &--active {
     display: inline;
@@ -60,10 +60,6 @@
   .main-menu__link--index {
     color: $white-text;
 
-    &--active {
-      border-bottom: 2px solid $white-text;
-    }
-
     &:hover,
     &:focus {
       color: rgba($white-text, 0.6);
@@ -72,5 +68,9 @@
     &:active {
       color: rgba($white-text, 0.3);
     }
+  }
+
+  .main-menu__link--active-index {
+    border-bottom: 2px solid $white-text;
   }
 }
