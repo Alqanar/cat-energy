@@ -49,11 +49,14 @@
   .catalog-content__title {
     @include content-desktop;
     padding-top: 173px;
+    padding-left: 40px;
   }
 
   .catalog-content__products-list {
     @include content-desktop;
     padding-top: 28px;
+    padding-left: 40px;
+    padding-right: 20px;
   }
 
   .catalog-content__additional-products {
