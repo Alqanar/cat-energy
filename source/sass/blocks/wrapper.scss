@@ -1,3 +1,29 @@
 .wrapper {
   @include content-margin;
 }
+
+@media (min-width: $tablet-width) {
+  .wrapper {
+    @include margin-tablet;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .wrapper {
+    @include margin-desktop;
+    @include content-desktop;
+  }
+
+  .wrapper__program {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 19px;
+  }
+
+  .wrapper__sample {
+    position: relative;
+    width: 40%;
+    margin: 0;
+    padding-right: 40px;
+  }
+}

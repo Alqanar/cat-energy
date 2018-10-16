@@ -42,3 +42,9 @@
 .sandwich-button__line--bottom {
   stroke-dasharray: 40 180;
 }
+
+@media (min-width: $tablet-width) {
+  .sandwich-button {
+    display: none;
+  }
+}

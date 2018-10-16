@@ -15,17 +15,17 @@
 
 .additional-item__product-name {
   @include Oswald-uppercase;
-  width: 100%;
   line-height: 16px;
   color: $additional-item-title;
+  flex-basis: 100%;
 }
 
 .additional-item__size,
 .additional-item__price {
   @include Arial(14px, 14px);
-  width: 50%;
   margin: 0;
-  margin-top: 12px;
+  flex-basis: 50%;
+  padding-top: 12px;
 }
 
 .additional-item__price {
@@ -35,4 +35,83 @@
 .additional-item__button {
   width: 100%;
   margin-top: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-item {
+    padding: 26px 36px 27px 37px;
+    border: 1px solid rgba($sample-border, 0.5);
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid rgba($sample-border, 0.5);
+    }
+  }
+
+  .additional-item__product-name {
+    font-size: 20px;
+    line-height: 20px;
+    flex-basis: 60%;
+    padding-left: 2px;
+  }
+
+  .additional-item__size,
+  .additional-item__price {
+    @include Arial(16px, 20px);
+    text-align: right;
+    padding-top: 3px;
+  }
+
+  .additional-item__size {
+    flex-basis: 25%;
+  }
+
+  .additional-item__price {
+    flex-basis: 15%;
+  }
+
+  .additional-item__button {
+    margin-top: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-item {
+    padding: 15px 0 16px;
+    border: none;
+    border-top: 1px solid $sample-border;
+
+    &:last-child {
+      border-bottom: 1px solid $sample-border;
+    }
+  }
+
+  .additional-item__product-name {
+    padding-left: 0;
+    flex-basis: 36%;
+    padding-top: 10px;
+  }
+
+  .additional-item__size {
+    flex-basis: 27%;
+    padding-top: 14px;
+    padding-left: 2px;
+  }
+
+  .additional-item__price {
+    flex-basis: 9%;
+    padding-top: 14px;
+    padding-left: 5px;
+  }
+
+  .additional-item__button {
+    flex-basis: 27%;
+    margin-top: 0;
+    margin-left: 8px;
+  }
+
+  .additional-item__size,
+  .additional-item__price {
+    text-align: left;
+  }
 }

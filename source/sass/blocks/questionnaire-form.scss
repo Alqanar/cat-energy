@@ -3,6 +3,11 @@
   padding-top: 25px;
 }
 
+.questionnaire-form__inquirer {
+  padding-left: 19px;
+  padding-right: 20px;
+}
+
 .questionnaire-form__row {
   position: relative;
   display: flex;
@@ -11,6 +16,7 @@
 }
 
 .questionnaire-form__label {
+  color: $additional-item-title;
   align-self: center;
 
   &--radio {
@@ -92,6 +98,14 @@
     content: "";
   }
 
+  &--email {
+    padding-right: 40px;
+  }
+
+  &--tel {
+    padding-right: 40px;
+  }
+
   &--checkbox:checked + .questionnaire-form__label--checkbox::after {
     position: absolute;
     top: 14px;
@@ -104,15 +118,18 @@
   }
 
   &--textarea {
-    @include content-margin;
+    padding-left: 15px;
+    padding-right: 9px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 9px;
   }
 }
 
 .questionnaire-form__program {
+  padding: 13px 20px 14px;
   border: 1px solid $gray-light;
   margin-top: 23px;
-  padding-bottom: 14px;
-  padding-top: 13px;
 }
 
 .questionnaire-form__item {
@@ -134,18 +151,31 @@
 }
 
 .questionnaire-form__cat-owner {
-  padding-top: 27px;
+  padding-top: 4px;
 }
 
 .questionnaire-form__title-stripe {
+  top: 23px;
   margin: 0;
-  margin-left: 20px;
   text-transform: none;
-  margin-bottom: 31px;
+  padding-left: 19px;
+  padding-right: 21px;
+
+  &--cat-owner {
+    padding-bottom: 60px;
+  }
+
+  &--comment {
+    padding-bottom: 37px;
+  }
 
   &--more {
-    margin-bottom: 25px;
+    padding-bottom: 31px;
   }
+}
+
+.questionnaire-form__cat-owner-wrapper {
+  @include content-margin;
 }
 
 .questionnaire-form__element {
@@ -156,11 +186,11 @@
 }
 
 .questionnaire-form__comment {
-  padding-top: 15px;
+  margin-top: -9px;
 }
 
 .questionnaire-form__more-products {
-  padding-top: 11px;
+  margin-top: -9px;
 }
 
 .questionnaire-form__button {
@@ -175,4 +205,254 @@
   text-transform: none;
   margin-top: 21px;
   margin-bottom: 32px;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire-form {
+    padding-top: 43px;
+  }
+
+  .questionnaire-form__inquirer {
+    @include margin-form;
+  }
+
+  .questionnaire-form__row {
+    margin-bottom: 19px;
+  }
+
+  .questionnaire-form__label {
+    font-size: 20px;
+    line-height: 20px;
+
+    &--radio {
+      margin-left: 58px;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &--checkbox {
+      margin-left: 78px;
+
+      &::before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .questionnaire-form__input {
+    padding: 10px 12px 11px 15px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 19px;
+
+    &--radio:checked + .questionnaire-form__label--radio::after {
+      top: 17px;
+      left: 10px;
+      width: 18px;
+      height: 18px;
+    }
+
+    &--email {
+      padding-right: 50px;
+    }
+
+    &--tel {
+      padding-right: 50px;
+    }
+
+    &--textarea {
+      padding-bottom: 17px;
+      padding-top: 15px;
+      padding-left: 18px;
+    }
+
+    &--checkbox:checked + .questionnaire-form__label--checkbox::after {
+      top: 18px;
+      left: 30px;
+    }
+  }
+
+  .questionnaire-form__program-wrapper {
+    @include margin-form;
+  }
+
+  .questionnaire-form__program {
+    padding: 18px 28px 17px;
+    margin-top: 74px;
+    border-color: rgba($sample-border, 0.5);
+  }
+
+  .questionnaire-form__item {
+    padding-top: 15px;
+    padding-bottom: 17px;
+
+    &--checkbox {
+      padding-bottom: 36px;
+      min-width: 50%;
+    }
+  }
+
+  .questionnaire-form__cat-owner {
+    padding-top: 59px;
+  }
+
+  .questionnaire-form__title-stripe {
+    top: 17px;
+    padding-left: 40px;
+    padding-right: 43px;
+  }
+
+  .questionnaire-form__cat-owner-wrapper {
+    @include margin-form;
+    padding-top: 22px;
+  }
+
+  .questionnaire-form__element {
+    top: 19px;
+    right: 20px;
+  }
+
+  .questionnaire-form__comment {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+
+  .questionnaire-form__textarea-wrapper {
+    padding-left: 51px;
+    padding-right: 47px;
+    padding-top: 46px;
+  }
+
+  .questionnaire-form__more-products {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+
+  .questionnaire-form__checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-top: 27px;
+    padding-right: 29px;
+  }
+
+  .questionnaire-form__button {
+    font-size: 20px;
+    margin-left: 71px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-top: 0;
+  }
+
+  .questionnaire-form__wrapper-end {
+    display: flex;
+    padding-top: 27px;
+    padding-bottom: 73px;
+  }
+
+  .questionnaire-form__text {
+    margin: 0;
+    font-size: 16px;
+    align-self: center;
+    margin-left: 63px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire-form {
+    padding-top: 45px;
+  }
+
+  .questionnaire-form__combiner {
+    @include content-desktop;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .questionnaire-form__inquirer,
+  .questionnaire-form__program-wrapper {
+    width: 50%;
+  }
+
+  .questionnaire-form__inquirer {
+    padding-left: 40px;
+    padding-right: 32px;
+  }
+
+  .questionnaire-form__program-wrapper {
+    padding-left: 48px;
+    padding-right: 23px;
+  }
+
+  .questionnaire-form__program {
+    margin: 0;
+  }
+
+  .questionnaire-form__cat-owner {
+    padding-top: 34px;
+  }
+
+  .questionnaire-form__cat-owner-wrapper {
+    @include content-desktop;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .questionnaire-form__row--cat-owner {
+    flex-basis: 50%;
+    padding-left: 44px;
+    padding-right: 27px;
+  }
+
+  .questionnaire-form__element {
+    top: 19px;
+    right: 46px;
+  }
+
+  .questionnaire-form__comment {
+    padding-top: 32px;
+  }
+
+  .questionnaire-form__textarea-wrapper {
+    @include content-desktop;
+    padding-left: 21px;
+    padding-right: 3px;
+  }
+
+  .questionnaire-form__more-products {
+    padding-top: 51px;
+  }
+
+  .questionnaire-form__checkbox {
+    @include content-desktop;
+    padding-left: 20px;
+  }
+
+  .questionnaire-form__item--checkbox {
+    min-width: 21%;
+  }
+
+  .questionnaire-form__wrapper-end {
+    @include content-desktop;
+    padding-top: 34px;
+    padding-left: 41px;
+    padding-bottom: 83px;
+  }
+
+  .questionnaire-form__button {
+    width: 568px;
+    margin-left: 0;
+  }
+
+  .questionnaire-form__text {
+    margin-left: 82px;
+  }
 }

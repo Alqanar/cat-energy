@@ -8,3 +8,23 @@
     color: $white-text;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    font-size: 60px;
+
+    &--index {
+      line-height: 60px;
+      text-align: left;
+      color: $dark-text;
+      margin-left: 88px;
+      max-width: 414px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title--index {
+    margin-left: 80px;
+  }
+}

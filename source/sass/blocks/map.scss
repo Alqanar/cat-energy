@@ -1,0 +1,66 @@
+.map {
+  overflow: hidden;
+  background-color: $map-color;
+}
+
+.map__image {
+  overflow: hidden;
+  width: 320px;
+  height: 400px;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0 -38px;
+  background-size: 320px 400px;
+}
+
+.map__badge {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 138px;
+    right: 128px;
+    width: 60px;
+    height: 55px;
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: 55px 53px;
+    content: "";
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .map__image {
+    width: 768px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+    background-position: 0 -3px;
+    background-size: 768px 400px;
+  }
+
+  .map__badge::before {
+    top: 146px;
+    right: 320px;
+    width: 125px;
+    height: 110px;
+    background-size: 122px 106px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map__image {
+    width: 100%;
+    margin: 0 auto;
+    background-image: url("../img/bg-map-desktop@1x.png");
+    background-position: top 0 center;
+    background-size: 1440px auto;
+  }
+
+  .map__badge {
+    @include content-desktop;
+
+    &::before {
+      top: 150px;
+      right: 240px;
+    }
+  }
+}

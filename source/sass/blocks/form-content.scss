@@ -13,7 +13,52 @@
 .form-content__text-help {
   @include Oswald-uppercase;
   font-size: 14px;
-  margin-left: 20px;
-  margin-right: 30px;
+  padding-left: 20px;
+  padding-right: 30px;
   margin-top: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-content {
+    @include content-tablet;
+    border-top: none;
+  }
+
+  .form-content__title {
+    @include margin-tablet;
+    padding-top: 36px;
+  }
+
+  .form-content__text-help {
+    @include margin-form;
+    width: 65%;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 55px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-content {
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .form-content__title {
+    @include content-desktop;
+    padding-top: 173px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .form-content__text-help {
+    width: 35%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .form-content__centring-device {
+    @include content-desktop;
+  }
 }

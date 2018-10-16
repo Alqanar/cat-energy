@@ -23,3 +23,49 @@
   margin-top: 7px;
   margin-right: 20px;
 }
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    @include content-tablet;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 24px;
+  }
+
+  .main-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-header__logo-link {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .main-header__logo-image {
+    width: 174px;
+    height: 59px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header {
+    @include content-desktop;
+    position: relative;
+    padding: 0;
+  }
+
+  .main-header__wrapper {
+    position: absolute;
+    top: 53px;
+    left: 40px;
+    z-index: 3;
+    width: 1220px;
+  }
+
+  .main-header__logo-image {
+    width: 203px;
+    height: 60px;
+  }
+}

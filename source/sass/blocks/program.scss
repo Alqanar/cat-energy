@@ -53,7 +53,7 @@
     width: 50px;
     height: 50px;
     background-color: $main-color;
-    border-radius: 25px;
+    border-radius: 50%;
     content: "";
   }
 }
@@ -95,6 +95,120 @@
 
     &::after {
       opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .program {
+    padding: 76px 60px 62px 53px;
+
+    &--slim::before {
+      top: 80px;
+      left: 476px;
+      width: 141px;
+      height: 194px;
+      background-size: 141px 194px;
+    }
+
+    &--pro::before {
+      top: 134px;
+      left: 412px;
+      width: 268px;
+      height: 113px;
+      background-size: 268px 113px;
+    }
+  }
+
+  .program__title {
+    margin: 0;
+    font-size: 36px;
+
+    &::before {
+      top: 16px;
+      left: 394px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .program__content {
+    @include Arial(16px, 24px);
+    border-bottom: none;
+    max-width: 344px;
+    margin-top: 25px;
+  }
+
+  .program__link {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 34px;
+
+    &::after {
+      top: 4px;
+      left: 128px;
+    }
+
+    &:hover::after {
+      left: 128px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program {
+    width: 570px;
+    padding: 43px 48px 62px 52px;
+
+    &--slim {
+      margin-right: 80px;
+
+      &::before {
+        top: 41px;
+        left: 65px;
+        width: 71px;
+        height: 97px;
+        background-size: 71px 97px;
+      }
+    }
+
+    &--pro::before {
+      top: 68px;
+      left: 34px;
+      width: 134px;
+      height: 57px;
+      background-size: 134px 57px;
+    }
+  }
+
+  .program__title {
+    font-size: 36px;
+    margin-top: 33px;
+    margin-left: 162px;
+
+    &::before {
+      top: -29px;
+      left: -162px;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .program__content {
+    @include Arial(16px, 24px);
+    border-bottom: none;
+    margin-top: 74px;
+    margin-bottom: 0;
+  }
+
+  .program__link {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 9px;
+
+    &::after {
+      top: 4px;
+      left: 129px;
     }
   }
 }
