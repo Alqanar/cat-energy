@@ -68,5 +68,19 @@
 
   .main-content__sample {
     margin-top: 22px;
+    padding-bottom: 75px;
+
+    &::before {
+      top: 178px;
+      width: 76%;
+      height: 72%;
+    }
+
+    &::after {
+      top: 178px;
+      left: calc((100% - 1300px) / 2 + 983px);
+      width: auto;
+      height: 72%;
+    }
   }
 }

@@ -160,12 +160,36 @@
 
 @media (min-width: $desktop-width) {
   .slider__fat-cat {
+    top: -276px;
+    left: 52px;
+    width: 54%;
     height: 499px;
     background-image: url("../img/before-desktop@1x.png");
   }
 
   .slider__thin-cat {
+    top: -275px;
+    right: -62px;
+    width: 48%;
     height: 517px;
     background-image: url("../img/after-desktop@1x.png");
+    background-position: right 33px top;
+  }
+
+  .slider__band {
+    margin-right: 13px;
+  }
+
+  .slider__controls {
+    padding-left: 165px;
+    padding-top: 260px;
+  }
+
+  .slider__slide-1:checked ~ .slider__controls .slider__indication-toggle::before {
+    left: 200px;
+  }
+
+  .slider__indication-toggle::after {
+    left: 213px;
   }
 }

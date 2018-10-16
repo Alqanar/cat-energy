@@ -55,8 +55,8 @@
 
   &--time {
     position: absolute;
-    right: 19px;
     bottom: -24px;
+    left: 174px;
     padding-left: 16px;
     padding-right: 17px;
   }
@@ -129,8 +129,8 @@
     }
 
     &--time {
-      right: 172px;
       bottom: -26px;
+      left: 214px;
       width: 142px;
       padding-left: 5px;
       padding-right: 5px;
@@ -151,17 +151,11 @@
   .sample {
     position: relative;
     border-top: none;
-    padding-bottom: 0;
   }
 
   .sample__title {
     margin: 0;
     padding-top: 26px;
-    padding-bottom: 75px;
-  }
-
-  .sample__background {
-    background-color: $gray-color;
     padding-bottom: 75px;
   }
 
@@ -191,7 +185,7 @@
     background-color: $gray-color;
 
     &--time {
-      right: 75px;
+      left: 214px;
     }
   }
 
@@ -204,9 +198,6 @@
   }
 
   .sample__slider {
-    position: absolute;
-    top: -87px;
-    right: 62px;
-    width: 50%;
+    width: 59%;
   }
 }
