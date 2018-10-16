@@ -25,7 +25,30 @@
   }
 
   .main-content__sample {
+    position: relative;
     margin-top: 41px;
+
+    &::before {
+      position: absolute;
+      top: 619px;
+      left: 0;
+      z-index: 0;
+      width: 50%;
+      height: 43%;
+      background-color: $gray-color;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: 619px;
+      right: 0;
+      z-index: 0;
+      width: 50%;
+      height: 43%;
+      background-color: $middle-gray;
+      content: "";
+    }
   }
 }
 

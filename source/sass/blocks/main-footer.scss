@@ -78,7 +78,7 @@
 
   .main-footer__references-wrapper {
     display: flex;
-    padding: 52px 40px 54px;
+    padding: 52px 30px 54px;
     justify-content: space-between;
   }
 
@@ -114,5 +114,7 @@
 
   .main-footer__references-wrapper {
     @include content-desktop;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
