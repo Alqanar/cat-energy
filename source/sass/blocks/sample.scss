@@ -1,6 +1,6 @@
 .sample {
   background-color: $gray-color;
-  padding-top: 17px;
+  padding-top: 16px;
   padding-bottom: 37px;
 }
 
@@ -11,6 +11,7 @@
 .sample__text {
   @include Arial();
   padding-top: 10px;
+  padding-right: 2px;
 }
 
 .sample__result {

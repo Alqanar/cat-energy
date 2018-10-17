@@ -5,6 +5,7 @@
 }
 
 .additional-products__additional-list {
+  @include content-margin;
   padding-top: 30px;
 }
 
