@@ -162,7 +162,9 @@
   .sample__flex-box {
     display: flex;
 
+
     @include content-desktop;
+    @include margin-desktop;
   }
 
   .sample__text {
@@ -198,6 +200,6 @@
   }
 
   .sample__slider {
-    width: 59%;
+    width: 60%;
   }
 }
