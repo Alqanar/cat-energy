@@ -1,17 +1,16 @@
 @mixin content {
+  width: 320px;
   margin: 0 auto;
-  max-width: 320px;
 }
 
 @mixin content-tablet {
+  width: $tablet-width;
   margin: 0 auto;
-  max-width: $tablet-width;
 }
 
 @mixin content-desktop {
   width: $desktop-width;
   margin: 0 auto;
-  max-width: 100%;
 }
 
 @mixin button {
@@ -32,11 +31,11 @@
 
 @mixin margin-desktop {
   padding-left: 40px;
-  padding-right: 8px;
+  padding-right: 40px;
 }
 
 @mixin margin-form {
-  padding-left: 71px;
+  padding-left: 70px;
   padding-right: 65px;
 }
 

@@ -103,8 +103,7 @@
 
 @media (min-width: $desktop-width) {
   .main-footer {
-    margin: 0;
-    max-width: 100%;
+    width: auto;
   }
 
   .main-footer__contacts-wrapper {
@@ -114,6 +113,7 @@
 
   .main-footer__references-wrapper {
     @include content-desktop;
+    padding-top: 54px;
     padding-left: 40px;
     padding-right: 40px;
   }

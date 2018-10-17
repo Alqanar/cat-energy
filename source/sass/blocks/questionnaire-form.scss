@@ -56,7 +56,7 @@
   padding: 13px 12px 13px 15px;
   color: $arial-text;
   border: 1px solid rgba($sample-border, 0.5);
-  margin-left: 12px;
+  margin-left: 16px;
   text-transform: inherit;
   flex-grow: 1;
 
@@ -100,10 +100,12 @@
 
   &--email {
     padding-right: 40px;
+    margin-left: 11px;
   }
 
   &--tel {
     padding-right: 40px;
+    margin-left: 9px;
   }
 
   &--checkbox:checked + .questionnaire-form__label--checkbox::after {
@@ -209,7 +211,7 @@
 
 @media (min-width: $tablet-width) {
   .questionnaire-form {
-    padding-top: 43px;
+    padding-top: 45px;
   }
 
   .questionnaire-form__inquirer {
@@ -258,10 +260,14 @@
 
     &--email {
       padding-right: 50px;
+      margin-left: 20px;
+      padding-left: 20px;
     }
 
     &--tel {
       padding-right: 50px;
+      margin-left: 14px;
+      padding-left: 19px;
     }
 
     &--textarea {
@@ -282,7 +288,7 @@
 
   .questionnaire-form__program {
     padding: 18px 28px 17px;
-    margin-top: 74px;
+    margin-top: 72px;
     border-color: rgba($sample-border, 0.5);
   }
 
@@ -376,17 +382,12 @@
 
   .questionnaire-form__inquirer,
   .questionnaire-form__program-wrapper {
+    @include margin-desktop;
     width: 50%;
   }
 
-  .questionnaire-form__inquirer {
-    padding-left: 40px;
-    padding-right: 32px;
-  }
-
-  .questionnaire-form__program-wrapper {
-    padding-left: 48px;
-    padding-right: 23px;
+  .questionnaire-form__title-stripe {
+    @include margin-desktop;
   }
 
   .questionnaire-form__program {
@@ -407,24 +408,37 @@
   }
 
   .questionnaire-form__row--cat-owner {
+    @include margin-desktop;
     flex-basis: 50%;
-    padding-left: 44px;
-    padding-right: 27px;
+  }
+
+  .questionnaire-form__input--email {
+    margin-left: 23px;
+    padding-left: 17px;
+  }
+
+  .questionnaire-form__input--tel {
+    margin-left: 16px;
+    padding-left: 17px;
   }
 
   .questionnaire-form__element {
     top: 19px;
-    right: 46px;
+    right: 59px;
   }
 
   .questionnaire-form__comment {
     padding-top: 32px;
   }
 
+  .questionnaire-form__input--textarea {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   .questionnaire-form__textarea-wrapper {
     @include content-desktop;
-    padding-left: 21px;
-    padding-right: 3px;
+    @include margin-desktop;
   }
 
   .questionnaire-form__more-products {
@@ -437,7 +451,7 @@
   }
 
   .questionnaire-form__item--checkbox {
-    min-width: 21%;
+    min-width: 22%;
   }
 
   .questionnaire-form__wrapper-end {
