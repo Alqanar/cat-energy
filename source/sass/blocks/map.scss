@@ -11,6 +11,10 @@
   background-repeat: no-repeat;
   background-position: 0 -38px;
   background-size: 320px 400px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
 }
 
 .map__badge {
@@ -35,6 +39,10 @@
     background-image: url("../img/bg-map-tablet@1x.png");
     background-position: 0 -3px;
     background-size: 768px 400px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
   }
 
   .map__badge::before {
@@ -53,6 +61,10 @@
     background-image: url("../img/bg-map-desktop@1x.png");
     background-position: top 0 center;
     background-size: 1440px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 
   .map__badge {
