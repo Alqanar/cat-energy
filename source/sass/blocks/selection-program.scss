@@ -1,6 +1,7 @@
 .selection-program {
   position: relative;
   text-align: center;
+  background: linear-gradient(to bottom, #68b738 63%, #ffffff 0%);
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
@@ -60,7 +61,9 @@
 
 @media (min-width: $desktop-width) {
   .selection-program {
+    background: linear-gradient(to right, $white-text 0%, $main-color 0%);
     background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
     background-position: calc(49% + 373px) 0;
     background-size: 720px 696px;
     padding-bottom: 41px;
