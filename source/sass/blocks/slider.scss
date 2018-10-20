@@ -117,7 +117,7 @@
     background-position: right top;
     background-size: 690px auto;
 
-     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/after-tablet@2x.png");
     }
   }
