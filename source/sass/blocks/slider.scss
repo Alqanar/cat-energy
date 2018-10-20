@@ -4,6 +4,11 @@
   background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+    background-size: 320px auto;
+  }
 }
 
 .slider__thin-cat {
@@ -12,6 +17,11 @@
   background-image: url("../img/after-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/after-mobile@2x.png");
+    background-size: 320px auto;
+  }
 }
 
 .slider__controls {
@@ -90,6 +100,11 @@
     height: 520px;
     background-image: url("../img/before-tablet@1x.png");
     background-position: left top;
+    background-size: 690px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+    }
   }
 
   .slider__thin-cat {
@@ -100,6 +115,11 @@
     height: 520px;
     background-image: url("../img/after-tablet@1x.png");
     background-position: right top;
+    background-size: 690px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/after-tablet@2x.png");
+    }
   }
 
   .slider__controls {
@@ -172,6 +192,10 @@
     width: 365px;
     height: 499px;
     background-image: url("../img/before-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/before-desktop@2x.png");
+    }
   }
 
   .slider__thin-cat {
@@ -180,6 +204,10 @@
     width: 325px;
     height: 517px;
     background-image: url("../img/after-desktop@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/after-desktop@2x.png");
+    }
   }
 
   .slider__band {

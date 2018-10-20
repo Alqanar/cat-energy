@@ -1,10 +1,16 @@
 .selection-program {
   position: relative;
   text-align: center;
+  background: linear-gradient(to bottom, #68b738 63%, #ffffff 0%);
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: 320px auto;
   padding-bottom: 41px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 }
 
 .selection-program__title {
@@ -17,6 +23,11 @@
   line-height: 14px;
   color: $white-text;
   margin-bottom: 29px;
+}
+
+.selection-program__image {
+  width: 280px;
+  height: 270px;
 }
 
 @media (min-width: $tablet-width) {
@@ -50,10 +61,16 @@
 
 @media (min-width: $desktop-width) {
   .selection-program {
+    background: linear-gradient(to right, $white-text 0%, $main-color 0%);
     background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
     background-position: calc(49% + 373px) 0;
     background-size: 720px 696px;
     padding-bottom: 41px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   .selection-program__wrapper {

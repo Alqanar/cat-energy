@@ -14,6 +14,19 @@
   display: flex;
 }
 
+.product__picture {
+  &--small {
+    width: 140px;
+    height: 144px;
+  }
+
+  &--big {
+    width: 140px;
+    height: 144px;
+  }
+}
+
+
 .product__wrapper-text {
   width: 100%;
   padding-top: 22px;
