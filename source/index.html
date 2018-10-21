@@ -12,6 +12,9 @@
     <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
+    <div style="display: none">
+      <include src="img/sprite.svg"></include>
+    </div>
     <header class="main-header">
       <div class="main-header__wrapper">
         <a class="main-header__logo-link" href="#">
@@ -50,6 +53,9 @@
             <a class="button button--green button--index selection-program__button" href="form.html">Подобрать программу</a>
           </div>
           <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
             <img class="selection-program__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Баночка корма">
@@ -144,26 +150,34 @@
             <li class="social__item-vk">
               <a class="social__button-vk" href="#">
                 <p class="visual-hidden">ВКонтакте</p>
-                <include src="img/icon-vk-mobile.svg"></include>
+                <svg class="social__button-vk-svg" width="25" height="14">
+                  <use xlink:href="#sprite-icon-vk-mobile"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item-inst">
               <a class="social__button-inst" href="#">
                 <p class="visual-hidden">Инстаграм</p>
-                <include src="img/icon-insta-mobile.svg"></include>
+                <svg class="social__button-inst-svg" width="17" height="17">
+                  <use xlink:href="#sprite-icon-insta-mobile"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item-fb">
               <a class="social__button-fb" href="#">
                 <p class="visual-hidden">Фейсбук</p>
-                <include src="img/icon-fb-mobile.svg"></include>
+                <svg class="social__button-fb-svg" width="10" height="19">
+                  <use xlink:href="#sprite-icon-fb-mobile"></use>
+                </svg>
               </a>
             </li>
           </ul>
           <section class="main-footer__copyright">
             <a class="link main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a class="main-footer__copyright-logo" href="https://htmlacademy.ru/intensive/adaptive">
-              <include src="img/htmlacademy.svg"></include>
+              <svg class="main-footer__htmlacademy-fill" width="39" height="42">
+                <use xlink:href="#sprite-htmlacademy"></use>
+              </svg>
             </a>
           </section>
         </div>
