@@ -12,6 +12,8 @@ var image = require("gulp-image");
 var webp = require("gulp-webp");
 var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
+var cssnano = require("gulp-cssnano");
+var del = require("del");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -20,6 +22,7 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(cssnano())
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
@@ -27,7 +30,7 @@ gulp.task("css", function () {
 gulp.task("html", function() {
   return gulp.src("source/*.html")
     .pipe(posthtml([include({
-      root: 'source/'
+      root: "source/"
     })]))
     .pipe(gulp.dest("build"));
 });
@@ -45,14 +48,14 @@ gulp.task("image", function() {
 gulp.task("imagemin", function() {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(image({
-      optipng: ['-i 1', '-strip all', '-fix', '-o3', '-force'],
-      pngquant: ['--speed=1', '--force', 256],
-      zopflipng: ['-y', '--lossy_8bit', '--lossy_transparent'],
+      optipng: ["-i 1", "-strip all", "-fix", "-o3", "-force"],
+      pngquant: ["--speed=1", "--force", 256],
+      zopflipng: ["-y", "--lossy_8bit", "--lossy_transparent"],
       jpegRecompress: false,
-      mozjpeg: ['-quality', 95, '-progressive'],
+      mozjpeg: ["-quality", 95, "-progressive"],
       guetzli: false,
       gifsicle: false,
-      svgo: ['--enable', 'cleanupIDs', '--disable', 'convertColors']
+      svgo: ["--enable", "cleanupIDs", "--disable", "convertColors"]
     }))
     .pipe(gulp.dest("source/img"));
 });
@@ -69,12 +72,16 @@ gulp.task("sprite", function() {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("js", function() {
   return gulp.src("source/js/*.js")
     .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("clean", function() {
+  return del("build");
 });
 
 gulp.task("server", function () {
@@ -88,12 +95,13 @@ gulp.task("server", function () {
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/*.html", gulp.series("html"));
+  gulp.watch("source/img/*.svg", gulp.series("sprite"));
   gulp.watch("source/fonts/*", gulp.series("fonts"));
   gulp.watch("source/img/*", gulp.series("image"));
   gulp.watch("source/js/*", gulp.series("js"));
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "html", "fonts", "js", "image", "server"));
+gulp.task("start", gulp.series("fonts", "js", "image", "css", "sprite", "html", "server"));
 
-gulp.task("build", gulp.series("css", "html", "fonts", "js", "image"));
+gulp.task("build", gulp.series("clean", "fonts", "js", "image", "css", "sprite", "html"));
