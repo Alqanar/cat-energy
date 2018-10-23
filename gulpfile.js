@@ -102,6 +102,6 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("fonts", "js", "image", "css", "sprite", "html", "server"));
+gulp.task("start", gulp.series("clean", "fonts", "js", "image", "css", "sprite", "html", "server"));
 
 gulp.task("build", gulp.series("clean", "fonts", "js", "image", "css", "sprite", "html"));
