@@ -14,6 +14,7 @@ var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
 var cssnano = require("gulp-cssnano");
 var del = require("del");
+var uglify = require("gulp-uglify");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -77,6 +78,7 @@ gulp.task("sprite", function() {
 
 gulp.task("js", function() {
   return gulp.src("source/js/*.js")
+    .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
 

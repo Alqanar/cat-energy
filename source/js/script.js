@@ -13,7 +13,7 @@ function debounce(f, ms) {
   return function () {
     var args = arguments;
 
-    const onComplete = function() {
+    var onComplete = function() {
       f.apply(this, args);
       timer = null;
     };
