@@ -31,7 +31,7 @@ gulp.task("css", function () {
 gulp.task("html", function() {
   return gulp.src("source/*.html")
     .pipe(posthtml([include({
-      root: "source/"
+      root: "build/"
     })]))
     .pipe(gulp.dest("build"));
 });

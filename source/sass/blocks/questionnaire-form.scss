@@ -75,14 +75,14 @@
     fill: $main-color;
   }
 
-  &--error {
+  &:required:invalid {
     border: 1px solid $input-error;
     box-shadow:
       inset 1px 1px $input-error,
       inset -1px -1px $input-error;
   }
 
-  &--error + .questionnaire-form__element {
+  &:required:invalid + .questionnaire-form__element {
     fill: $input-error;
   }
 
