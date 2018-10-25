@@ -83,8 +83,9 @@
     content: "";
   }
 
-  &:hover::after {
-    left: 96px;
+  &:hover::after,
+  &:focus::after {
+    left: 132px;
     width: 40px;
     background-image: url("../img/icon-right-arrow-verylong.svg");
     background-size: 34px 12px;

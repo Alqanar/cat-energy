@@ -7,7 +7,8 @@
   padding-bottom: 25px;
 }
 
-.main-footer__link:hover {
+.main-footer__link:hover,
+.main-footer__link:focus {
   opacity: 0.8;
 }
 
@@ -53,7 +54,12 @@
   height: 42px;
   margin-right: -8px;
 
-  &:hover .main-footer__htmlacademy-fill {
+  &:focus {
+    outline: none;
+  }
+
+  &:hover .main-footer__htmlacademy-fill,
+  &:focus .main-footer__htmlacademy-fill {
     fill: $main-color;
   }
 

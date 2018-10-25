@@ -27,6 +27,7 @@
   &:hover,
   &:focus {
     color: rgba($dark-text, 0.6);
+    outline: none;
   }
 
   &:active {

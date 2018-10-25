@@ -5,6 +5,13 @@ var sandwichButton = document.querySelector(".sandwich-button");
 var myMap;
 var defaultCenter = [59.9386,30.3231];
 var defaultZoom = 17;
+var buttonsOrder = document.querySelectorAll(".product__button--order");
+var buttonAllProducts = document.querySelector(".button--gray");
+
+function onOrderClick (evt) {
+  evt.preventDefault();
+  console.log("open modal window: make the order");
+}
 
 /*функция для того, чтобы при изменении размера вьюпорта карта менялась не множество раз, а один раз при окончательном изменении ширины окна*/
 function debounce(f, ms) {
@@ -70,9 +77,22 @@ sandwichButton.addEventListener("click", function (evt) {
   mainMenu.classList.toggle("main-menu--show");
 });
 
+/*если у нас есть эта переменная на странице, то делать функцию*/
+if (buttonAllProducts) {
+  buttonAllProducts.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    console.log("show all products");
+  });
+}
+
 /*это событие срабатывает, только когда загрузятся все DOM-элементы*/
 document.addEventListener("DOMContentLoaded", function(evt) {
   ymaps.ready(initMap);
   /*слушаем изменение размера окна, при изменении применяем переменную handleResizeDebounced*/
   window.addEventListener("resize", handleResizeDebounced);
+
+  /*так как у нас несколько кнопок по которым должно открываться одинаковое модальное окно, то делаем цикл, в котором устанавливаем переменную i, которая изначально у нас = 0, условие цикла: пока i не станет меньше buttonsOrder, прогресс: i увеличивается на 1*/
+  for (var i = 0; i < buttonsOrder.length; i++) {
+    buttonsOrder[i].addEventListener("click", onOrderClick);
+  }
 });

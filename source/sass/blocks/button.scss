@@ -13,8 +13,10 @@
     color: $white-text;
     background-color: $main-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $button-action;
+      outline: none;
     }
 
     &:active {
