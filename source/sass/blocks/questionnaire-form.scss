@@ -142,11 +142,19 @@
     border: 1px solid $input-action;
   }
 
+  &:focus-within > .questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio::before {
+    border: 1px solid $input-action;
+}
+
   &:active {
     opacity: 0.3;
   }
 
   &:hover > .questionnaire-form__label--checkbox::before {
+    border: 1px solid $input-action;
+  }
+
+  &:focus-within > .questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox::before {
     border: 1px solid $input-action;
   }
 }

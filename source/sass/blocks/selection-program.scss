@@ -64,9 +64,11 @@
   .selection-program {
     background-image: 
       url("../img/index-background-desktop@1x.jpg"),
-      linear-gradient(to right, $white-text 50%, $gradient-color 50%);
+      linear-gradient(to left, $gradient-color 49%, $white-text 49%);
     background-repeat: no-repeat;
-    background-position: calc(49% + 373px) 0;
+    background-position: 
+      calc(49% + 373px) 0,
+      top 0 left -5px;
     background-size: 
       720px 696px,
       auto auto;

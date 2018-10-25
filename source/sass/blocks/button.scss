@@ -28,8 +28,10 @@
     color: $arial-text;
     background-color: $gray-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $gray-button-action;
+      outline: none;
     }
 
     &:active {

@@ -79,7 +79,7 @@
   .sample {
     background-color: $white-text;
     border-top: 1px solid $gray-border;
-    padding-bottom: 69px;
+    padding-bottom: 0;
   }
 
   .sample__title {
@@ -162,10 +162,10 @@
 
   .sample__flex-box {
     display: flex;
+    padding-left: 40px;
 
 
     @include content-desktop;
-    @include margin-desktop;
   }
 
   .sample__text {
@@ -202,5 +202,6 @@
 
   .sample__slider {
     width: 60%;
+    margin-top: -65px;
   }
 }
