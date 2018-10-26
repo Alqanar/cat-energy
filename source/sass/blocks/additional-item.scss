@@ -102,6 +102,10 @@
     flex-basis: 9%;
     padding-top: 14px;
     padding-left: 5px;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      flex-basis: 8.3%;
+    }
   }
 
   .additional-item__button {

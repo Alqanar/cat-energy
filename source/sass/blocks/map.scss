@@ -74,6 +74,10 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-map-desktop@2x.png");
     }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      margin-top: -130px;
+    }
   }
 
   .map__badge {

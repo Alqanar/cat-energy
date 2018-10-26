@@ -159,6 +159,21 @@
   }
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .questionnaire-form__label--radio:active,
+  .questionnaire-form__label--checkbox:active {
+    opacity: 0.3;
+
+    &::before {
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
 .questionnaire-form__cat-owner {
   padding-top: 4px;
 }
@@ -305,8 +320,9 @@
     padding-bottom: 17px;
 
     &--checkbox {
-      padding-bottom: 36px;
+      padding-bottom: 15px;
       min-width: 50%;
+      margin-bottom: 11px;
     }
   }
 
@@ -418,6 +434,10 @@
   .questionnaire-form__row--cat-owner {
     @include margin-desktop;
     flex-basis: 50%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      flex-basis: 43.8%;
+    }
   }
 
   .questionnaire-form__input--email {

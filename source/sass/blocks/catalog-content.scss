@@ -62,5 +62,9 @@
   .catalog-content__additional-products {
     padding-top: 54px;
     margin-bottom: 86px;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      padding-bottom: 130px;
+    }
   }
 }

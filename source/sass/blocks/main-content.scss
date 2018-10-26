@@ -14,6 +14,13 @@
   margin-top: 46px;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .main-content__selection-program {
+    width: inherit;
+    margin: inherit;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .main-content {
     @include content-tablet;
