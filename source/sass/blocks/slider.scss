@@ -132,6 +132,14 @@
     transition-timing-function: linear;
   }
 
+  .slider__slide-1:focus ~ .slider__wrapper-image .slider__band--left {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+    .slider__slide-2:focus ~ .slider__wrapper-image .slider__band--right {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
   .slider__controls {
     margin-top: 12px;
     padding-left: 17px;
@@ -145,8 +153,7 @@
     margin-right: 17px;
     padding-top: 4px;
 
-    &:hover,
-    &:focus {
+    &:hover {
       border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     }
 
@@ -200,7 +207,6 @@
     &:hover,
     &:focus {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
-      outline: none;
     }
 
     &:active {
