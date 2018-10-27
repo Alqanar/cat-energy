@@ -159,21 +159,6 @@
   }
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .questionnaire-form__label--radio:active,
-  .questionnaire-form__label--checkbox:active {
-    opacity: 0.3;
-
-    &::before {
-      opacity: 0.3;
-    }
-
-    &::after {
-      opacity: 0.3;
-    }
-  }
-}
-
 .questionnaire-form__cat-owner {
   padding-top: 4px;
 }
@@ -230,6 +215,30 @@
   text-transform: none;
   margin-top: 21px;
   margin-bottom: 32px;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .questionnaire-form__label--radio:active,
+  .questionnaire-form__label--checkbox:active {
+    opacity: 0.3;
+
+    &::before {
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  .questionnaire-form__input--tel {
+    padding-right: 26px;
+  }
+
+  .questionnaire-form__element {
+    top: 17px;
+    right: 11px;
+  }
 }
 
 @media (min-width: $tablet-width) {

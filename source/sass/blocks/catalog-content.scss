@@ -17,6 +17,15 @@
   padding-top: 8px;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .catalog-content__title,
+  .catalog-content__products-list,
+  .catalog-content__additional-products {
+    width: inherit;
+    margin: inherit;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .catalog-content {
     @include content-tablet;
@@ -62,9 +71,5 @@
   .catalog-content__additional-products {
     padding-top: 54px;
     margin-bottom: 86px;
-
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      padding-bottom: 130px;
-    }
   }
 }

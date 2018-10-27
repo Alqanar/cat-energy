@@ -2,6 +2,13 @@
   @include content-margin;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .wrapper {
+    width: inherit;
+    margin: inherit;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .wrapper {
     @include margin-tablet;

@@ -64,6 +64,10 @@
 
   .additional-item__size {
     flex-basis: 25%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      flex-basis: 24.6%;
+    }
   }
 
   .additional-item__price {
