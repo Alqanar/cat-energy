@@ -4,7 +4,7 @@
 }
 
 .questionnaire-form__inquirer {
-  padding-left: 19px;
+  padding-left: 20px;
   padding-right: 20px;
 }
 
@@ -12,7 +12,7 @@
   position: relative;
   display: flex;
   margin-top: 0;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 }
 
 .questionnaire-form__label {
@@ -52,10 +52,12 @@
 }
 
 .questionnaire-form__input {
-  padding: 13px 12px 13px 15px;
+  height: 45px;
   color: $arial-text;
   border: 1px solid rgba($sample-border, 0.5);
-  margin-left: 16px;
+  padding-left: 15px;
+  padding-right: 12px;
+  margin-left: 14px;
   text-transform: inherit;
   flex-grow: 1;
 
@@ -116,6 +118,8 @@
   }
 
   &--tel {
+    overflow: hidden;
+    width: 206px;
     padding-right: 40px;
     margin-left: 9px;
   }
@@ -143,18 +147,32 @@
       opacity: 0.3;
     }
   }
+}
 
-  &--textarea {
-    padding-left: 15px;
-    padding-right: 9px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-bottom: 9px;
+.questionnaire-form__textarea {
+  padding: 12px 9px 9px 15px;
+  color: $arial-text;
+  border: 1px solid rgba($sample-border, 0.5);
+  margin-left: 20px;
+  margin-right: 20px;
+  text-transform: inherit;
+  flex-grow: 1;
+
+  &:hover {
+    border: 1px solid $sample-border;
+  }
+
+  &:focus {
+    border: 1px solid $arial-text;
+    box-shadow:
+      inset 1px 1px $arial-text,
+      inset -1px -1px $arial-text;
+    outline: none;
   }
 }
 
 .questionnaire-form__program {
-  padding: 13px 20px 14px;
+  padding: 14px 20px 14px;
   border: 1px solid $gray-light;
   margin-top: 23px;
 }
@@ -217,7 +235,7 @@
 .questionnaire-form__element {
   position: absolute;
   top: 15px;
-  right: 14px;
+  right: 13px;
   fill: $additional-item-title;
 }
 
@@ -245,10 +263,9 @@
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  // если так прописать сразу, то в хром, сафари и фф применяется двойное opacity и от label и от ::before
   .questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio:active,
   .questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
-    opacity: 0.3;
-
     &::before {
       border: 1px solid $input-action;
       opacity: 0.3;
@@ -258,22 +275,10 @@
       opacity: 0.3;
     }
   }
-
-  .questionnaire-form__input--tel {
-    padding-right: 26px;
-  }
-
-  .questionnaire-form__element {
-    top: 17px;
-    right: 11px;
-  }
 }
 
 @supports (-ms-ime-align:auto) {
-  .questionnaire-form__input--tel {
-    padding-right: 26px;
-  }
-
+  // если так прописать сразу, то в хром, сафари и фф применяется двойное opacity и от label и от ::before
   .questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio:active,
   .questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
     &::before {
@@ -286,15 +291,9 @@
   }
 }
 
-@-moz-document url-prefix("") {
-  .questionnaire-form__input--tel {
-    padding-right: 26px;
-  }
-}
-
 @media (min-width: $tablet-width) {
   .questionnaire-form {
-    padding-top: 45px;
+    padding-top: 46px;
   }
 
   .questionnaire-form__inquirer {
@@ -302,7 +301,7 @@
   }
 
   .questionnaire-form__row {
-    margin-bottom: 19px;
+    margin-bottom: 20px;
   }
 
   .questionnaire-form__label {
@@ -329,9 +328,11 @@
   }
 
   .questionnaire-form__input {
-    padding: 10px 12px 11px 15px;
+    height: 52px;
     font-size: 20px;
     line-height: 20px;
+    padding-left: 15px;
+    padding-right: 12px;
     margin-left: 19px;
 
     &--radio:checked + .questionnaire-form__label--radio::after {
@@ -353,16 +354,16 @@
       padding-left: 19px;
     }
 
-    &--textarea {
-      padding-bottom: 17px;
-      padding-top: 15px;
-      padding-left: 18px;
-    }
-
     &--checkbox:checked + .questionnaire-form__label--checkbox::after {
       top: 18px;
       left: 30px;
     }
+  }
+
+  .questionnaire-form__textarea {
+    padding: 15px 18px 17px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .questionnaire-form__program-wrapper {
@@ -380,7 +381,7 @@
     padding-bottom: 17px;
 
     &--checkbox {
-      padding-bottom: 15px;
+      padding-bottom: 25px;
       min-width: 50%;
       margin-bottom: 11px;
     }
@@ -403,7 +404,7 @@
 
   .questionnaire-form__element {
     top: 19px;
-    right: 20px;
+    right: 19px;
   }
 
   .questionnaire-form__comment {
@@ -451,18 +452,11 @@
     align-self: center;
     margin-left: 63px;
   }
-
-  @-moz-document url-prefix("") {
-    .questionnaire-form__input {
-      padding-top: 14px;
-      padding-bottom: 15px;
-    }
-  }
 }
 
 @media (min-width: $desktop-width) {
   .questionnaire-form {
-    padding-top: 45px;
+    padding-top: 46px;
   }
 
   .questionnaire-form__combiner {
@@ -500,11 +494,7 @@
 
   .questionnaire-form__row--cat-owner {
     @include margin-desktop;
-    flex-basis: 50%;
-
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      flex-basis: 43.8%;
-    }
+    width: 650px;
   }
 
   .questionnaire-form__input--email {
@@ -534,6 +524,11 @@
   .questionnaire-form__textarea-wrapper {
     @include content-desktop;
     @include margin-desktop;
+  }
+
+  .questionnaire-form__textarea {
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .questionnaire-form__more-products {
