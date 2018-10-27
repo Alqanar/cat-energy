@@ -97,6 +97,19 @@
     content: "";
   }
 
+  &--radio:disabled + .questionnaire-form__label--radio {
+    opacity: 0.3;
+    cursor: auto;
+
+    &::before {
+      opacity: 0.6;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
   &--email {
     padding-right: 40px;
     margin-left: 11px;
@@ -116,6 +129,19 @@
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     content: "";
+  }
+
+  &--checkbox:disabled + .questionnaire-form__label--checkbox {
+    opacity: 0.3;
+    cursor: auto;
+
+    &::before {
+      opacity: 0.6;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 
   &--textarea {
@@ -138,7 +164,7 @@
   padding-top: 12px;
   padding-bottom: 13px;
 
-  &:hover > .questionnaire-form__label--radio::before {
+  &:hover > .questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio::before {
     border: 1px solid $input-action;
   }
 
@@ -146,11 +172,15 @@
     border: 1px solid $input-action;
 }
 
-  &:active {
+  &:active > .questionnaire-form__input--radio:not(:disabled) {
     opacity: 0.3;
   }
 
-  &:hover > .questionnaire-form__label--checkbox::before {
+  &:active > .questionnaire-form__input--checkbox:not(:disabled) {
+    opacity: 0.3;
+  }
+
+  &:hover > .questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox::before {
     border: 1px solid $input-action;
   }
 
@@ -218,7 +248,7 @@
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .questionnaire-form__label--radio:active,
+  .questionnaire-form__label--radio:active ,
   .questionnaire-form__label--checkbox:active {
     opacity: 0.3;
 
@@ -244,6 +274,19 @@
 @supports (-ms-ime-align:auto) {
   .questionnaire-form__input--tel {
     padding-right: 26px;
+  }
+
+  .questionnaire-form__label--radio:active ,
+  .questionnaire-form__label--checkbox:active {
+    opacity: 0.3;
+
+    &::before {
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
 
