@@ -15,6 +15,7 @@
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  // в ie11 дети от родителя не наследуют
   .main-content__selection-program,
   .main-content__sample {
     width: inherit;

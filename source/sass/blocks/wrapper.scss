@@ -3,6 +3,7 @@
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  // в ie11 дети от родителя не наследуют
   .wrapper {
     width: inherit;
     margin: inherit;
