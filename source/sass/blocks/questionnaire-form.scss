@@ -163,30 +163,27 @@
   position: relative;
   padding-top: 12px;
   padding-bottom: 13px;
-
-  &:hover > .questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio::before {
-    border: 1px solid $input-action;
-  }
-
-  &:focus-within > .questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio::before {
-    border: 1px solid $input-action;
 }
 
-  &:active > .questionnaire-form__input--radio:not(:disabled) {
-    opacity: 0.3;
-  }
+.questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio:active,
+.questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
+  opacity: 0.3;
 
-  &:active > .questionnaire-form__input--checkbox:not(:disabled) {
-    opacity: 0.3;
-  }
-
-  &:hover > .questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox::before {
+  &::before {
     border: 1px solid $input-action;
   }
+}
 
-  &:focus-within > .questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox::before {
+.questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio:hover,
+.questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox:hover {
+  &::before {
     border: 1px solid $input-action;
   }
+}
+
+.questionnaire-form__input--radio:not(:disabled):focus + .questionnaire-form__label--radio::before,
+.questionnaire-form__input--checkbox:not(:disabled):focus + .questionnaire-form__label--checkbox::before {
+  border: 1px solid $input-action;
 }
 
 .questionnaire-form__cat-owner {
@@ -248,11 +245,12 @@
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .questionnaire-form__label--radio:active ,
-  .questionnaire-form__label--checkbox:active {
+  .questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio:active,
+  .questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
     opacity: 0.3;
 
     &::before {
+      border: 1px solid $input-action;
       opacity: 0.3;
     }
 
@@ -276,10 +274,8 @@
     padding-right: 26px;
   }
 
-  .questionnaire-form__label--radio:active ,
-  .questionnaire-form__label--checkbox:active {
-    opacity: 0.3;
-
+  .questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio:active,
+  .questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
     &::before {
       opacity: 0.3;
     }
@@ -290,7 +286,7 @@
   }
 }
 
-@media screen and (min--moz-device-pixel-ratio:0) {
+@-moz-document url-prefix("") {
   .questionnaire-form__input--tel {
     padding-right: 26px;
   }
@@ -456,7 +452,7 @@
     margin-left: 63px;
   }
 
-  @media screen and (min--moz-device-pixel-ratio:0) {
+  @-moz-document url-prefix("") {
     .questionnaire-form__input {
       padding-top: 14px;
       padding-bottom: 15px;
