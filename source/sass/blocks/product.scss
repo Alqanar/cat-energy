@@ -98,6 +98,12 @@
   }
 }
 
+@media screen and (min--moz-device-pixel-ratio:0) {
+  .product__button {
+    margin-top: -3px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .product {
     position: relative;
