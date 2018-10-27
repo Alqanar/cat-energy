@@ -241,6 +241,12 @@
   }
 }
 
+@supports (-ms-ime-align:auto) {
+  .questionnaire-form__input--tel {
+    padding-right: 26px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .questionnaire-form {
     padding-top: 45px;

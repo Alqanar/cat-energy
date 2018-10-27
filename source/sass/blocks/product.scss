@@ -92,6 +92,12 @@
   margin-bottom: 24px;
 }
 
+@supports (-ms-ime-align:auto) {
+  .product__button {
+    margin-top: -3px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .product {
     position: relative;

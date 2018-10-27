@@ -271,12 +271,12 @@
     margin-right: 3px;
   }
 
-  .slider__slide-1:checked~.slider__wrapper-image {
+  .slider__slide-1:checked ~ .slider__wrapper-image {
     background-color: $gray-color;
     background-image: none;
   }
 
-  .slider__slide-2:checked~.slider__wrapper-image {
+  .slider__slide-2:checked ~ .slider__wrapper-image {
     background-color: $middle-gray;
     background-image: none;
   }
