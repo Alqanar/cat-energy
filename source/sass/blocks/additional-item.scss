@@ -15,6 +15,7 @@
 
 .additional-item__product-name {
   @include Oswald-uppercase;
+  margin: 0;
   line-height: 16px;
   color: $additional-item-title;
   flex-basis: 100%;

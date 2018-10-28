@@ -3,13 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="preload" type="font/woff2" href="fonts/oswaldregular.woff2" as="font" crossorigin>
     <title>Кэт энерджи</title>
-    <script>
-      // Picture element HTML5 shiv
-      document.createElement( "picture" );
-    </script>
     <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
@@ -25,15 +21,15 @@
             <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип магазина cat-energy">
           </picture>
         </a>
+        <!-- если JS работает, то нижеуказанному button добавляется класс sandwichButton--javascript-work и в результате чего показывается кнопка, по умолчанию кнопка скрыта -->
         <button class="sandwich-button main-header__sandwich-button" type="button">Открыть меню
           <include src="img/hamburger.svg"></include>
         </button>
+        <!-- если JS работает, то меню добавляется класс main-menu--javascript-work, в результате чего меню скрывается, по умолчанию меню открыто -->
         <nav class="main-header__main-menu main-menu">
           <ul class="same-list main-menu__navigation">
             <li class="main-menu__item">
-              <a class="link main-menu__link main-menu__link--index main-menu__link--active-index">
-                <p class="main-menu__link-text">Главная</p>
-              </a>
+              <a class="link main-menu__link main-menu__link--index main-menu__link--active-index">Главная</a>
             </li>
             <li class="main-menu__item">
               <a class="link main-menu__link main-menu__link--index" href="catalog.html">Каталог продукции</a>
@@ -68,12 +64,12 @@
           <article class="program program--slim main-content__program">
             <h3 class="program__title">Похудение</h3>
             <p class="program__content">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="link program__link" href="#">Каталог slim</a>
+            <a class="link program__link" href="catalog/slim.html">Каталог slim</a>
           </article>
           <article class="program program--pro main-content__program">
             <h3 class="program__title">Набор массы</h3>
             <p class="program__content">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="link program__link" href="#">Каталог pro</a>
+            <a class="link program__link" href="catalog/pro.html">Каталог pro</a>
           </article>
         </div>
         <section class="features">
@@ -89,7 +85,7 @@
               <p class="features__text features__text--cultery">Замените один-два приема обычной еды на наше функциональное питание.</p>
             </li>
             <li class="features__item">
-              <p class="features__text features__text--weight">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+              <p class="features__text features__text--weight">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
             </li>
           </ol>
         </section>
@@ -108,7 +104,10 @@
                 <p class="sample__field sample__field--time">60 дней</p>
                 <p class="sample__property-small sample__property-small--time">затрачено времени</p>
               </div>
-              <p class="sample__waste">Затраты на питание:              15 000 руб.</p>
+              <div class="sample__waste">
+                <p class="sample__expenses">Затраты на питание:</p>
+                <p class="sample__expenses sample__cost">15 000 руб.</p>
+              </div>
             </div>
           </div>
           <section class="slider sample__slider">
@@ -132,7 +131,7 @@
     <footer class="main-footer">
       <div class="main-footer__contacts-wrapper">
         <section class="contacts contacts--index main-footer__contacts">
-          <p class="contacts__dillers">приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__dillers">приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <div class="contacts__adress">
             <p class="contacts__adress-street">ул. Большая Конюшенная, д. 19/8</p>
             <p class="contacts__adress-town">Санкт-Петербург</p>
@@ -150,7 +149,7 @@
           <ul class="same-list social main-footer__social">
             <li class="social__item-vk">
               <a class="social__button-vk" href="#">
-                <p class="visual-hidden">ВКонтакте</p>
+                <span class="visual-hidden">ВКонтакте</span>
                 <svg class="social__button-vk-svg" width="25" height="14">
                   <use xlink:href="#sprite-icon-vk-mobile"></use>
                 </svg>
@@ -158,7 +157,7 @@
             </li>
             <li class="social__item-inst">
               <a class="social__button-inst" href="#">
-                <p class="visual-hidden">Инстаграм</p>
+                <span class="visual-hidden">Инстаграм</span>
                 <svg class="social__button-inst-svg" width="17" height="17">
                   <use xlink:href="#sprite-icon-insta-mobile"></use>
                 </svg>
@@ -166,7 +165,7 @@
             </li>
             <li class="social__item-fb">
               <a class="social__button-fb" href="#">
-                <p class="visual-hidden">Фейсбук</p>
+                <span class="visual-hidden">Фейсбук</span>
                 <svg class="social__button-fb-svg" width="10" height="19">
                   <use xlink:href="#sprite-icon-fb-mobile"></use>
                 </svg>

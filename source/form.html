@@ -3,13 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="preload" type="font/woff2" href="fonts/oswaldregular.woff2" as="font" crossorigin>
     <title>Подбор программы питания - Кэт энерджи</title>
-    <script>
-      // Picture element HTML5 shiv
-      document.createElement( "picture" );
-    </script>
     <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
@@ -25,9 +21,11 @@
             <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип магазина cat-energy">
           </picture>
         </a>
+        <!-- если JS работает, то нижеуказанному button добавляется класс sandwichButton--javascript-work и в результате чего показывается кнопка, по умолчанию кнопка скрыта -->
         <button class="sandwich-button main-header__sandwich-button" type="button">Открыть меню
           <include src="img/hamburger.svg"></include>
         </button>
+        <!-- если JS работает, то меню добавляется класс main-menu--javascript-work, в результате чего меню скрывается, по умолчанию меню открыто -->
         <nav class="main-header__main-menu main-menu">
           <ul class="same-list main-menu__navigation">
             <li class="main-menu__item">
@@ -37,9 +35,7 @@
               <a class="link main-menu__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-menu__item">
-              <a class="link main-menu__link main-menu__link--active">
-                <p class="main-menu__link-text">Подбор программы</p>
-              </a>
+              <a class="link main-menu__link main-menu__link--active">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -53,15 +49,15 @@
       <form class="questionnaire-form form-content__questionnaire-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="questionnaire-form__combiner">
           <section class="questionnaire-form__inquirer">
-            <p class="questionnaire-form__row">
+            <p class="questionnaire-form__row questionnaire-form__row--introductory">
               <label class="questionnaire-form__label" for="questionnaire-form__cat-name">Имя:*</label>
               <input class="questionnaire-form__input" id="questionnaire-form__cat-name" type="text" name="cat-name" value="Барсик" required>
             </p>
-            <p class="questionnaire-form__row">
+            <p class="questionnaire-form__row questionnaire-form__row--introductory">
               <label class="questionnaire-form__label" for="questionnaire-form__cat-weight">Вес (кг):*</label>
               <input class="questionnaire-form__input" id="questionnaire-form__cat-weight" type="text" name="cat-weight" value="7" required>
             </p>
-            <p class="questionnaire-form__row">
+            <p class="questionnaire-form__row questionnaire-form__row--introductory">
               <label class="questionnaire-form__label" for="questionnaire-form__cat-years">Возраст (лет):</label>
               <input class="questionnaire-form__input" id="questionnaire-form__cat-years" type="text" name="cat-years" placeholder="7">
             </p>
@@ -87,10 +83,10 @@
           </div>
         </div>
         <section class="questionnaire-form__cat-owner">
-          <div class="title-stripe__line questionnaire-form__title-stripe--cat-owner">
-            <div class="title-strip__holder">
-              <h2 class="title-stripe questionnaire-form__title-stripe">
-                <span class="title-stripe__wrapper">
+          <div class="title-stripe">
+            <div class="title-stripe__holder">
+              <h2 class="title-stripe__name title-stripe__name--form">
+                <span class="title-stripe__text">
                   Контактные данные (владельца кота)
                 </span>
               </h2>
@@ -114,9 +110,9 @@
           </div>
         </section>
         <section class="questionnaire-form__comment">
-          <div class="title-stripe__line questionnaire-form__title-stripe--comment">
-            <div class="title-strip__holder">
-              <h2 class="title-stripe questionnaire-form__title-stripe">Комментарий</h2>
+          <div class="title-stripe">
+            <div class="title-stripe__holder">
+              <h2 class="title-stripe__name title-stripe__name--form">Комментарий</h2>
             </div>
           </div>
           <p class="questionnaire-form__row questionnaire-form__textarea-wrapper">
@@ -125,9 +121,9 @@
           </p>
         </section>
         <section class="questionnaire-form__more-products">
-          <div class="title-stripe__line questionnaire-form__title-stripe--more">
-            <div class="title-strip__holder">
-              <h2 class="title-stripe questionnaire-form__title-stripe">Дополнительно</h2>
+          <div class="title-stripe">
+            <div class="title-stripe__holder">
+              <h2 class="title-stripe__name title-stripe__name--form">Дополнительно</h2>
             </div>
           </div>
           <ul class="same-list questionnaire-form__checkbox">
@@ -158,7 +154,7 @@
     <footer class="main-footer">
       <div class="main-footer__contacts-wrapper">
         <section class="contacts main-footer__contacts">
-          <p class="contacts__dillers">приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__dillers">приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <div class="contacts__adress">
             <p class="contacts__adress-street">ул. Большая Конюшенная, д. 19/8</p>
             <p class="contacts__adress-town">Санкт-Петербург</p>
@@ -176,7 +172,7 @@
           <ul class="same-list social main-footer__social">
             <li class="social__item-vk">
               <a class="social__button-vk" href="#">
-                <p class="visual-hidden">ВКонтакте</p>
+                <span class="visual-hidden">ВКонтакте</span>
                 <svg class="social__button-vk-svg" width="25" height="14">
                   <use xlink:href="#sprite-icon-vk-mobile"></use>
                 </svg>
@@ -184,7 +180,7 @@
             </li>
             <li class="social__item-inst">
               <a class="social__button-inst" href="#">
-                <p class="visual-hidden">Инстаграм</p>
+                <span class="visual-hidden">Инстаграм</span>
                 <svg class="social__button-inst-svg" width="17" height="17">
                   <use xlink:href="#sprite-icon-insta-mobile"></use>
                 </svg>
@@ -192,7 +188,7 @@
             </li>
             <li class="social__item-fb">
               <a class="social__button-fb" href="#">
-                <p class="visual-hidden">Фейсбук</p>
+                <span class="visual-hidden">Фейсбук</span>
                 <svg class="social__button-fb-svg" width="10" height="19">
                   <use xlink:href="#sprite-icon-fb-mobile"></use>
                 </svg>

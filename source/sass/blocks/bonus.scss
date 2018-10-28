@@ -58,7 +58,7 @@
     width: 25%;
     text-align: left;
     margin-left: auto;
-    margin-right: 92px;
+    margin-right: 108px;
     padding-top: 56px;
 
     &::before {
@@ -76,8 +76,8 @@
     background-size: 245px auto;
     margin-top: 69px;
     margin-left: 58px;
-    padding-left: 38px;
-    padding-right: 23px;
+    padding-left: 35px;
+    padding-right: 33px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");

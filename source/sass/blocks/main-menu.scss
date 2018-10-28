@@ -36,7 +36,7 @@
 
   &--active,
   &--active-index {
-    cursor: pointer;
+    cursor: auto;
 
     &:hover,
     &:focus,
@@ -111,7 +111,6 @@
 
   .main-menu__link--active-index {
     border-bottom: 2px solid $white-text;
-    cursor: pointer;
 
     &:hover,
     &:focus,

@@ -11,8 +11,15 @@
 .questionnaire-form__row {
   position: relative;
   display: flex;
-  margin-top: 0;
-  margin-bottom: 14px;
+  margin: 0;
+
+  &--introductory {
+    margin-bottom: 14px;
+  }
+
+  &--cat-owner {
+    margin-top: 14px;
+  }
 }
 
 .questionnaire-form__label {
@@ -208,28 +215,9 @@
   padding-top: 4px;
 }
 
-.questionnaire-form__title-stripe {
-  top: 23px;
-  margin: 0;
-  text-transform: none;
-  padding-left: 19px;
-  padding-right: 21px;
-
-  &--cat-owner {
-    padding-bottom: 60px;
-  }
-
-  &--comment {
-    padding-bottom: 37px;
-  }
-
-  &--more {
-    padding-bottom: 31px;
-  }
-}
-
 .questionnaire-form__cat-owner-wrapper {
   @include content-margin;
+  padding-top: 42px;
 }
 
 .questionnaire-form__element {
@@ -240,11 +228,19 @@
 }
 
 .questionnaire-form__comment {
-  margin-top: -9px;
+  margin-top: 5px;
+}
+
+.questionnaire-form__textarea-wrapper {
+  padding-top: 33px;
 }
 
 .questionnaire-form__more-products {
-  margin-top: -9px;
+  margin-top: 5px;
+}
+
+.questionnaire-form__checkbox {
+  padding-top: 27px;
 }
 
 .questionnaire-form__button {
@@ -301,7 +297,13 @@
   }
 
   .questionnaire-form__row {
-    margin-bottom: 20px;
+    &--introductory {
+      margin-bottom: 20px;
+    }
+
+    &--cat-owner {
+      margin-top: 20px;
+    }
   }
 
   .questionnaire-form__label {
@@ -391,15 +393,9 @@
     padding-top: 59px;
   }
 
-  .questionnaire-form__title-stripe {
-    top: 17px;
-    padding-left: 40px;
-    padding-right: 43px;
-  }
-
   .questionnaire-form__cat-owner-wrapper {
     @include margin-form;
-    padding-top: 22px;
+    padding-top: 47px;
   }
 
   .questionnaire-form__element {
@@ -408,19 +404,17 @@
   }
 
   .questionnaire-form__comment {
-    margin-top: 0;
-    padding-top: 30px;
+    padding-top: 44px;
   }
 
   .questionnaire-form__textarea-wrapper {
     padding-left: 51px;
     padding-right: 47px;
-    padding-top: 46px;
+    padding-top: 66px;
   }
 
   .questionnaire-form__more-products {
-    margin-top: 0;
-    padding-top: 30px;
+    padding-top: 45px;
   }
 
   .questionnaire-form__checkbox {
@@ -428,7 +422,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 50px;
-    padding-top: 27px;
+    padding-top: 41px;
     padding-right: 29px;
   }
 
@@ -442,7 +436,7 @@
 
   .questionnaire-form__wrapper-end {
     display: flex;
-    padding-top: 27px;
+    padding-top: 28px;
     padding-bottom: 73px;
   }
 
@@ -471,10 +465,6 @@
     width: 50%;
   }
 
-  .questionnaire-form__title-stripe {
-    @include margin-desktop;
-  }
-
   .questionnaire-form__program {
     margin: 0;
   }
@@ -488,6 +478,7 @@
     display: flex;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 46px;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -513,7 +504,7 @@
   }
 
   .questionnaire-form__comment {
-    padding-top: 32px;
+    padding-top: 47px;
   }
 
   .questionnaire-form__input--textarea {
@@ -524,6 +515,7 @@
   .questionnaire-form__textarea-wrapper {
     @include content-desktop;
     @include margin-desktop;
+    padding-top: 66px;
   }
 
   .questionnaire-form__textarea {
@@ -532,12 +524,13 @@
   }
 
   .questionnaire-form__more-products {
-    padding-top: 51px;
+    padding-top: 46px;
   }
 
   .questionnaire-form__checkbox {
     @include content-desktop;
     padding-left: 20px;
+    padding-top: 42px;
   }
 
   .questionnaire-form__item--checkbox {

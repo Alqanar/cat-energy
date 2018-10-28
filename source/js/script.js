@@ -7,6 +7,7 @@ var defaultCenter = [59.9386,30.3231];
 var defaultZoom = 17;
 var buttonsOrder = document.querySelectorAll(".product__button--order");
 var buttonAllProducts = document.querySelector(".button--gray");
+var sandwich = document.querySelector(".sandwich-button__ham");
 
 function onOrderClick (evt) {
   evt.preventDefault();
@@ -66,13 +67,30 @@ function initMap() {
   handleResize();
 }
 
+/*пришлось это прописывать, так как у svg нет classList в ie11*/
+function switchSvgClass(element) {
+  var activeClass = "sandwich-button__ham--active";
+  var className = element.getAttribute("class");
+  var toSet = "sandwich-button__ham";
+  /*если нет активного класса --active, то дополнить toSet еще одним классом под переменной activeClass*/
+  if (!className.match(activeClass)) {
+    toSet += " " + activeClass;
+  }
+  element.setAttribute("class", toSet);
+}
+
 /*если js работает, то навешивается класс для сокрытия менюшки*/
 mainMenu.classList.add("main-menu--javascript-work");
+
+/*если js работает, то навешивается класс для показа сэндвич-кнопки*/
+sandwichButton.classList.add("sandwichButton--javascript-work");
 
 /*ловим клик (событие) по кнопке открытия меню, которую мы записали ранее в переменную sandwichButton*/
 sandwichButton.addEventListener("click", function (evt) {
   /*отменяем стандартное действие при нажатии на кнопку*/
   evt.preventDefault();
+  /*добавляем сэндвичу класс, чтобы осуществить превращение в крестик*/
+  switchSvgClass(sandwich);
   /*с помощью метода classList.toggle добавляем новый класс к менюшке по клику на кнопку и удаляем по второму клику*/
   mainMenu.classList.toggle("main-menu--show");
 });

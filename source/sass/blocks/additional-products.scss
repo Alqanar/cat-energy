@@ -1,20 +1,9 @@
-.additional-products__title-stripe {
-  margin: 0;
-  padding-left: 19px;
-  padding-right: 23px;
-}
-
 .additional-products__additional-list {
   @include content-margin;
   padding-top: 30px;
 }
 
 @media (min-width: $tablet-width) {
-  .additional-products__title-stripe {
-    padding-left: 38px;
-    padding-right: 35px;
-  }
-
   .additional-products__additional-list {
     padding: 0;
     padding-top: 69px;
@@ -27,11 +16,6 @@
   .additional-products {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .additional-products__title-stripe {
-    padding-left: 40px;
-    padding-right: 35px;
   }
 
   .additional-products__centering-device {

@@ -3,13 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="preload" type="font/woff2" href="fonts/oswaldregular.woff2" as="font" crossorigin>
     <title>Каталог продукции - Кэт энерджи</title>
-    <script>
-      // Picture element HTML5 shiv
-      document.createElement( "picture" );
-    </script>
     <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
@@ -25,18 +21,18 @@
             <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип магазина cat-energy">
           </picture>
         </a>
+        <!-- если JS работает, то нижеуказанному button добавляется класс sandwichButton--javascript-work и в результате чего показывается кнопка, по умолчанию кнопка скрыта -->
         <button class="sandwich-button main-header__sandwich-button" type="button">Открыть меню
           <include src="img/hamburger.svg"></include>
         </button>
+        <!-- если JS работает, то меню добавляется класс main-menu--javascript-work, в результате чего меню скрывается, по умолчанию меню открыто -->
         <nav class="main-header__main-menu main-menu">
           <ul class="same-list main-menu__navigation">
             <li class="main-menu__item">
               <a class="link main-menu__link" href="index.html">Главная</a>
             </li>
             <li class="main-menu__item">
-              <a class="link main-menu__link main-menu__link--active">
-                <p class="main-menu__link-text">Каталог продукции</p>
-              </a>
+              <a class="link main-menu__link main-menu__link--active">Каталог продукции</a>
             </li>
             <li class="main-menu__item">
               <a class="link main-menu__link" href="form.html">Подбор программы</a>
@@ -253,7 +249,7 @@
                 <source type="image/webp" media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.webp 1x, img/rice-small-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.webp 1x, img/rice-small-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/rice-small-mobile@1x.webp 1x, img/rice-small-mobile@2x.webp 2x">
-                <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png">
+                <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
                 <img class="product__picture product__picture--small" src="img/rice-small-mobile@1x.jpg" srcset="img/rice-small-mobile@2x.jpg 2x" alt="Баночка с кормом со вкусом риса 500 гр">
               </picture>
@@ -286,48 +282,48 @@
         </li>
       </ul>
       <section class="additional-products catalog-content__additional-products">
-        <div class="title-stripe__line">
-          <div class="title-strip__holder">
-            <h2 class="title-stripe additional-products__title-stripe">Дополнительные товары</h2>
+        <div class="title-stripe">
+          <div class="title-stripe__holder">
+            <h2 class="title-stripe__name title-stripe__name--catalog">Дополнительные товары</h2>
           </div>
         </div>
         <div class="additional-products__centering-device">
           <ul class="same-list additional-products__additional-list">
             <li class="additional-item">
-              <ul class="same-list additional-item__goods">
-                <li class="additional-item__product-name">Сахарозаменитель</li>
-                <li class="additional-item__size">1 упаковка (100 г)</li>
-                <li class="additional-item__price">100 Р.</li>
+              <div class="same-list additional-item__goods">
+                <p class="additional-item__product-name">Сахарозаменитель</p>
+                <p class="additional-item__size">1 упаковка (100 г)</p>
+                <p class="additional-item__price">100 Р.</p>
                 <a class="link button button--green additional-item__button" href="#">Заказать</a>
-              </ul>
+              </div>
             </li>
             <li class="additional-item">
-              <ul class="same-list additional-item__goods">
-                <li class="additional-item__product-name">Питьевая вода</li>
-                <li class="additional-item__size">5 литров</li>
-                <li class="additional-item__price">50 Р.</li>
+              <div class="same-list additional-item__goods">
+                <p class="additional-item__product-name">Питьевая вода</p>
+                <p class="additional-item__size">5 литров</p>
+                <p class="additional-item__price">50 Р.</p>
                 <a class="link button button--green additional-item__button" href="#">Заказать</a>
-              </ul>
+              </div>
             </li>
             <li class="additional-item">
-              <ul class="same-list additional-item__goods">
-                <li class="additional-item__product-name">Молоко</li>
-                <li class="additional-item__size">1 литр</li>
-                <li class="additional-item__price">100 Р.</li>
+              <div class="same-list additional-item__goods">
+                <p class="additional-item__product-name">Молоко</p>
+                <p class="additional-item__size">1 литр</p>
+                <p class="additional-item__price">100 Р.</p>
                 <a class="link button button--green additional-item__button" href="#">Заказать</a>
-              </ul>
+              </div>
             </li>
             <li class="additional-item">
-              <ul class="same-list additional-item__goods">
-                <li class="additional-item__product-name">Витамины</li>
-                <li class="additional-item__size">1 упаковка (30 г)</li>
-                <li class="additional-item__price">300 Р.</li>
+              <div class="same-list additional-item__goods">
+                <p class="additional-item__product-name">Витамины</p>
+                <p class="additional-item__size">1 упаковка (30 г)</p>
+                <p class="additional-item__price">300 Р.</p>
                 <a class="link button button--green additional-item__button" href="#">Заказать</a>
-              </ul>
+              </div>
             </li>
           </ul>
           <section class="bonus">
-            <p class="bonus__text">Закажите все и получите чехол для кота в подарок!</p>
+            <p class="bonus__text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
           </section>
         </div>
       </section>
@@ -335,7 +331,7 @@
     <footer class="main-footer">
       <div class="main-footer__contacts-wrapper">
         <section class="contacts main-footer__contacts">
-          <p class="contacts__dillers">приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__dillers">приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <div class="contacts__adress">
             <p class="contacts__adress-street">ул. Большая Конюшенная, д. 19/8</p>
             <p class="contacts__adress-town">Санкт-Петербург</p>
@@ -353,7 +349,7 @@
           <ul class="same-list social main-footer__social">
             <li class="social__item-vk">
               <a class="social__button-vk" href="#">
-                <p class="visual-hidden">ВКонтакте</p>
+                <span class="visual-hidden">ВКонтакте</span>
                 <svg class="social__button-vk-svg" width="25" height="14">
                   <use xlink:href="#sprite-icon-vk-mobile"></use>
                 </svg>
@@ -361,7 +357,7 @@
             </li>
             <li class="social__item-inst">
               <a class="social__button-inst" href="#">
-                <p class="visual-hidden">Инстаграм</p>
+                <span class="visual-hidden">Инстаграм</span>
                 <svg class="social__button-inst-svg" width="17" height="17">
                   <use xlink:href="#sprite-icon-insta-mobile"></use>
                 </svg>
@@ -369,7 +365,7 @@
             </li>
             <li class="social__item-fb">
               <a class="social__button-fb" href="#">
-                <p class="visual-hidden">Фейсбук</p>
+                <span class="visual-hidden">Фейсбук</span>
                 <svg class="social__button-fb-svg" width="10" height="19">
                   <use xlink:href="#sprite-icon-fb-mobile"></use>
                 </svg>

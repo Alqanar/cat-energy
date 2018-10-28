@@ -10,7 +10,9 @@
   padding-bottom: 41px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-image:
+      url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to bottom, $gradient-color 63%, $white-text 0%);
   }
 }
 
@@ -74,7 +76,12 @@
       auto auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg");
+      background-image:
+        url("../img/index-background-desktop@2x.jpg"),
+        linear-gradient(to left, $gradient-color 49%, $white-text 49%);
+      background-position:
+        calc(50% + 360px) 0,
+        top 0 left -5px;
     }
   }
 
