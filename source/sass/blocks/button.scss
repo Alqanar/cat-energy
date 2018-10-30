@@ -40,8 +40,6 @@
   }
 
   &--index {
-    position: absolute;
-    top: 440px;
     padding: 11px 73px;
     font-size: 14px;
     line-height: 18px;
@@ -50,16 +48,9 @@
 
 @media (min-width: $tablet-width) {
   .button--index {
-    top: 272px;
-    padding: 15px 29px 17px 26px;
+    padding: 15px 28px 17px 26px;
     font-size: 20px;
     line-height: 20px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .button--index {
-    top: 261px;
-    left: 80px;
+    max-width: 245px;
   }
 }

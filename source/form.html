@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link rel="preload" type="font/woff2" href="fonts/oswaldregular.woff2" as="font" crossorigin>
+    <link rel="preload" type="font/woff2" href="fonts/oswaldmedium.woff2" as="font" crossorigin>
     <title>Подбор программы питания - Кэт энерджи</title>
     <script src="js/picturefill.min.js" async></script>
   </head>
@@ -26,7 +27,7 @@
           <include src="img/hamburger.svg"></include>
         </button>
         <!-- если JS работает, то меню добавляется класс main-menu--javascript-work, в результате чего меню скрывается, по умолчанию меню открыто -->
-        <nav class="main-header__main-menu main-menu">
+        <nav class="main-menu">
           <ul class="same-list main-menu__navigation">
             <li class="main-menu__item">
               <a class="link main-menu__link" href="index.html">Главная</a>
@@ -65,17 +66,17 @@
           <div class="questionnaire-form__program-wrapper">
             <section class="questionnaire-form__program">
               <h2 class="visual-hidden">Выберите желаемую программу питания для кота</h2>
-                <ul class="same-list questionnaire-form__radio">
-                  <li class="questionnaire-form__item">
-                    <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="slim" value="slim" checked>
+                <ul class="same-list">
+                  <li class="questionnaire-form__item questionnaire-form__item--radio">
+                    <input class="visual-hidden questionnaire-form__cell-radio" type="radio" name="program" id="slim" value="slim" checked>
                     <label class="questionnaire-form__label questionnaire-form__label--radio" for="slim">Похудение</label>
                   </li>
-                  <li class="questionnaire-form__item">
-                    <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="pro" value="pro">
+                  <li class="questionnaire-form__item questionnaire-form__item--radio">
+                    <input class="visual-hidden questionnaire-form__cell-radio" type="radio" name="program" id="pro" value="pro">
                     <label class="questionnaire-form__label questionnaire-form__label--radio" for="pro">Набор массы</label>
                   </li>
-                  <li class="questionnaire-form__item">
-                    <input class="visual-hidden questionnaire-form__input--radio" type="radio" name="program" id="advice" value="advice">
+                  <li class="questionnaire-form__item questionnaire-form__item--radio">
+                    <input class="visual-hidden questionnaire-form__cell-radio" type="radio" name="program" id="advice" value="advice">
                     <label class="questionnaire-form__label questionnaire-form__label--radio" for="advice">Не знаю (Нужен ваш совет)</label>
                   </li>
                 </ul>
@@ -128,19 +129,19 @@
           </div>
           <ul class="same-list questionnaire-form__checkbox">
             <li class="questionnaire-form__item questionnaire-form__item--checkbox">
-              <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
+              <input class="visual-hidden questionnaire-form__cell-checkbox" type="checkbox" name="sweetener" id="sweetener" checked>
               <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="sweetener">Сахарозаменитель</label>
             </li>
             <li class="questionnaire-form__item questionnaire-form__item--checkbox">
-              <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="water" id="water">
+              <input class="visual-hidden questionnaire-form__cell-checkbox" type="checkbox" name="water" id="water">
               <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="water">Питьевая вода</label>
             </li>
             <li class="questionnaire-form__item questionnaire-form__item--checkbox">
-              <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="milk" id="milk">
+              <input class="visual-hidden questionnaire-form__cell-checkbox" type="checkbox" name="milk" id="milk">
               <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="milk">Молоко</label>
             </li>
             <li class="questionnaire-form__item questionnaire-form__item--checkbox">
-              <input class="visual-hidden questionnaire-form__input--checkbox" type="checkbox" name="vitamins" id="vitamins">
+              <input class="visual-hidden questionnaire-form__cell-checkbox" type="checkbox" name="vitamins" id="vitamins">
               <label class="questionnaire-form__label questionnaire-form__label--checkbox" for="vitamins">Витамины</label>
             </li>
           </ul>

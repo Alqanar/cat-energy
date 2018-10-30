@@ -138,6 +138,10 @@
     border-bottom: none;
     max-width: 344px;
     margin-top: 25px;
+
+    &--slim {
+      max-width: 375px;
+    }
   }
 
   .program__link {
@@ -147,11 +151,11 @@
 
     &::after {
       top: 4px;
-      left: 128px;
+      left: 127px;
     }
 
     &:hover::after {
-      left: 128px;
+      left: 127px;
     }
   }
 }

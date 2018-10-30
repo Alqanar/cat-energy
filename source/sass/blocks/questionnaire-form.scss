@@ -27,8 +27,8 @@
   align-self: center;
 
   &--radio {
-    margin-left: 45px;
     cursor: pointer;
+    word-break: break-word;
 
     &::before {
       position: absolute;
@@ -43,8 +43,8 @@
   }
 
   &--checkbox {
-    margin-left: 66px;
     cursor: pointer;
+    word-break: break-word;
 
     &::before {
       position: absolute;
@@ -95,30 +95,6 @@
     fill: $input-error;
   }
 
-  &--radio:checked + .questionnaire-form__label--radio::after {
-    position: absolute;
-    top: 15px;
-    left: 8px;
-    width: 12px;
-    height: 12px;
-    background-color: $main-color;
-    border-radius: 50%;
-    content: "";
-  }
-
-  &--radio:disabled + .questionnaire-form__label--radio {
-    opacity: 0.3;
-    cursor: auto;
-
-    &::before {
-      opacity: 0.6;
-    }
-
-    &::after {
-      opacity: 0.3;
-    }
-  }
-
   &--email {
     padding-right: 40px;
     margin-left: 11px;
@@ -130,29 +106,53 @@
     padding-right: 40px;
     margin-left: 9px;
   }
+}
 
-  &--checkbox:checked + .questionnaire-form__label--checkbox::after {
-    position: absolute;
-    top: 14px;
-    left: 25px;
-    width: 22px;
-    height: 17px;
-    background-image: url("../img/icon-tick.svg");
-    background-repeat: no-repeat;
-    content: "";
+.questionnaire-form__cell-radio:checked + .questionnaire-form__label--radio::after {
+  position: absolute;
+  top: 15px;
+  left: 8px;
+  width: 12px;
+  height: 12px;
+  background-color: $main-color;
+  border-radius: 50%;
+  content: "";
+}
+
+.questionnaire-form__cell-radio:disabled + .questionnaire-form__label--radio {
+  opacity: 0.3;
+  cursor: auto;
+
+  &::before {
+    opacity: 0.6;
   }
 
-  &--checkbox:disabled + .questionnaire-form__label--checkbox {
+  &::after {
     opacity: 0.3;
-    cursor: auto;
+  }
+}
 
-    &::before {
-      opacity: 0.6;
-    }
+.questionnaire-form__cell-checkbox:checked + .questionnaire-form__label--checkbox::after {
+  position: absolute;
+  top: 14px;
+  left: 25px;
+  width: 22px;
+  height: 17px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
 
-    &::after {
-      opacity: 0.3;
-    }
+.questionnaire-form__cell-checkbox:disabled + .questionnaire-form__label--checkbox {
+  opacity: 0.3;
+  cursor: auto;
+
+  &::before {
+    opacity: 0.6;
+  }
+
+  &::after {
+    opacity: 0.3;
   }
 }
 
@@ -188,10 +188,19 @@
   position: relative;
   padding-top: 12px;
   padding-bottom: 13px;
+
+  &--checkbox {
+    padding-left: 66px;
+    padding-right: 20px;
+  }
+
+  &--radio {
+    padding-left: 45px;
+  }
 }
 
-.questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio:active,
-.questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
+.questionnaire-form__cell-radio:not(:disabled) + .questionnaire-form__label--radio:active,
+.questionnaire-form__cell-checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
   opacity: 0.3;
 
   &::before {
@@ -199,15 +208,15 @@
   }
 }
 
-.questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio:hover,
-.questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox:hover {
+.questionnaire-form__cell-radio:not(:disabled) + .questionnaire-form__label--radio:hover,
+.questionnaire-form__cell-checkbox:not(:disabled) + .questionnaire-form__label--checkbox:hover {
   &::before {
     border: 1px solid $input-action;
   }
 }
 
-.questionnaire-form__input--radio:not(:disabled):focus + .questionnaire-form__label--radio::before,
-.questionnaire-form__input--checkbox:not(:disabled):focus + .questionnaire-form__label--checkbox::before {
+.questionnaire-form__cell-radio:not(:disabled):focus + .questionnaire-form__label--radio::before,
+.questionnaire-form__cell-checkbox:not(:disabled):focus + .questionnaire-form__label--checkbox::before {
   border: 1px solid $input-action;
 }
 
@@ -260,8 +269,8 @@
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   // если так прописать сразу, то в хром, сафари и фф применяется двойное opacity и от label и от ::before
-  .questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio:active,
-  .questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
+  .questionnaire-form__cell-radio:not(:disabled) + .questionnaire-form__label--radio:active,
+  .questionnaire-form__cell-checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
     &::before {
       border: 1px solid $input-action;
       opacity: 0.3;
@@ -275,8 +284,8 @@
 
 @supports (-ms-ime-align:auto) {
   // если так прописать сразу, то в хром, сафари и фф применяется двойное opacity и от label и от ::before
-  .questionnaire-form__input--radio:not(:disabled) + .questionnaire-form__label--radio:active,
-  .questionnaire-form__input--checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
+  .questionnaire-form__cell-radio:not(:disabled) + .questionnaire-form__label--radio:active,
+  .questionnaire-form__cell-checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
     &::before {
       opacity: 0.3;
     }
@@ -310,22 +319,14 @@
     font-size: 20px;
     line-height: 20px;
 
-    &--radio {
-      margin-left: 58px;
-
-      &::before {
-        width: 40px;
-        height: 40px;
-      }
+    &--radio::before {
+      width: 40px;
+      height: 40px;
     }
 
-    &--checkbox {
-      margin-left: 78px;
-
-      &::before {
-        width: 40px;
-        height: 40px;
-      }
+    &--checkbox::before {
+      width: 40px;
+      height: 40px;
     }
   }
 
@@ -336,13 +337,6 @@
     padding-left: 15px;
     padding-right: 12px;
     margin-left: 19px;
-
-    &--radio:checked + .questionnaire-form__label--radio::after {
-      top: 17px;
-      left: 10px;
-      width: 18px;
-      height: 18px;
-    }
 
     &--email {
       padding-right: 50px;
@@ -355,11 +349,18 @@
       margin-left: 14px;
       padding-left: 19px;
     }
+  }
 
-    &--checkbox:checked + .questionnaire-form__label--checkbox::after {
-      top: 18px;
-      left: 30px;
-    }
+  .questionnaire-form__cell-radio:checked + .questionnaire-form__label--radio::after {
+    top: 17px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .questionnaire-form__cell-checkbox:checked + .questionnaire-form__label--checkbox::after {
+    top: 18px;
+    left: 30px;
   }
 
   .questionnaire-form__textarea {
@@ -382,9 +383,14 @@
     padding-top: 15px;
     padding-bottom: 17px;
 
+    &--radio {
+      padding-left: 58px;
+    }
+
     &--checkbox {
+      width: 50%;
+      padding-left: 77px;
       padding-bottom: 25px;
-      min-width: 50%;
       margin-bottom: 11px;
     }
   }
@@ -535,6 +541,7 @@
 
   .questionnaire-form__item--checkbox {
     min-width: 22%;
+    max-width: 276px;
   }
 
   .questionnaire-form__wrapper-end {

@@ -1,5 +1,5 @@
 /*находим в разметке блок меню, которое нам нужно скрыть, если работает js, записывам его в переменную*/
-var mainMenu = document.querySelector(".main-header__main-menu");
+var mainMenu = document.querySelector(".main-menu");
 /*находим в разметке кнопку, клик по которой покажет меню, записывам её в переменную*/
 var sandwichButton = document.querySelector(".sandwich-button");
 var myMap;

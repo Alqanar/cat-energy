@@ -181,6 +181,8 @@
 
   .sample__text {
     margin-top: 62px;
+    max-height: 106px;
+    overflow-y: auto;
   }
 
   .sample__wrapper-result {
