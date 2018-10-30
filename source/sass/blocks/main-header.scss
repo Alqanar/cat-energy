@@ -12,6 +12,10 @@
     opacity: 0.8;
   }
 
+  &:focus {
+    opacity: 0.8;
+  }
+
   &:active {
     opacity: 0.6;
   }
@@ -51,17 +55,22 @@
 
 @media (min-width: $desktop-width) {
   .main-header {
-    @include content-desktop;
     position: relative;
+    width: 100%;
+    margin: 0;
     padding: 0;
+
+    &--index {
+      background-image: linear-gradient(to left, $gradient-color calc(51% - 20px), $white-text 0);
+    }
   }
 
   .main-header__wrapper {
-    position: absolute;
-    top: 53px;
-    left: 40px;
+    @include content-desktop;
+    @include margin-desktop;
+    position: relative;
     z-index: 3;
-    width: 1220px;
+    padding-top: 53px;
   }
 
   .main-header__logo-image {

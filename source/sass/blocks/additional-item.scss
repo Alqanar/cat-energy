@@ -15,8 +15,11 @@
 
 .additional-item__product-name {
   @include Oswald-uppercase;
+  margin: 0;
   line-height: 16px;
   color: $additional-item-title;
+  max-width: 280px;
+  word-wrap: break-word;
   flex-basis: 100%;
 }
 
@@ -35,6 +38,7 @@
 .additional-item__button {
   width: 100%;
   margin-top: 15px;
+  word-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {
@@ -52,6 +56,7 @@
     font-size: 20px;
     line-height: 20px;
     flex-basis: 60%;
+    max-width: 60%;
     padding-left: 2px;
   }
 
@@ -64,6 +69,10 @@
 
   .additional-item__size {
     flex-basis: 25%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      flex-basis: 24.6%;
+    }
   }
 
   .additional-item__price {
@@ -89,29 +98,36 @@
   .additional-item__product-name {
     padding-left: 0;
     flex-basis: 36%;
-    padding-top: 10px;
+    align-self: center;
+    max-width: 380px;
   }
 
   .additional-item__size {
     flex-basis: 27%;
-    padding-top: 14px;
     padding-left: 2px;
   }
 
   .additional-item__price {
     flex-basis: 9%;
-    padding-top: 14px;
     padding-left: 5px;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      flex-basis: 8.3%;
+    }
   }
 
   .additional-item__button {
     flex-basis: 27%;
     margin-top: 0;
     margin-left: 8px;
+    align-self: center;
+    max-width: 242px;
   }
 
   .additional-item__size,
   .additional-item__price {
     text-align: left;
+    padding-top: 7px;
+    align-self: center;
   }
 }

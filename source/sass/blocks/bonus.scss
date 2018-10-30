@@ -3,14 +3,15 @@
   position: relative;
   display: flex;
   width: 280px;
-  height: 289px;
+  height: auto;
   background-color: $main-color;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: 280px auto;
+  background-position: center;
+  background-size: cover;
   margin-top: 39px;
   margin-bottom: 35px;
+  padding-bottom: 26px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
@@ -43,11 +44,10 @@
   .bonus {
     @include content-tablet;
     width: 708px;
-    height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
-    background-size: 708px auto;
     margin-top: 69px;
     margin-bottom: 76px;
+    padding-bottom: 52px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
@@ -58,7 +58,7 @@
     width: 25%;
     text-align: left;
     margin-left: auto;
-    margin-right: 92px;
+    margin-right: 108px;
     padding-top: 56px;
 
     &::before {
@@ -70,14 +70,13 @@
 @media (min-width: $desktop-width) {
   .bonus {
     width: 245px;
-    height: auto;
     margin: 0;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
-    background-size: 245px auto;
     margin-top: 69px;
     margin-left: 58px;
-    padding-left: 38px;
-    padding-right: 23px;
+    padding-left: 35px;
+    padding-right: 33px;
+    padding-bottom: 20px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");

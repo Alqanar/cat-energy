@@ -14,6 +14,15 @@
   margin-top: 46px;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  // в ie11 дети от родителя не наследуют
+  .main-content__selection-program,
+  .main-content__sample {
+    width: inherit;
+    margin: inherit;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .main-content {
     @include content-tablet;
@@ -27,28 +36,6 @@
   .main-content__sample {
     position: relative;
     margin-top: 41px;
-
-    &::before {
-      position: absolute;
-      top: 619px;
-      left: 0;
-      z-index: 0;
-      width: 50%;
-      height: 43%;
-      background-color: $gray-color;
-      content: "";
-    }
-
-    &::after {
-      position: absolute;
-      top: 619px;
-      right: 0;
-      z-index: 0;
-      width: 50%;
-      height: 43%;
-      background-color: $middle-gray;
-      content: "";
-    }
   }
 }
 
@@ -64,6 +51,7 @@
     width: 100%;
     margin: 0;
     max-width: 100%;
+    margin-top: -128px;
   }
 
   .main-content__sample {
@@ -71,16 +59,15 @@
     padding-bottom: 75px;
 
     &::before {
-      top: 178px;
-      width: 76%;
+      position: absolute;
+      top: 179px;
+      left: 0;
+      z-index: 0;
+      width: 100%;
       height: 72%;
-    }
-
-    &::after {
-      top: 178px;
-      left: calc((100% - 1300px) / 2 + 983px);
-      width: auto;
-      height: 72%;
+      background-image: linear-gradient(to right, $gray-color 50%, $middle-gray 50%);
+      background-repeat: no-repeat;
+      content: "";
     }
   }
 }

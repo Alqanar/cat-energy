@@ -14,6 +14,7 @@ var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
 var cssnano = require("gulp-cssnano");
 var del = require("del");
+var uglify = require("gulp-uglify");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -22,7 +23,9 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(cssnano())
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
@@ -30,7 +33,7 @@ gulp.task("css", function () {
 gulp.task("html", function() {
   return gulp.src("source/*.html")
     .pipe(posthtml([include({
-      root: "source/"
+      root: "build/"
     })]))
     .pipe(gulp.dest("build"));
 });
@@ -77,6 +80,7 @@ gulp.task("sprite", function() {
 
 gulp.task("js", function() {
   return gulp.src("source/js/*.js")
+    .pipe(uglify())
     .pipe(gulp.dest("build/js"));
 });
 
@@ -102,6 +106,6 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("fonts", "js", "image", "css", "sprite", "html", "server"));
+gulp.task("start", gulp.series("clean", "fonts", "js", "image", "css", "sprite", "html", "server"));
 
 gulp.task("build", gulp.series("clean", "fonts", "js", "image", "css", "sprite", "html"));

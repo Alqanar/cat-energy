@@ -4,15 +4,22 @@
 }
 
 .questionnaire-form__inquirer {
-  padding-left: 19px;
+  padding-left: 20px;
   padding-right: 20px;
 }
 
 .questionnaire-form__row {
   position: relative;
   display: flex;
-  margin-top: 0;
-  margin-bottom: 13px;
+  margin: 0;
+
+  &--introductory {
+    margin-bottom: 14px;
+  }
+
+  &--cat-owner {
+    margin-top: 14px;
+  }
 }
 
 .questionnaire-form__label {
@@ -20,8 +27,8 @@
   align-self: center;
 
   &--radio {
-    margin-left: 45px;
     cursor: pointer;
+    word-break: break-word;
 
     &::before {
       position: absolute;
@@ -36,8 +43,8 @@
   }
 
   &--checkbox {
-    margin-left: 66px;
     cursor: pointer;
+    word-break: break-word;
 
     &::before {
       position: absolute;
@@ -52,10 +59,12 @@
 }
 
 .questionnaire-form__input {
-  padding: 13px 12px 13px 15px;
+  height: 45px;
   color: $arial-text;
   border: 1px solid rgba($sample-border, 0.5);
-  margin-left: 16px;
+  padding-left: 15px;
+  padding-right: 12px;
+  margin-left: 14px;
   text-transform: inherit;
   flex-grow: 1;
 
@@ -75,26 +84,15 @@
     fill: $main-color;
   }
 
-  &--error {
+  &:required:invalid {
     border: 1px solid $input-error;
     box-shadow:
       inset 1px 1px $input-error,
       inset -1px -1px $input-error;
   }
 
-  &--error + .questionnaire-form__element {
+  &:required:invalid + .questionnaire-form__element {
     fill: $input-error;
-  }
-
-  &--radio:checked + .questionnaire-form__label--radio::after {
-    position: absolute;
-    top: 15px;
-    left: 8px;
-    width: 12px;
-    height: 12px;
-    background-color: $main-color;
-    border-radius: 50%;
-    content: "";
   }
 
   &--email {
@@ -103,32 +101,85 @@
   }
 
   &--tel {
+    overflow: hidden;
+    width: 206px;
     padding-right: 40px;
     margin-left: 9px;
   }
+}
 
-  &--checkbox:checked + .questionnaire-form__label--checkbox::after {
-    position: absolute;
-    top: 14px;
-    left: 25px;
-    width: 22px;
-    height: 17px;
-    background-image: url("../img/icon-tick.svg");
-    background-repeat: no-repeat;
-    content: "";
+.questionnaire-form__cell-radio:checked + .questionnaire-form__label--radio::after {
+  position: absolute;
+  top: 15px;
+  left: 8px;
+  width: 12px;
+  height: 12px;
+  background-color: $main-color;
+  border-radius: 50%;
+  content: "";
+}
+
+.questionnaire-form__cell-radio:disabled + .questionnaire-form__label--radio {
+  opacity: 0.3;
+  cursor: auto;
+
+  &::before {
+    opacity: 0.6;
   }
 
-  &--textarea {
-    padding-left: 15px;
-    padding-right: 9px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-bottom: 9px;
+  &::after {
+    opacity: 0.3;
+  }
+}
+
+.questionnaire-form__cell-checkbox:checked + .questionnaire-form__label--checkbox::after {
+  position: absolute;
+  top: 14px;
+  left: 25px;
+  width: 22px;
+  height: 17px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.questionnaire-form__cell-checkbox:disabled + .questionnaire-form__label--checkbox {
+  opacity: 0.3;
+  cursor: auto;
+
+  &::before {
+    opacity: 0.6;
+  }
+
+  &::after {
+    opacity: 0.3;
+  }
+}
+
+.questionnaire-form__textarea {
+  padding: 12px 9px 9px 15px;
+  color: $arial-text;
+  border: 1px solid rgba($sample-border, 0.5);
+  margin-left: 20px;
+  margin-right: 20px;
+  text-transform: inherit;
+  flex-grow: 1;
+
+  &:hover {
+    border: 1px solid $sample-border;
+  }
+
+  &:focus {
+    border: 1px solid $arial-text;
+    box-shadow:
+      inset 1px 1px $arial-text,
+      inset -1px -1px $arial-text;
+    outline: none;
   }
 }
 
 .questionnaire-form__program {
-  padding: 13px 20px 14px;
+  padding: 14px 20px 14px;
   border: 1px solid $gray-light;
   margin-top: 23px;
 }
@@ -138,60 +189,67 @@
   padding-top: 12px;
   padding-bottom: 13px;
 
-  &:hover > .questionnaire-form__label--radio::before {
-    border: 1px solid $input-action;
+  &--checkbox {
+    padding-left: 66px;
+    padding-right: 20px;
   }
 
-  &:active {
-    opacity: 0.3;
+  &--radio {
+    padding-left: 45px;
   }
+}
 
-  &:hover > .questionnaire-form__label--checkbox::before {
+.questionnaire-form__cell-radio:not(:disabled) + .questionnaire-form__label--radio:active,
+.questionnaire-form__cell-checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
+  opacity: 0.3;
+
+  &::before {
     border: 1px solid $input-action;
   }
+}
+
+.questionnaire-form__cell-radio:not(:disabled) + .questionnaire-form__label--radio:hover,
+.questionnaire-form__cell-checkbox:not(:disabled) + .questionnaire-form__label--checkbox:hover {
+  &::before {
+    border: 1px solid $input-action;
+  }
+}
+
+.questionnaire-form__cell-radio:not(:disabled):focus + .questionnaire-form__label--radio::before,
+.questionnaire-form__cell-checkbox:not(:disabled):focus + .questionnaire-form__label--checkbox::before {
+  border: 1px solid $input-action;
 }
 
 .questionnaire-form__cat-owner {
   padding-top: 4px;
 }
 
-.questionnaire-form__title-stripe {
-  top: 23px;
-  margin: 0;
-  text-transform: none;
-  padding-left: 19px;
-  padding-right: 21px;
-
-  &--cat-owner {
-    padding-bottom: 60px;
-  }
-
-  &--comment {
-    padding-bottom: 37px;
-  }
-
-  &--more {
-    padding-bottom: 31px;
-  }
-}
-
 .questionnaire-form__cat-owner-wrapper {
   @include content-margin;
+  padding-top: 42px;
 }
 
 .questionnaire-form__element {
   position: absolute;
   top: 15px;
-  right: 14px;
+  right: 13px;
   fill: $additional-item-title;
 }
 
 .questionnaire-form__comment {
-  margin-top: -9px;
+  margin-top: 5px;
+}
+
+.questionnaire-form__textarea-wrapper {
+  padding-top: 33px;
 }
 
 .questionnaire-form__more-products {
-  margin-top: -9px;
+  margin-top: 5px;
+}
+
+.questionnaire-form__checkbox {
+  padding-top: 27px;
 }
 
 .questionnaire-form__button {
@@ -209,9 +267,38 @@
   margin-bottom: 32px;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  // если так прописать сразу, то в хром, сафари и фф применяется двойное opacity и от label и от ::before
+  .questionnaire-form__cell-radio:not(:disabled) + .questionnaire-form__label--radio:active,
+  .questionnaire-form__cell-checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
+    &::before {
+      border: 1px solid $input-action;
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+@supports (-ms-ime-align:auto) {
+  // если так прописать сразу, то в хром, сафари и фф применяется двойное opacity и от label и от ::before
+  .questionnaire-form__cell-radio:not(:disabled) + .questionnaire-form__label--radio:active,
+  .questionnaire-form__cell-checkbox:not(:disabled) + .questionnaire-form__label--checkbox:active {
+    &::before {
+      opacity: 0.3;
+    }
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .questionnaire-form {
-    padding-top: 45px;
+    padding-top: 46px;
   }
 
   .questionnaire-form__inquirer {
@@ -219,44 +306,37 @@
   }
 
   .questionnaire-form__row {
-    margin-bottom: 19px;
+    &--introductory {
+      margin-bottom: 20px;
+    }
+
+    &--cat-owner {
+      margin-top: 20px;
+    }
   }
 
   .questionnaire-form__label {
     font-size: 20px;
     line-height: 20px;
 
-    &--radio {
-      margin-left: 58px;
-
-      &::before {
-        width: 40px;
-        height: 40px;
-      }
+    &--radio::before {
+      width: 40px;
+      height: 40px;
     }
 
-    &--checkbox {
-      margin-left: 78px;
-
-      &::before {
-        width: 40px;
-        height: 40px;
-      }
+    &--checkbox::before {
+      width: 40px;
+      height: 40px;
     }
   }
 
   .questionnaire-form__input {
-    padding: 10px 12px 11px 15px;
+    height: 52px;
     font-size: 20px;
     line-height: 20px;
+    padding-left: 15px;
+    padding-right: 12px;
     margin-left: 19px;
-
-    &--radio:checked + .questionnaire-form__label--radio::after {
-      top: 17px;
-      left: 10px;
-      width: 18px;
-      height: 18px;
-    }
 
     &--email {
       padding-right: 50px;
@@ -269,17 +349,24 @@
       margin-left: 14px;
       padding-left: 19px;
     }
+  }
 
-    &--textarea {
-      padding-bottom: 17px;
-      padding-top: 15px;
-      padding-left: 18px;
-    }
+  .questionnaire-form__cell-radio:checked + .questionnaire-form__label--radio::after {
+    top: 17px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+  }
 
-    &--checkbox:checked + .questionnaire-form__label--checkbox::after {
-      top: 18px;
-      left: 30px;
-    }
+  .questionnaire-form__cell-checkbox:checked + .questionnaire-form__label--checkbox::after {
+    top: 18px;
+    left: 30px;
+  }
+
+  .questionnaire-form__textarea {
+    padding: 15px 18px 17px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .questionnaire-form__program-wrapper {
@@ -296,9 +383,15 @@
     padding-top: 15px;
     padding-bottom: 17px;
 
+    &--radio {
+      padding-left: 58px;
+    }
+
     &--checkbox {
-      padding-bottom: 36px;
-      min-width: 50%;
+      width: 50%;
+      padding-left: 77px;
+      padding-bottom: 25px;
+      margin-bottom: 11px;
     }
   }
 
@@ -306,36 +399,28 @@
     padding-top: 59px;
   }
 
-  .questionnaire-form__title-stripe {
-    top: 17px;
-    padding-left: 40px;
-    padding-right: 43px;
-  }
-
   .questionnaire-form__cat-owner-wrapper {
     @include margin-form;
-    padding-top: 22px;
+    padding-top: 47px;
   }
 
   .questionnaire-form__element {
     top: 19px;
-    right: 20px;
+    right: 19px;
   }
 
   .questionnaire-form__comment {
-    margin-top: 0;
-    padding-top: 30px;
+    padding-top: 44px;
   }
 
   .questionnaire-form__textarea-wrapper {
     padding-left: 51px;
     padding-right: 47px;
-    padding-top: 46px;
+    padding-top: 66px;
   }
 
   .questionnaire-form__more-products {
-    margin-top: 0;
-    padding-top: 30px;
+    padding-top: 45px;
   }
 
   .questionnaire-form__checkbox {
@@ -343,7 +428,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 50px;
-    padding-top: 27px;
+    padding-top: 41px;
     padding-right: 29px;
   }
 
@@ -357,7 +442,7 @@
 
   .questionnaire-form__wrapper-end {
     display: flex;
-    padding-top: 27px;
+    padding-top: 28px;
     padding-bottom: 73px;
   }
 
@@ -371,7 +456,7 @@
 
 @media (min-width: $desktop-width) {
   .questionnaire-form {
-    padding-top: 45px;
+    padding-top: 46px;
   }
 
   .questionnaire-form__combiner {
@@ -384,10 +469,6 @@
   .questionnaire-form__program-wrapper {
     @include margin-desktop;
     width: 50%;
-  }
-
-  .questionnaire-form__title-stripe {
-    @include margin-desktop;
   }
 
   .questionnaire-form__program {
@@ -403,13 +484,14 @@
     display: flex;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 46px;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .questionnaire-form__row--cat-owner {
     @include margin-desktop;
-    flex-basis: 50%;
+    width: 650px;
   }
 
   .questionnaire-form__input--email {
@@ -428,7 +510,7 @@
   }
 
   .questionnaire-form__comment {
-    padding-top: 32px;
+    padding-top: 47px;
   }
 
   .questionnaire-form__input--textarea {
@@ -439,19 +521,27 @@
   .questionnaire-form__textarea-wrapper {
     @include content-desktop;
     @include margin-desktop;
+    padding-top: 66px;
+  }
+
+  .questionnaire-form__textarea {
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .questionnaire-form__more-products {
-    padding-top: 51px;
+    padding-top: 46px;
   }
 
   .questionnaire-form__checkbox {
     @include content-desktop;
     padding-left: 20px;
+    padding-top: 42px;
   }
 
   .questionnaire-form__item--checkbox {
     min-width: 22%;
+    max-width: 276px;
   }
 
   .questionnaire-form__wrapper-end {

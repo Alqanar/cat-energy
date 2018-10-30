@@ -2,9 +2,21 @@
   @include content-margin;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  // в ie11 дети от родителя не наследуют
+  .wrapper {
+    width: inherit;
+    margin: inherit;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .wrapper {
     @include margin-tablet;
+  }
+
+  .wrapper__program {
+    margin-top: 533px;
   }
 }
 
@@ -17,7 +29,7 @@
   .wrapper__program {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 19px;
+    margin-top: 60px;
   }
 
   .wrapper__sample {
@@ -25,6 +37,6 @@
     width: 40%;
     margin: 0;
     padding: 0;
-    padding-right: 50px;
+    padding-right: 60px;
   }
 }

@@ -18,6 +18,15 @@
   margin-top: 25px;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .form-content__title,
+  .form-content__centring-device,
+  .form-content__questionnaire-form {
+    width: inherit;
+    margin: inherit;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .form-content {
     @include content-tablet;
@@ -47,7 +56,7 @@
 
   .form-content__title {
     @include content-desktop;
-    padding-top: 173px;
+    padding-top: 45px;
     padding-left: 40px;
     padding-right: 40px;
   }

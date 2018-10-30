@@ -1,11 +1,16 @@
 .sandwich-button {
+  display: none;
   overflow: hidden;
   width: 24px;
+  height: 24px;
   font-size: 0;
   background-color: #ffffff;
-  justify-content: center;
 
   @include button;
+}
+
+.sandwichButton--javascript-work {
+  display: inline-block;
 }
 
 .sandwich-button__ham {

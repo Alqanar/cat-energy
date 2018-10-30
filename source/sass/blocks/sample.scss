@@ -65,10 +65,20 @@
 
 .sample__waste {
   @include Oswald-uppercase;
+  display: flex;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+  justify-content: center;
   margin-top: 34px;
+}
+
+.sample__expenses {
+  margin: 0;
+}
+
+.sample__cost {
+  padding-left: 3px;
 }
 
 .sample__slider {
@@ -79,7 +89,7 @@
   .sample {
     background-color: $white-text;
     border-top: 1px solid $gray-border;
-    padding-bottom: 69px;
+    padding-bottom: 0;
   }
 
   .sample__title {
@@ -89,17 +99,19 @@
   .sample__text {
     @include Arial(16px, 24px);
     margin-top: 54px;
+    padding-right: 6px;
   }
 
   .sample__wrapper-result {
     display: flex;
-    margin-top: 53px;
+    margin-top: 54px;
   }
 
   .sample__result {
     width: 70%;
     margin-top: 0;
     margin-right: 0;
+    align-items: start;
     flex-grow: 1;
   }
 
@@ -113,7 +125,7 @@
     }
 
     &--time {
-      padding: 14px 29px 17px;
+      padding: 14px 29px 19px;
     }
   }
 
@@ -122,7 +134,7 @@
     background-color: $white-text;
 
     &--weight {
-      bottom: -26px;
+      top: 50px;
       left: 24px;
       width: 114px;
       padding-left: 5px;
@@ -130,7 +142,7 @@
     }
 
     &--time {
-      bottom: -26px;
+      top: 50px;
       left: 214px;
       width: 142px;
       padding-left: 5px;
@@ -139,12 +151,12 @@
   }
 
   .sample__waste {
-    width: 180px;
     font-size: 20px;
     line-height: 27px;
     text-align: right;
-    margin-top: 9px;
-    margin-bottom: 0;
+    flex-direction: column;
+    max-width: 30%;
+    margin-top: 0;
   }
 }
 
@@ -162,14 +174,15 @@
 
   .sample__flex-box {
     display: flex;
-
+    padding-left: 40px;
 
     @include content-desktop;
-    @include margin-desktop;
   }
 
   .sample__text {
-    margin-top: 61px;
+    margin-top: 62px;
+    max-height: 106px;
+    overflow-y: auto;
   }
 
   .sample__wrapper-result {
@@ -187,20 +200,31 @@
   .sample__property-small {
     background-color: $gray-color;
 
+    &--weight {
+      top: 101px;
+    }
+
     &--time {
+      top: 101px;
       left: 214px;
     }
   }
 
   .sample__waste {
-    width: 100%;
     line-height: 20px;
     text-align: left;
+    flex-direction: row;
+    justify-content: start;
+    max-width: 100%;
     margin-top: 60px;
-    white-space: pre;
+  }
+
+  .sample__cost {
+    padding-left: 64px;
   }
 
   .sample__slider {
     width: 60%;
+    margin-top: -65px;
   }
 }

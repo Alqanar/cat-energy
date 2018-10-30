@@ -7,7 +7,8 @@
   padding-bottom: 25px;
 }
 
-.main-footer__link:hover {
+.main-footer__link:hover,
+.main-footer__link:focus {
   opacity: 0.8;
 }
 
@@ -22,7 +23,6 @@
 .main-footer__references {
   text-align: center;
   background-color: $gray-color;
-  margin-top: -40px;
 }
 
 .main-footer__social {
@@ -54,7 +54,12 @@
   height: 42px;
   margin-right: -8px;
 
-  &:hover .main-footer__htmlacademy-fill {
+  &:focus {
+    outline: none;
+  }
+
+  &:hover .main-footer__htmlacademy-fill,
+  &:focus .main-footer__htmlacademy-fill {
     fill: $main-color;
   }
 
@@ -78,7 +83,7 @@
 
   .main-footer__references-wrapper {
     display: flex;
-    padding: 52px 30px 54px;
+    padding: 50px 30px 54px;
     justify-content: space-between;
   }
 

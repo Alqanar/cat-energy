@@ -70,6 +70,8 @@
   position: relative;
   display: flex;
   margin-top: 19px;
+  max-width: 40%;
+  word-break: break-word;
 
   &::after {
     position: absolute;
@@ -83,8 +85,8 @@
     content: "";
   }
 
-  &:hover::after {
-    left: 96px;
+  &:hover::after,
+  &:focus::after {
     width: 40px;
     background-image: url("../img/icon-right-arrow-verylong.svg");
     background-size: 34px 12px;
@@ -137,20 +139,25 @@
     border-bottom: none;
     max-width: 344px;
     margin-top: 25px;
+
+    &--slim {
+      max-width: 375px;
+    }
   }
 
   .program__link {
     font-size: 20px;
     line-height: 20px;
+    max-width: 22%;
     margin-top: 34px;
 
     &::after {
       top: 4px;
-      left: 128px;
+      left: 127px;
     }
 
     &:hover::after {
-      left: 128px;
+      left: 127px;
     }
   }
 }
@@ -205,6 +212,7 @@
     font-size: 20px;
     line-height: 20px;
     margin-top: 9px;
+    max-width: 27%;
 
     &::after {
       top: 4px;

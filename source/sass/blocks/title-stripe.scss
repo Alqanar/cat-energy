@@ -1,5 +1,4 @@
-.title-stripe__line {
-  overflow: hidden;
+.title-stripe {
   padding-bottom: 4px;
 
   &::after {
@@ -12,12 +11,12 @@
   }
 }
 
-.title-strip__holder {
+.title-stripe__holder {
   position: relative;
   height: 27px;
 }
 
-.title-stripe {
+.title-stripe__name {
   position: absolute;
   top: 20px;
   z-index: 2;
@@ -28,42 +27,78 @@
   padding-bottom: 3px;
 
   @include Oswald;
+
+  &--catalog {
+    margin: 0;
+    padding-left: 19px;
+    padding-right: 23px;
+  }
+
+  &--form {
+    top: 23px;
+    margin: 0;
+    text-transform: none;
+    padding-left: 19px;
+    padding-right: 21px;
+  }
 }
 
-.title-stripe__wrapper {
+.title-stripe__text {
   display: inline-block;
   vertical-align: top;
   max-width: 181px;
 }
 
 @media (min-width: $tablet-width) {
-  .title-stripe__line {
+  .title-stripe {
     padding-bottom: 16px;
   }
 
-  .title-stripe {
+  .title-stripe__name {
     top: 15px;
     left: 29px;
     font-size: 36px;
     line-height: 36px;
     padding-bottom: 5px;
+
+    &--catalog {
+      padding-left: 38px;
+      padding-right: 35px;
+    }
+
+    &--form {
+      top: 17px;
+      padding-left: 40px;
+      padding-right: 43px;
+    }
   }
 
-  .title-stripe__wrapper {
+  .title-stripe__text {
     max-width: 100%;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .title-strip__holder {
-    @include content-desktop;
-  }
-
-  .title-stripe__line {
+  .title-stripe {
     width: 100%;
   }
 
-  .title-stripe {
+  .title-stripe__holder {
+    @include content-desktop;
+  }
+
+  .title-stripe__name {
     left: 0;
+
+    &--catalog {
+      padding-left: 40px;
+      padding-right: 35px;
+    }
+
+    &--form {
+      top: 15px;
+      padding-left: 39px;
+      padding-right: 41px;
+    }
   }
 }

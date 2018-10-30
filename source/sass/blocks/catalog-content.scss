@@ -14,7 +14,16 @@
 }
 
 .catalog-content__additional-products {
-  padding-top: 8px;
+  padding-top: 7px;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .catalog-content__title,
+  .catalog-content__products-list,
+  .catalog-content__additional-products {
+    width: inherit;
+    margin: inherit;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -48,7 +57,7 @@
 
   .catalog-content__title {
     @include content-desktop;
-    padding-top: 173px;
+    padding-top: 45px;
     padding-left: 40px;
   }
 

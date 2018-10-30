@@ -13,8 +13,10 @@
     color: $white-text;
     background-color: $main-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $button-action;
+      outline: none;
     }
 
     &:active {
@@ -26,8 +28,10 @@
     color: $arial-text;
     background-color: $gray-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $gray-button-action;
+      outline: none;
     }
 
     &:active {
@@ -36,9 +40,7 @@
   }
 
   &--index {
-    position: absolute;
-    top: 440px;
-    padding: 11px 73px;
+    padding: 11px 72px;
     font-size: 14px;
     line-height: 18px;
   }
@@ -46,16 +48,9 @@
 
 @media (min-width: $tablet-width) {
   .button--index {
-    top: 272px;
-    padding: 15px 29px 17px 26px;
+    padding: 15px 27px 17px 26px;
     font-size: 20px;
     line-height: 20px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .button--index {
-    top: 261px;
-    left: 80px;
+    max-width: 245px;
   }
 }
