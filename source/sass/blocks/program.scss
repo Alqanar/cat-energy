@@ -70,6 +70,8 @@
   position: relative;
   display: flex;
   margin-top: 19px;
+  max-width: 40%;
+  word-break: break-word;
 
   &::after {
     position: absolute;
@@ -85,7 +87,6 @@
 
   &:hover::after,
   &:focus::after {
-    left: 132px;
     width: 40px;
     background-image: url("../img/icon-right-arrow-verylong.svg");
     background-size: 34px 12px;
@@ -147,6 +148,7 @@
   .program__link {
     font-size: 20px;
     line-height: 20px;
+    max-width: 22%;
     margin-top: 34px;
 
     &::after {
@@ -210,6 +212,7 @@
     font-size: 20px;
     line-height: 20px;
     margin-top: 9px;
+    max-width: 27%;
 
     &::after {
       top: 4px;

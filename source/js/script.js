@@ -7,6 +7,7 @@ var defaultCenter = [59.9386,30.3231];
 var defaultZoom = 17;
 var buttonsOrder = document.querySelectorAll(".product__button--order");
 var buttonAllProducts = document.querySelector(".button--gray");
+var additionalOrder = document.querySelectorAll(".additional-item__button");
 var sandwich = document.querySelector(".sandwich-button__ham");
 
 function onOrderClick (evt) {
@@ -112,5 +113,9 @@ document.addEventListener("DOMContentLoaded", function(evt) {
   /*так как у нас несколько кнопок по которым должно открываться одинаковое модальное окно, то делаем цикл, в котором устанавливаем переменную i, которая изначально у нас = 0, условие цикла: пока i не станет меньше buttonsOrder, прогресс: i увеличивается на 1*/
   for (var i = 0; i < buttonsOrder.length; i++) {
     buttonsOrder[i].addEventListener("click", onOrderClick);
-  }
+  };
+
+  for (var i = 0; i < additionalOrder.length; i++) {
+    additionalOrder[i].addEventListener("click", onOrderClick);
+  };
 });
