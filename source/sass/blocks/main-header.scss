@@ -1,6 +1,15 @@
 .main-header {
-  @include content;
   padding-top: 13px;
+}
+
+.main-header__wrapper-link {
+  @include content;
+}
+
+.main-header__logo {
+  display: inline-block;
+  margin-bottom: 9px;
+  margin-left: 20px;
 }
 
 .main-header__logo-link {
@@ -29,19 +38,22 @@
 }
 
 @media (min-width: $tablet-width) {
-  .main-header {
+  .main-header__wrapper {
     @include content-tablet;
+    display: flex;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 24px;
-  }
-
-  .main-header__wrapper {
-    display: flex;
+    padding-top: 11px;
     justify-content: space-between;
   }
 
-  .main-header__logo-link {
+  .main-header__wrapper-link {
+    width: 174px;
+    margin: 0;
+  }
+
+  .main-header__logo-link,
+  .main-header__logo {
     display: inline-block;
     margin-bottom: 0;
     margin-left: 0;

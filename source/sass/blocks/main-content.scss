@@ -1,7 +1,3 @@
-.main-content {
-  @include content;
-}
-
 .main-content__selection-program {
   border-top: 1px solid $gray-border;
 }
@@ -14,20 +10,7 @@
   margin-top: 46px;
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  // в ie11 дети от родителя не наследуют
-  .main-content__selection-program,
-  .main-content__sample {
-    width: inherit;
-    margin: inherit;
-  }
-}
-
 @media (min-width: $tablet-width) {
-  .main-content {
-    @include content-tablet;
-  }
-
   .main-content__selection-program {
     border-top: none;
     padding-top: 16px;
@@ -51,6 +34,9 @@
     width: 100%;
     margin: 0;
     max-width: 100%;
+  }
+
+  .main-content__selection-program {
     margin-top: -128px;
   }
 

@@ -15,17 +15,19 @@
     </div>
     <header class="main-header main-header--index">
       <div class="main-header__wrapper">
-        <a class="main-header__logo-link" href="#">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип магазина cat-energy">
-          </picture>
-        </a>
-        <!-- если JS работает, то нижеуказанному button добавляется класс sandwichButton--javascript-work и в результате чего показывается кнопка, по умолчанию кнопка скрыта -->
-        <button class="sandwich-button main-header__sandwich-button" type="button">Открыть меню
-          <include src="img/hamburger.svg"></include>
-        </button>
+        <div class="main-header__wrapper-link">
+          <span class="main-header__logo">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип магазина cat-energy">
+            </picture>
+          </span>
+          <!-- если JS работает, то нижеуказанному button добавляется класс sandwichButton--javascript-work и в результате чего показывается кнопка, по умолчанию кнопка скрыта -->
+          <button class="sandwich-button main-header__sandwich-button" type="button">Открыть меню
+            <include src="img/hamburger.svg"></include>
+          </button>
+        </div>
         <!-- если JS работает, то меню добавляется класс main-menu--javascript-work, в результате чего меню скрывается, по умолчанию меню открыто -->
         <nav class="main-menu">
           <ul class="same-list main-menu__navigation">
@@ -130,7 +132,7 @@
       </section>
     </main>
     <footer class="main-footer">
-      <div class="main-footer__contacts-wrapper">
+      <div class="main-footer__contacts-wrapper main-footer__contacts-wrapper--index">
         <section class="contacts contacts--index main-footer__contacts">
           <p class="contacts__dillers">приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <div class="contacts__adress">
@@ -143,7 +145,7 @@
         <div class="map__badge"></div>
       </section>
       <section class="main-footer__references">
-        <div class="main-footer__references-wrapper">
+        <div class="main-footer__references-wrapper ">
           <a class="main-footer__link" href="index.html">
             <img src="img/logo-footer.svg" width="128" height="24" alt="Уменьшенный логотип магазина cat-energy">
           </a>

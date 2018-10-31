@@ -12,6 +12,7 @@
 }
 
 .title-stripe__holder {
+  @include content;
   position: relative;
   height: 27px;
 }
@@ -52,6 +53,10 @@
 @media (min-width: $tablet-width) {
   .title-stripe {
     padding-bottom: 16px;
+  }
+
+  .title-stripe__holder {
+    @include content-tablet;
   }
 
   .title-stripe__name {

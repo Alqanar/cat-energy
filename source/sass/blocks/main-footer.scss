@@ -1,9 +1,19 @@
-.main-footer {
-  @include content;
+.main-footer__contacts-wrapper {
   position: relative;
+  background-color: $gray-color;
+
+  &--index {
+    background-color: $white-text;
+  }
+}
+
+.main-footer__references-wrapper {
+  @include content;
+  padding: 41px 19px 17px 20px;
 }
 
 .main-footer__contacts {
+  @include content;
   padding-bottom: 25px;
 }
 
@@ -14,10 +24,6 @@
 
 .main-footer__link:active {
   opacity: 0.6;
-}
-
-.main-footer__references-wrapper {
-  padding: 41px 19px 17px 20px;
 }
 
 .main-footer__references {
@@ -73,7 +79,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .main-footer {
+  .main-footer__contacts {
     @include content-tablet;
   }
 
@@ -82,8 +88,9 @@
   }
 
   .main-footer__references-wrapper {
+    @include content-tablet;
     display: flex;
-    padding: 50px 30px 54px;
+    padding: 52px 30px 53px;
     justify-content: space-between;
   }
 

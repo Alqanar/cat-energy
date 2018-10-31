@@ -1,17 +1,11 @@
 .wrapper {
+  @include content;
   @include content-margin;
-}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  // в ie11 дети от родителя не наследуют
-  .wrapper {
-    width: inherit;
-    margin: inherit;
-  }
 }
 
 @media (min-width: $tablet-width) {
   .wrapper {
+    @include content-tablet;
     @include margin-tablet;
   }
 

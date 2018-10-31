@@ -4,8 +4,8 @@
 }
 
 .questionnaire-form__inquirer {
-  padding-left: 20px;
-  padding-right: 20px;
+  @include content;
+  @include content-margin;
 }
 
 .questionnaire-form__row {
@@ -178,10 +178,15 @@
   }
 }
 
-.questionnaire-form__program {
-  padding: 14px 20px 14px;
-  border: 1px solid $gray-light;
+.questionnaire-form__program-wrapper {
+  border-top: 1px solid $gray-light;
+  border-bottom: 1px solid $gray-light;
   margin-top: 23px;
+}
+
+.questionnaire-form__program {
+  @include content;
+  padding: 14px 20px 14px;
 }
 
 .questionnaire-form__item {
@@ -218,6 +223,10 @@
 .questionnaire-form__cell-radio:not(:disabled):focus + .questionnaire-form__label--radio::before,
 .questionnaire-form__cell-checkbox:not(:disabled):focus + .questionnaire-form__label--checkbox::before {
   border: 1px solid $input-action;
+  outline:
+    thin dotted,
+    5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
 .questionnaire-form__cat-owner {
@@ -225,6 +234,7 @@
 }
 
 .questionnaire-form__cat-owner-wrapper {
+  @include content;
   @include content-margin;
   padding-top: 42px;
 }
@@ -241,6 +251,7 @@
 }
 
 .questionnaire-form__textarea-wrapper {
+  @include content;
   padding-top: 33px;
 }
 
@@ -249,12 +260,17 @@
 }
 
 .questionnaire-form__checkbox {
+  @include content;
   padding-top: 27px;
 }
 
+.questionnaire-form__wrapper-end {
+  @include content;
+  @include content-margin;
+}
+
 .questionnaire-form__button {
-  width: 282px;
-  margin-left: 20px;
+  width: 280px;
   margin-top: 26px;
   cursor: pointer;
 }
@@ -264,7 +280,7 @@
   text-align: center;
   text-transform: none;
   margin-top: 21px;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -302,6 +318,7 @@
   }
 
   .questionnaire-form__inquirer {
+    @include content-tablet;
     @include margin-form;
   }
 
@@ -370,13 +387,18 @@
   }
 
   .questionnaire-form__program-wrapper {
+    @include content-tablet;
     @include margin-form;
+    border-top: none;
+    border-bottom: none;
+    margin-top: 72px;
   }
 
   .questionnaire-form__program {
+    width: 100%;
+    margin: 0;
     padding: 18px 28px 17px;
-    margin-top: 72px;
-    border-color: rgba($sample-border, 0.5);
+    border: 1px solid rgba($sample-border, 0.5);
   }
 
   .questionnaire-form__item {
@@ -400,6 +422,7 @@
   }
 
   .questionnaire-form__cat-owner-wrapper {
+    @include content-tablet;
     @include margin-form;
     padding-top: 47px;
   }
@@ -414,6 +437,7 @@
   }
 
   .questionnaire-form__textarea-wrapper {
+    @include content-tablet;
     padding-left: 51px;
     padding-right: 47px;
     padding-top: 66px;
@@ -424,6 +448,7 @@
   }
 
   .questionnaire-form__checkbox {
+    @include content-tablet;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -441,9 +466,9 @@
   }
 
   .questionnaire-form__wrapper-end {
+    @include content-tablet;
     display: flex;
-    padding-top: 28px;
-    padding-bottom: 73px;
+    padding: 28px 0 73px;
   }
 
   .questionnaire-form__text {
@@ -469,6 +494,10 @@
   .questionnaire-form__program-wrapper {
     @include margin-desktop;
     width: 50%;
+  }
+
+  .questionnaire-form__program-wrapper {
+    margin-top: 0;
   }
 
   .questionnaire-form__program {
