@@ -1,13 +1,15 @@
 .form-content {
-  @include content;
   border-top: 1px solid $gray-border;
   padding-top: 15px;
 }
 
 .form-content__title {
-  margin: 0;
-
+  @include content;
   @include content-margin;
+}
+
+.form-content__centring-device {
+  @include content;
 }
 
 .form-content__text-help {
