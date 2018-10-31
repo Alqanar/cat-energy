@@ -1,5 +1,10 @@
 .main-footer__contacts-wrapper {
   position: relative;
+  background-color: $gray-color;
+
+    &--index {
+    background-color: $white-text;
+  }
 }
 
 .main-footer__references-wrapper {

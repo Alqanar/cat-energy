@@ -1,5 +1,10 @@
 .main-header {
+  border-bottom: 1px solid $gray-border;
   padding-top: 13px;
+}
+
+.main-header--index {
+  border-bottom: none;
 }
 
 .main-header__wrapper-link {

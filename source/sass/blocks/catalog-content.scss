@@ -1,16 +1,19 @@
 .catalog-content {
-  @include content;
-  border-top: 1px solid $gray-border;
   padding-top: 15px;
 }
 
 .catalog-content__title {
-  margin: 0;
+  @include content;
   padding-left: 20px;
 }
 
 .catalog-content__products-list {
+  @include content;
   margin-top: 28px;
+}
+
+.additional-products__centering-device {
+  @include content;
 }
 
 .catalog-content__additional-products {

@@ -12,6 +12,7 @@
 }
 
 .title-stripe__holder {
+  @include content;
   position: relative;
   height: 27px;
 }
