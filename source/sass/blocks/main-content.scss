@@ -20,10 +20,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .main-content {
-    @include content-tablet;
-  }
-
   .main-content__selection-program {
     border-top: none;
     padding-top: 16px;
