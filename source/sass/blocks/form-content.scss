@@ -20,15 +20,6 @@
   margin-top: 25px;
 }
 
-// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-//   .form-content__title,
-//   .form-content__centring-device,
-//   .form-content__questionnaire-form {
-//     width: inherit;
-//     margin: inherit;
-//   }
-// }
-
 @media (min-width: $tablet-width) {
   .form-content {
     border-top: none;
