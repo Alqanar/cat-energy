@@ -79,7 +79,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .main-footer {
+  .main-footer__contacts {
     @include content-tablet;
   }
 
@@ -88,8 +88,9 @@
   }
 
   .main-footer__references-wrapper {
+    @include content-tablet;
     display: flex;
-    padding: 50px 30px 54px;
+    padding: 52px 30px 53px;
     justify-content: space-between;
   }
 

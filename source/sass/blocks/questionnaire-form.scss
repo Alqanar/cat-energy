@@ -315,6 +315,7 @@
   }
 
   .questionnaire-form__inquirer {
+    @include content-tablet;
     @include margin-form;
   }
 
@@ -383,13 +384,18 @@
   }
 
   .questionnaire-form__program-wrapper {
+    @include content-tablet;
     @include margin-form;
+    border-top: none;
+    border-bottom: none;
+    margin-top: 72px;
   }
 
   .questionnaire-form__program {
+    width: 100%;
+    margin: 0;
     padding: 18px 28px 17px;
-    margin-top: 72px;
-    border-color: rgba($sample-border, 0.5);
+    border: 1px solid rgba($sample-border, 0.5);
   }
 
   .questionnaire-form__item {
@@ -413,6 +419,7 @@
   }
 
   .questionnaire-form__cat-owner-wrapper {
+    @include content-tablet;
     @include margin-form;
     padding-top: 47px;
   }
@@ -427,6 +434,7 @@
   }
 
   .questionnaire-form__textarea-wrapper {
+    @include content-tablet;
     padding-left: 51px;
     padding-right: 47px;
     padding-top: 66px;
@@ -437,6 +445,7 @@
   }
 
   .questionnaire-form__checkbox {
+    @include content-tablet;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -454,9 +463,9 @@
   }
 
   .questionnaire-form__wrapper-end {
+    @include content-tablet;
     display: flex;
-    padding-top: 28px;
-    padding-bottom: 73px;
+    padding: 28px 0 73px;
   }
 
   .questionnaire-form__text {

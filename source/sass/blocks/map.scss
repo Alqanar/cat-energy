@@ -35,7 +35,7 @@
   .map {
     height: 400px;
     background-image: url("../img/bg-map-tablet@1x.png");
-    background-position: 0 -3px;
+    background-position: center top -3px;
     background-size: 768px 400px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -44,8 +44,8 @@
   }
 
   .map__badge::before {
-    top: 146px;
-    right: 320px;
+    top: 147px;
+    right: 96px;
     width: 125px;
     height: 110px;
     background-size: 122px 106px;

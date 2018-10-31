@@ -6,6 +6,12 @@
   @include content;
 }
 
+.main-header__logo {
+  display: inline-block;
+  margin-bottom: 9px;
+  margin-left: 20px;
+}
+
 .main-header__logo-link {
   display: inline-block;
   margin-bottom: 9px;
@@ -37,8 +43,13 @@
     display: flex;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 24px;
+    padding-top: 11px;
     justify-content: space-between;
+  }
+
+  .main-header__wrapper-link {
+    width: 174px;
+    margin: 0;
   }
 
   .main-header__logo-link {
