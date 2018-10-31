@@ -1,6 +1,9 @@
 .main-header {
-  @include content;
   padding-top: 13px;
+}
+
+.main-header__wrapper-link {
+  @include content;
 }
 
 .main-header__logo-link {
@@ -29,15 +32,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .main-header {
+  .main-header__wrapper {
     @include content-tablet;
+    display: flex;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 24px;
-  }
-
-  .main-header__wrapper {
-    display: flex;
     justify-content: space-between;
   }
 

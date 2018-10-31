@@ -2,11 +2,12 @@
   overflow: hidden;
   width: 100%;
   height: 360px;
+  margin: 0 auto;
   background-color: $map-color;
   background-image: url("../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: 0 -38px;
-  background-size: 320px 400px;
+  background-position: center top -38px;
+  background-size: 320px auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-map-mobile@2x.png");
@@ -14,17 +15,18 @@
 }
 
 .map__badge {
+  @include content;
   position: relative;
 
   &::before {
     position: absolute;
-    top: 138px;
-    right: 128px;
+    top: 141px;
+    right: 129px;
     width: 60px;
     height: 55px;
     background-image: url("../img/map-pin.png");
     background-repeat: no-repeat;
-    background-size: 55px 53px;
+    background-size: 58px 52px;
     content: "";
   }
 }

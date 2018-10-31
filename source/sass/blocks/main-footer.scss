@@ -1,9 +1,14 @@
-.main-footer {
-  @include content;
+.main-footer__contacts-wrapper {
   position: relative;
 }
 
+.main-footer__references-wrapper {
+  @include content;
+  padding: 41px 19px 17px 20px;
+}
+
 .main-footer__contacts {
+  @include content;
   padding-bottom: 25px;
 }
 
@@ -14,10 +19,6 @@
 
 .main-footer__link:active {
   opacity: 0.6;
-}
-
-.main-footer__references-wrapper {
-  padding: 41px 19px 17px 20px;
 }
 
 .main-footer__references {

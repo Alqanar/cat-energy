@@ -6,7 +6,9 @@
     linear-gradient(to bottom, $gradient-color 305px, $white-text 0%);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 320px auto;
+  background-size:
+    320px auto,
+    auto auto;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image:
@@ -14,6 +16,10 @@
       linear-gradient(to bottom, $gradient-color 58%, $white-text 0%);
   }
 }
+
+// .selection-program__wrapper-title {
+//   @include content-margin;
+// }
 
 .selection-program__title {
   margin-top: 27px;
@@ -29,9 +35,13 @@
   margin-bottom: 29px;
 }
 
+.selection-program__wrapper {
+  position: relative;
+}
+
 .selection-program__image {
   position: absolute;
-  top: 167px;
+  top: 140px;
   left: 20px;
   width: 280px;
   height: 270px;
