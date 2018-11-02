@@ -80,7 +80,8 @@
     outline: none;
   }
 
-  &:focus + .questionnaire-form__element {
+  &:focus + .questionnaire-form__element-mail,
+  &:focus + .questionnaire-form__element-tel {
     fill: $main-color;
   }
 
@@ -91,7 +92,8 @@
       inset -1px -1px $input-error;
   }
 
-  &:required:invalid + .questionnaire-form__element {
+  &:required:invalid + .questionnaire-form__element-mail,
+  &:required:invalid + .questionnaire-form__element-tel, {
     fill: $input-error;
   }
 
@@ -235,11 +237,20 @@
   padding-top: 42px;
 }
 
-.questionnaire-form__element {
+.questionnaire-form__element-mail,
+.questionnaire-form__element-tel {
   position: absolute;
-  top: 15px;
-  right: 13px;
   fill: $additional-item-title;
+}
+
+.questionnaire-form__element-mail {
+  top: 16px;
+  right: 15px;
+}
+
+.questionnaire-form__element-tel {
+  top: 13px;
+  right: 12px;
 }
 
 .questionnaire-form__comment {
@@ -423,9 +434,14 @@
     padding-top: 47px;
   }
 
-  .questionnaire-form__element {
-    top: 19px;
-    right: 19px;
+  .questionnaire-form__element-mail {
+    top: 20px;
+    right: 20px;
+  }
+
+  .questionnaire-form__element-tel {
+    top: 17px;
+    right: 17px;
   }
 
   .questionnaire-form__comment {
@@ -529,9 +545,13 @@
     padding-left: 17px;
   }
 
-  .questionnaire-form__element {
-    top: 19px;
+  .questionnaire-form__element-mail {
     right: 59px;
+  }
+
+  .questionnaire-form__element-tel {
+    top: 17px;
+    right: 58px;
   }
 
   .questionnaire-form__comment {
