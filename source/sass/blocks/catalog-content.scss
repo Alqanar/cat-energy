@@ -1,4 +1,5 @@
 .catalog-content {
+  display: block;
   border-top: 1px solid $gray-border;
   padding-top: 15px;
 }
@@ -9,7 +10,6 @@
 }
 
 .catalog-content__products-list {
-  @include content;
   padding-top: 28px;
 }
 
@@ -20,15 +20,6 @@
 .catalog-content__additional-products {
   padding-top: 7px;
 }
-
-// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-//   .catalog-content__title,
-//   .catalog-content__products-list,
-//   .catalog-content__additional-products {
-//     width: inherit;
-//     margin: inherit;
-//   }
-// }
 
 @media (min-width: $tablet-width) {
   .catalog-content {

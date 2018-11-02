@@ -1,13 +1,16 @@
 .product {
-  border: 1px solid #ededed;
-  border-bottom: none;
-  padding-left: 20px;
-  padding-right: 12px;
+  border-top: 1px solid $gray-light;
   padding-bottom: 24px;
 
   &:last-child {
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid $gray-light;
   }
+}
+
+.product__wrapper {
+  @include content;
+  padding-right: 12px;
+  padding-left: 20px;
 }
 
 .product__wrapper-card {
@@ -117,6 +120,13 @@
 
   .product:nth-child(2n) {
     margin-left: 60px;
+  }
+
+  .product__wrapper {
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .product__image {
