@@ -4,6 +4,8 @@
 * Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
 ---
 
+Проект доступен по ссылке https://alqanar.github.io/cat-energy/
 
+---
 
-Репозиторий создан для обучения на интенсивном онлайн‑курсе «[Профессиональный HTML и CSS](https://htmlacademy.ru/intensive/adaptive)», уровень 2 от [HTML Academy](https://htmlacademy.ru).
+Проект создан во время обучения на интенсивном онлайн‑курсе «[Профессиональный HTML и CSS](https://htmlacademy.ru/intensive/adaptive)», уровень 2 от [HTML Academy](https://htmlacademy.ru).
