@@ -11,8 +11,8 @@ cache:
     - "node_modules"
 
 script:
-  - npm test
-  - npm build
+  - npm run test
+  - npm run build
 
 deploy:
   provider: pages
