@@ -1,4 +1,4 @@
-# Личный проект «Кэт энерджи»
+# Личный проект «Кэт энерджи» [![Build Status](https://travis-ci.org/Alqanar/Cat-energy.svg?branch=master)](https://travis-ci.org/Alqanar/Cat-energy)
 
 * Студент: [Екатерина Шибакова](https://up.htmlacademy.ru/adaptive/15/user/808249).
 * Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
